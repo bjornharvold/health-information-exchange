@@ -1,0 +1,70 @@
+Calendaring Business Process
+
+===================================================
+Use Cases
+1 create/delete schedule
+	-> schedule can have many event records like meeting
+	-> one can have many schedules e.g. personal, work, etc
+2 create event
+3 reschedule event
+4 delete event
+	- event can be meeting, to do, out of office, vacation. More detailed list to come
+5 search for free/busy time
+6 apply for appointment
+===================================================
+-- Application functionality
+	-> Add/Remove calendar entry DONE
+		- Date
+		- Time
+		- Timezone
+		- Recurring
+		- Participant(s)
+		- Type: GROUP / INDIVIDUAL
+		- Should client confirm?
+		
+	--> Searching does not yet work. (Well it works with httpclient 2.0.2 but not 3) 
+		- 
+		
+Use case 1a: Create schedule
+	- User is on list schedules page
+	- User can create a new list by clicking on the "add button"
+		- A schedule is just a descriptive name where a user can store events under
+
+Use case 1b: Delete schedule
+	- User can delete a schedule by clicking on the "delete button beside the desired schedule"
+	
+Use case 2: Create event
+	- When in calendar view where user can see all her schedules and appointments, she can 
+	  click on a free slot to start creating a new appointment
+	- The listed fields should be:
+		- Date
+		- Time
+		- Recurring
+			- End date
+		- Participant(s)
+		- Type (out of office, appointment, vacation etc)
+		- Invite only. Client must confirm (this functionality should be reused for clients)
+	- Implicit fields are:
+		- Group / Individual meeting
+		- Time zone
+		
+Use case 3: Reschedule (edit) event
+	- User can click on any existing future event and edit its values
+	- Upon save, participants of this event will be notified of the change
+	
+Use case 4: Delete event
+	- User can delete any future event
+	- Upon delete, participants of this event will be notified of the change
+	
+Use case 5: Search for free/busy time
+	- Apart from the functionality of being to zoom to a specified date and time and seeing if 
+	  there is anything available, a user can also type in a datetime range to search for freebusy
+	  times
+	- The schedule focuses on the date range specified so user can see freebusy areas
+
+Use case 6: Apply for appointment
+	- One user seeks to make an appointment with another user
+		- What type of iCalendar request should be made (usually the chair/organizer
+		  creates the meeting. Not the attendant.
+	- The professional needs to accept or reject the request for appointment
+		- Cosmo is updated and emails are dispatched to both parties

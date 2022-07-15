@@ -1,0 +1,3 @@
+JProfiler v5.1.2 (do not let jrpofiler dial out during registration)
+Name: John Kowalski
+License Key  : L-FLN#15217-1ku39ab14s7ut7#174

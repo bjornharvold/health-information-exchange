@@ -1,0 +1,6 @@
+Name=Bjorn Harvold
+Address=154 Atlantic Ave 3R, 11201 Brooklyn New York, USA
+Email=bjorn@harvold.com
+FreeUpdatesUntil=2009-07-26
+LicenseCount=1
+Key=2<g-JxF00-fVqbI-btcG6-<WFX4-kB6fg-c7xBM-g875c-28qy4

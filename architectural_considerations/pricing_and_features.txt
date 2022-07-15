@@ -1,0 +1,54 @@
+Globalhealth roles:
+	- 0 Administrator
+	- 1 Professional
+	- 2 Client
+	- 3 Guest
+	
+Administrator features:
+	- News
+	- Accounting
+	
+Professional features:  (by country)
+	- Scheduler (basic)
+	- Client management
+	- Shop
+	- Job board (basic)
+	- Exercise organizer
+	- Profile creator (basic)
+	- Accounting
+	- Journal
+	- Ga-Gaah Company
+	
+Client features (by country) (feature type):
+	- PHR (basic)
+	- Pro search (basic)
+	- Shopping (basic)
+	- Scheduler (basic)
+	- Journal (basic)
+	- Privileges for PHR and Journals (basic)
+	- Emergency records (basic)
+	
+Feature types:
+	- Basic    0
+	- Advanced 1
+	- Premium  2
+	
+Price levels:
+	- Free 0
+	- Cheap 1
+	- Normal 2
+	- Pricey 3
+	- Expensive 4
+	- Very Expensive 5
+
+Group types (by country):
+	- Commercial entity 1
+	- Non-commercial entity 1/2
+	- Health organization (i.e. Red Cross) 0
+
+Discounts (by country):
+	- Time
+	- Referral
+	
+How to calculate price:
+	((base price * feature type * price level * group type) (- discounts)) * exchange rate = User monthly price

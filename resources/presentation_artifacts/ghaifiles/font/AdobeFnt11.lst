@@ -1,0 +1,612 @@
+%!Adobe-FontList 1.11
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Black
+FamilyName:Myriad Pro
+StyleName:Black
+FullName:Myriad Pro Black
+MenuName:Myriad Pro Black
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-Black.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:81792
+FileModTime:958470336
+WeightClass:900
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BlackCond
+FamilyName:Myriad Pro
+StyleName:Black Condensed
+FullName:Myriad Pro Black Condensed
+MenuName:Myriad Pro Black Cond
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-BlackCond.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:80344
+FileModTime:958470340
+WeightClass:900
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BlackCondIt
+FamilyName:Myriad Pro
+StyleName:Black Condensed Italic
+FullName:Myriad Pro Black Condensed Italic
+MenuName:Myriad Pro Black Cond
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-BlackCondIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:80904
+FileModTime:958470358
+WeightClass:900
+WidthClass:3
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BlackIt
+FamilyName:Myriad Pro
+StyleName:Black Italic
+FullName:Myriad Pro Black Italic
+MenuName:Myriad Pro Black
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-BlackIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:82936
+FileModTime:958470356
+WeightClass:900
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BlackSemiExt
+FamilyName:Myriad Pro
+StyleName:Black SemiExtended
+FullName:Myriad Pro Black SemiExtended
+MenuName:Myriad Pro Black SemiExt
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-BlackSemiExt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:80784
+FileModTime:958470342
+WeightClass:900
+WidthClass:6
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BlackSemiExtIt
+FamilyName:Myriad Pro
+StyleName:Black SemiExtended Italic
+FullName:Myriad Pro Black SemiExtended Italic
+MenuName:Myriad Pro Black SemiExt
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-BlackSemiExtIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:81716
+FileModTime:958470358
+WeightClass:900
+WidthClass:6
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Bold
+FamilyName:Myriad Pro
+StyleName:Bold
+FullName:Myriad Pro Bold
+MenuName:Myriad Pro
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:81436
+FileModTime:958470342
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BoldCond
+FamilyName:Myriad Pro
+StyleName:Bold Condensed
+FullName:Myriad Pro Bold Condensed
+MenuName:Myriad Pro Cond
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-BoldCond.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:79924
+FileModTime:958470344
+WeightClass:700
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BoldCondIt
+FamilyName:Myriad Pro
+StyleName:Bold Condensed Italic
+FullName:Myriad Pro Bold Condensed Italic
+MenuName:Myriad Pro Cond
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-BoldCondIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:81696
+FileModTime:958470362
+WeightClass:700
+WidthClass:3
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BoldIt
+FamilyName:Myriad Pro
+StyleName:Bold Italic
+FullName:Myriad Pro Bold Italic
+MenuName:Myriad Pro
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-BoldIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:81884
+FileModTime:958470360
+WeightClass:700
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BoldSemiExt
+FamilyName:Myriad Pro
+StyleName:Bold SemiExtended
+FullName:Myriad Pro Bold SemiExtended
+MenuName:Myriad Pro SemiExt
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-BoldSemiExt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:81272
+FileModTime:958470344
+WeightClass:700
+WidthClass:6
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BoldSemiExtIt
+FamilyName:Myriad Pro
+StyleName:Bold SemiExtended Italic
+FullName:Myriad Pro Bold SemiExtended Italic
+MenuName:Myriad Pro SemiExt
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-BoldSemiExtIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:81916
+FileModTime:958470364
+WeightClass:700
+WidthClass:6
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Cond
+FamilyName:Myriad Pro
+StyleName:Condensed
+FullName:Myriad Pro Condensed
+MenuName:Myriad Pro Cond
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-Cond.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:78364
+FileModTime:958470346
+WeightClass:400
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-CondIt
+FamilyName:Myriad Pro
+StyleName:Condensed Italic
+FullName:Myriad Pro Condensed Italic
+MenuName:Myriad Pro Cond
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-CondIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:80236
+FileModTime:958470364
+WeightClass:400
+WidthClass:3
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-It
+FamilyName:Myriad Pro
+StyleName:Italic
+FullName:Myriad Pro Italic
+MenuName:Myriad Pro
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-It.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:80740
+FileModTime:958470370
+WeightClass:400
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Light
+FamilyName:Myriad Pro
+StyleName:Light
+FullName:Myriad Pro Light
+MenuName:Myriad Pro Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-Light.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:79308
+FileModTime:958470346
+WeightClass:300
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-LightCond
+FamilyName:Myriad Pro
+StyleName:Light Condensed
+FullName:Myriad Pro Light Condensed
+MenuName:Myriad Pro Light Cond
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-LightCond.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:76740
+FileModTime:958470348
+WeightClass:300
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-LightCondIt
+FamilyName:Myriad Pro
+StyleName:Light Condensed Italic
+FullName:Myriad Pro Light Condensed Italic
+MenuName:Myriad Pro Light Cond
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-LightCondIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:78080
+FileModTime:958470366
+WeightClass:300
+WidthClass:3
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-LightIt
+FamilyName:Myriad Pro
+StyleName:Light Italic
+FullName:Myriad Pro Light Italic
+MenuName:Myriad Pro Light
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-LightIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:80396
+FileModTime:958470366
+WeightClass:300
+WidthClass:5
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-LightSemiExt
+FamilyName:Myriad Pro
+StyleName:Light SemiExtended
+FullName:Myriad Pro Light SemiExtended
+MenuName:Myriad Pro Light SemiExt
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-LightSemiExt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:78488
+FileModTime:958470348
+WeightClass:300
+WidthClass:6
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-LightSemiExtIt
+FamilyName:Myriad Pro
+StyleName:Light SemiExtended Italic
+FullName:Myriad Pro Light SemiExtended Italic
+MenuName:Myriad Pro Light SemiExt
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-LightSemiExtIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:79048
+FileModTime:958470368
+WeightClass:300
+WidthClass:6
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Regular
+FamilyName:Myriad Pro
+StyleName:Regular
+FullName:Myriad Pro
+MenuName:Myriad Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:79364
+FileModTime:958470350
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Semibold
+FamilyName:Myriad Pro
+StyleName:Semibold
+FullName:Myriad Pro Semibold
+MenuName:Myriad Pro Light
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-Semibold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:80696
+FileModTime:958470354
+WeightClass:600
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-SemiboldCond
+FamilyName:Myriad Pro
+StyleName:Semibold Condensed
+FullName:Myriad Pro Semibold Condensed
+MenuName:Myriad Pro Light Cond
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-SemiboldCond.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:79040
+FileModTime:1206103090
+WeightClass:600
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-SemiboldCondIt
+FamilyName:Myriad Pro
+StyleName:Semibold Condensed Italic
+FullName:Myriad Pro Semibold Condensed Italic
+MenuName:Myriad Pro Light Cond
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-SemiboldCondIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:80848
+FileModTime:958470372
+WeightClass:600
+WidthClass:3
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-SemiboldSemiExt
+FamilyName:Myriad Pro
+StyleName:Semibold SemiExtended
+FullName:Myriad Pro Semibold SemiExtended
+MenuName:Myriad Pro Light SemiExt
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-SemiboldSemiExt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:80220
+FileModTime:958470356
+WeightClass:600
+WidthClass:6
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-SemiboldSemiExtIt
+FamilyName:Myriad Pro
+StyleName:Semibold SemiExtended Italic
+FullName:Myriad Pro Semibold SemiExtended Italic
+MenuName:Myriad Pro Light SemiExt
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-SemiboldSemiExtIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:81432
+FileModTime:958470374
+WeightClass:600
+WidthClass:6
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-SemiExt
+FamilyName:Myriad Pro
+StyleName:SemiExtended
+FullName:Myriad Pro SemiExtended
+MenuName:Myriad Pro SemiExt
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-SemiExt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:79892
+FileModTime:958470352
+WeightClass:400
+WidthClass:6
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-SemiExtIt
+FamilyName:Myriad Pro
+StyleName:SemiExtended Italic
+FullName:Myriad Pro SemiExtended Italic
+MenuName:Myriad Pro SemiExt
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:C:\Users\bjorn\Documents\work\hxcel\resources\presentation\ghaifiles\Font\MyriadPro-SemiExtIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:80924
+FileModTime:958470370
+WeightClass:400
+WidthClass:6
+AngleClass:1
+%EndFont
+

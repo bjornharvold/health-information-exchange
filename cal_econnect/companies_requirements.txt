@@ -1,0 +1,16 @@
+Minimum Corporate Experience Requirements
+The Bidder or Bidder consortium must be able to meet the following minimum corporate experience requirements:
+1. Minimum of 5 years in business
+2. Minimum of 6 healthcare client projects, including at least 1 with inter-enterprise exchange among diverse partners using a provider directory
+3. Minimum of 3 client projects that implemented systems to exchange health information among independent organizations via the public internet and appropriate security and access-control techniques. The systems must be or have been in production with at least 200 users or 5,000 transactions/year
+4. Familiarity with HITECH, the ONC, CMS’ EHR Incentive Program and the Meaningful Use Criteria, NwHIN and related standards, etc.
+5. Technical and functional knowledge of HIT data representation, transport protocols, directory services, trusts frameworks, & related standards/methods
+6. Experience with large-scale transaction-based systems that displays the capability to ensure flexibility and scalability
+7. Experience hosting and operating a web services solution in compliance with HIPAA security controls
+8. Experience providing support (including help desk and technical on-boarding) to a large number of users and organizations
+
+Health Xcel
+Universal Mind
+Mirth Corp mirthcorp.com
+Clark Parsia clarkparsia.com
+Quintiles quintiles.com
