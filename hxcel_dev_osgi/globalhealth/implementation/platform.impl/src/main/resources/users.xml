@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<users>
+    <user>
+        <username>bjorn</username>
+        <password>bjorn</password>
+        <firstName>Bjorn</firstName>
+        <lastName>Harvold</lastName>
+        <roles>
+            <role>ROLE_ADMINISTRATOR</role>
+        </roles>
+    </user>
+</users>    

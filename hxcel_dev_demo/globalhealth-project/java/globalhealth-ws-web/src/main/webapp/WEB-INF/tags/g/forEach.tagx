@@ -1,0 +1,31 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" xmlns:img="urn:jsptld:/WEB-INF/tlds/taglibs-image.tld" xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:spring="http://www.springframework.org/tags"
+          xmlns:tiles="http://struts.apache.org/tags-tiles" xmlns:cewolf="urn:jsptld:/WEB-INF/tlds/cewolf.tld" xmlns:hxcel="urn:jsptld:/WEB-INF/tlds/hxcel.tld"
+          version="2.0">
+    <jsp:directive.tag body-content="empty"/>
+    <jsp:directive.attribute name="even" fragment="true" required="true"/>
+    <jsp:directive.attribute name="odd" fragment="true" required="true"/>
+    <jsp:directive.attribute name="message" fragment="true" required="true" />
+    <jsp:directive.attribute name="var" rtexprvalue="false" required="true" type="java.lang.String"/>
+    <jsp:directive.variable name-from-attribute="var" alias="current" variable-class="java.lang.Object" scope="NESTED"/>
+    <jsp:directive.attribute name="items" rtexprvalue="true" required="true" type="java.lang.Object"/>
+
+    <c:choose>
+        <c:when test="${empty items}">
+            <jsp:invoke fragment="message"/>
+        </c:when>
+        <c:otherwise>
+            <c:forEach items="${items}" varStatus="status" var="current">
+                <c:choose>
+                    <c:when test="${status.count % 2 == 0}">
+                        <jsp:invoke fragment="even"/>
+                    </c:when>
+                    <c:otherwise>
+                        <jsp:invoke fragment="odd"/>
+                    </c:otherwise>
+                </c:choose>
+                <c:set var="current" value="${current}"/>                
+            </c:forEach>
+        </c:otherwise>
+    </c:choose>
+</jsp:root>

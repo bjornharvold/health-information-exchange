@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/osgi-compendium
+                           http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
+
+    <!-- here's the service that will be exported -->
+    <bean id="calendarService" class="com.hxcel.globalhealth.calendar.CalendarServiceImpl" parent="abstractCalendarService">
+        <property name="cmpService" ref="cmpService"/>
+    </bean>
+
+    <!-- these are its dependants -->
+    <bean id="cmpService" class="com.hxcel.globalhealth.calendar.CmpServiceImpl" init-method="init" parent="abstractCalendarService">
+        <property name="cmpFactory" ref="cmpFactory"/>
+    </bean>
+
+    <bean id="abstractCalendarService" class="com.hxcel.globalhealth.calendar.AbstractCalendarService" abstract="true">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.calendar" update-strategy="container-managed"/>
+        <property name="calendarUrl" value="http://localhost:8080/chandler"/>
+        <property name="username" value="root"/>
+        <property name="password" value="cosmo"/>
+        <property name="httpClient" ref="httpClient"/>
+    </bean>
+
+    <bean id="cmpFactory" class="com.hxcel.globalhealth.calendar.factory.chandler.CmpFactory"/>
+
+    <!-- http client that all services are dependent on -->
+    <!-- common http client bean -->
+    <bean id="httpClient" class="org.apache.commons.httpclient.HttpClient">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.calendar" update-strategy="container-managed"/>
+        <property name="connectionTimeout" value="30000"/>
+        <property name="httpConnectionFactoryTimeout" value="30000"/>
+        <property name="timeout" value="30000"/>
+        <property name="strictMode" value="true"/>
+        <property name="params" ref="httpClientParams"/>
+        <property name="httpConnectionManager" ref="httpConnectionManager"/>
+    </bean>
+
+    <bean id="httpClientParams" class="org.apache.commons.httpclient.params.HttpClientParams">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.calendar" update-strategy="container-managed"/>
+        <property name="connectionManagerTimeout" value="30000"/>
+        <property name="contentCharset" value="UTF-8"/>
+        <property name="uriCharset" value="UTF-8"/>
+        <property name="soTimeout" value="30000"/>
+        <property name="version">
+            <bean class="org.apache.commons.httpclient.HttpVersion">
+                <constructor-arg value="1"/>
+                <constructor-arg value="1"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="httpConnectionManager" class="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.calendar" update-strategy="container-managed"/>
+        <property name="params" ref="httpConnectionManagerParams"/>
+        <property name="maxConnectionsPerHost" value="300"/>
+        <property name="maxTotalConnections" value="500"/>
+    </bean>
+
+    <bean id="httpConnectionManagerParams" class="org.apache.commons.httpclient.params.HttpConnectionManagerParams">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.calendar" update-strategy="container-managed"/>
+        <property name="connectionTimeout" value="30000"/>
+        <property name="defaultMaxConnectionsPerHost" value="300"/>
+        <property name="maxTotalConnections" value="500"/>
+        <property name="soTimeout" value="30000"/>
+        <property name="staleCheckingEnabled" value="true"/>
+    </bean>
+
+</beans>

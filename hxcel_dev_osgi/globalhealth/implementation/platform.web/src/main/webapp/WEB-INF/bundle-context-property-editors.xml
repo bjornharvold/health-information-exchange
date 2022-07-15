@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2006, Health XCEL Inc.. All Rights Reserved.
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool.xsd
+                           http://cxf.apache.org/jaxws
+                           http://cxf.apache.org/schemas/jaxws.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- custom property editors -->
+    <bean id="applicationConfigurationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="applicationService"/>
+        <property name="dataAccessMethod" value="getApplicationConfiguration"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="applicationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="applicationService"/>
+        <property name="dataAccessMethod" value="getApplication"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="countryPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="countryService"/>
+        <property name="dataAccessMethod" value="getCountry"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="organizationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="organizationService"/>
+        <property name="dataAccessMethod" value="getOrganization"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="organizationLicensePropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="applicationService"/>
+        <property name="dataAccessMethod" value="getOrganizationLicense"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="regulationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="countryService"/>
+        <property name="dataAccessMethod" value="getRegulation"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="resourceBundleEntryPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="applicationService"/>
+        <property name="dataAccessMethod" value="getResourceBundleEntry"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="userPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="userService"/>
+        <property name="dataAccessMethod" value="getUser"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+
+</beans>

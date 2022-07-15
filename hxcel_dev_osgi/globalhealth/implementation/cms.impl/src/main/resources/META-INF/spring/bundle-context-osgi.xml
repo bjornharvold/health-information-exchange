@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2006, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans:beans xmlns="http://www.springframework.org/schema/osgi"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/osgi
+                                 http://www.springframework.org/schema/osgi/spring-osgi-1.2.xsd
+                                 http://www.springframework.org/schema/osgi-compendium
+                                 http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd
+                                 http://www.springframework.org/schema/beans
+                                 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <service interface="com.hxcel.globalhealth.cms.spec.CmsService" ref="cmsService"/>
+
+    <!--
+
+    commenting this out until dm server has the right version ov v1.2 of spring dm modules
+    <osgix:cm-properties persistent-id="com.hxcel.globalhealth.cms" id="cmsConfig">
+        <beans:prop key="httpBaseUrl">http://localhost:8888</beans:prop>
+        <beans:prop key="username">admin</beans:prop>
+        <beans:prop key="password">admin</beans:prop>
+        <beans:prop key="authenticationEnabled">true</beans:prop>
+        <beans:prop key="connectionTimeout">30000</beans:prop>
+        <beans:prop key="max.connections.per.host">300</beans:prop>
+        <beans:prop key="default.max.connections.per.host">300</beans:prop>
+        <beans:prop key="max.total.connections">500</beans:prop>
+    </osgix:cm-properties>
+    -->
+</beans:beans>

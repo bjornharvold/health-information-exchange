@@ -1,0 +1,129 @@
+/*
+ * Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+ */
+
+package com.hxcel.globalhealth.domain.common.converter;
+
+import net.sf.dozer.util.mapping.converters.CustomConverter;
+import net.sf.dozer.util.mapping.MappingException;
+import net.sf.dozer.util.mapping.MapperIF;
+import com.hxcel.globalhealth.domain.common.model.AbstractEntity;
+import com.hxcel.globalhealth.domain.common.dto.AbstractDto;
+import com.hxcel.globalhealth.domain.utils.hibernate.GenericDAO;
+import com.hxcel.globalhealth.domain.utils.hibernate.PersistenceException;
+import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+/**
+ * User: bjorn
+ * Date: Dec 21, 2007
+ * Time: 3:28:27 PM
+ */
+public abstract class AbstractConverter implements CustomConverter {
+    private final static Logger log = LoggerFactory.getLogger(AbstractConverter.class);
+
+    public Object convert(Object destination, Object source, Class destClass, Class sourceClass) {
+        AbstractDto dto = null;
+        AbstractEntity entity = null;
+
+        if (source == null) {
+            return null;
+        }
+
+        try {
+            if (source instanceof AbstractEntity) {
+                entity = (AbstractEntity) source;
+                // check to see if the object already exists
+                if (destination == null) {
+                    try {
+                        dto = (AbstractDto) destClass.newInstance();
+                    } catch (InstantiationException e) {
+                        log.error("Cannot instantiate destination class: " + e.getMessage(), e);
+                        throw new MappingException("Cannot instantiate destination class: " + e.getMessage(), e);
+                    } catch (IllegalAccessException e) {
+                        log.error("Cannot instantiate destination class: " + e.getMessage(), e);
+                        throw new MappingException("Cannot instantiate destination class: " + e.getMessage(), e);
+                    }
+                } else {
+                    dto = (AbstractDto) destination;
+                }
+
+                // set abstractentity variables
+                dto.setId(entity.getId());
+                dto.setCreatedDate(entity.getCreatedDate());
+                dto.setLastUpdate(entity.getLastUpdate());
+                dto.setVersion(entity.getVersion());
+
+                dto = toDto(dto, (AbstractEntity) source, destClass, sourceClass);
+
+                // flatten entity here
+                dto.setId(entity.getId());
+
+                return dto;
+            } else if (source instanceof AbstractDto) {
+                dto = (AbstractDto) source;
+                if (StringUtils.isNotBlank(dto.getId())) {
+                    // load up entity from db
+                    entity = (AbstractEntity) dao.get(destClass, dto.getId());
+                } else if (destination == null) {
+                    try {
+                        entity = (AbstractEntity) destClass.newInstance();
+                    } catch (InstantiationException e) {
+                        log.error("Cannot instantiate destination class: " + e.getMessage(), e);
+                        throw new MappingException("Cannot instantiate destination class: " + e.getMessage(), e);
+                    } catch (IllegalAccessException e) {
+                        log.error("Cannot instantiate destination class: " + e.getMessage(), e);
+                        throw new MappingException("Cannot instantiate destination class: " + e.getMessage(), e);
+                    }
+                } else {
+                    entity = (AbstractEntity) destination;
+                }
+
+                entity = toEntity(entity, dto, destClass, sourceClass);
+
+                return entity;
+            } else {
+                throw new MappingException("Converter CustomConverter used incorrectly. Arguments passed in were: " + destination + " and " + source);
+            }
+        } catch (PersistenceException e) {
+            log.error("Could not retrieve permission entity from db: " + e.getMessage(), e);
+            throw new MappingException(e.getMessage(), e);
+        }
+    }
+
+    /**
+     * Needs to be implemented by the extending class
+     *
+     * @param dto
+     * @param source
+     * @param destClass
+     * @param sourceClass
+     * @return
+     */
+    protected abstract AbstractDto toDto(AbstractDto dto, AbstractEntity source, Class destClass, Class sourceClass);
+
+    /**
+     * Needs to be implemented by the extending class
+     *
+     * @param entity
+     * @param source
+     * @param destClass
+     * @param sourceClass
+     * @return
+     */
+    protected abstract AbstractEntity toEntity(AbstractEntity entity, AbstractDto source, Class destClass, Class sourceClass);
+
+
+    // Spring IoC
+    @Autowired
+    protected MapperIF mapperIF;
+
+    private GenericDAO dao;
+
+    public void setDao(GenericDAO dao) {
+        this.dao = dao;
+    }
+
+}

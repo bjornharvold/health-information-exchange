@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xmlns:util="http://www.springframework.org/schema/util"
+             xmlns:jee="http://www.springframework.org/schema/jee"
+             xmlns:lang="http://www.springframework.org/schema/lang"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xmlns:tool="http://www.springframework.org/schema/tool"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/security
+                           http://www.springframework.org/schema/security/spring-security-2.0.2.xsd">
+
+    <!-- This Spring Security-friendly PasswordEncoder implementation will -->
+    <!-- wrap the PasswordEncryptor instance so that it can be used from   -->
+    <!-- the security framework.                                           -->
+    <beans:bean id="passwordEncoder" class="org.jasypt.spring.security2.PasswordEncoder">
+        <beans:property name="passwordEncryptor" ref="passwordEncryptor"/>
+    </beans:bean>
+
+    <!-- spring security for the domain layer -->
+    <global-method-security secured-annotations="enabled">
+        <!-- AspectJ pointcut expression that locates our "post" method and applies security that way
+          <protect-pointcut expression="execution(* bigbank.*Service.post*(..))" access="ROLE_TELLER"/>
+          -->
+        <!-- in order to call any method on the PlatformManager interface you have to be an administrator -->
+        <protect-pointcut expression="execution(* com.hxcel.globalhealth.domain.platform.PlatformManager.*(..))" access="ROLE_ADMINISTRATOR"/>
+    </global-method-security>
+
+    <authentication-manager alias="authenticationManager"/>
+
+    <!-- spring-security uses our custom user service implementation -->
+    <authentication-provider user-service-ref="userManager">
+        <password-encoder ref="passwordEncoder"/>
+    </authentication-provider>
+
+    <!-- An access decision manager used by the business objects -->
+  <beans:bean id="accessDecisionManager" class="org.springframework.security.vote.AffirmativeBased">
+    <beans:property name="allowIfAllAbstainDecisions" value="false"/>
+    <beans:property name="decisionVoters">
+      <beans:list>
+        <beans:ref local="roleVoter"/>
+      </beans:list>
+    </beans:property>
+  </beans:bean>
+
+    <!-- An access decision voter that reads ROLE_* configuration settings -->
+  <beans:bean id="roleVoter" class="org.springframework.security.vote.RoleVoter">
+      <beans:property name="rolePrefix" value="ROLE_*"/>
+  </beans:bean>
+</beans:beans>

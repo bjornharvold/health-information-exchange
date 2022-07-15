@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2006, ADD Ltd. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:ctx="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/aop/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool.xsd
+                           http://www.springframework.org/schema/osgi-compendium
+                           http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
+
+    <bean id="mailService" class="com.hxcel.globalhealth.email.MailServiceImpl">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.email" update-strategy="container-managed"/>
+        <property name="velocityEngine" ref="velocityEngine"/>
+        <property name="mailMessage" ref="mailMessage"/>
+        <property name="mailSender" ref="mailSender"/>
+        <property name="mimeMessagePreparator" ref="mimeMessagePreparator"/>
+        <property name="mailEnabled" value="true"/>
+    </bean>
+
+    <bean id="mimeMessagePreparator" class="com.hxcel.globalhealth.email.MyMimeMessagePreparator">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.email" update-strategy="container-managed"/>
+        <property name="attachmentAssetRoot" value="/velocity/attachment/"/>
+        <property name="inlineAssetRoot" value="/velocity/inline/"/>
+        <property name="standardHeaders">
+            <map>
+                <entry key="Sender" value="Health XCEL, Inc."/>
+            </map>
+        </property>
+        <property name="from" value="do-not-reply@hxcel.com"/>
+        <property name="replyTo" value="do-not-reply@hxcel.com"/>
+    </bean>
+
+    <!-- Velocity is used among other things to create template emails -->
+    <!-- The template files should be bundles with the directory structure -->
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <props>
+                <prop key="resource.loader">class</prop>
+                <!-- via class -->
+                <prop key="class.resource.loader.class">
+                    org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+                </prop>
+                <prop key="runtime.log.logsystem.log4j.logger">com.hxcel.globalhealth.email</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Mailsender impl by Spring -->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.email" update-strategy="container-managed"/>
+        <property name="host" value="smtp.1and1.com"/>
+        <property name="port" value="25"/>
+        <property name="protocol" value="smtp"/>
+        <property name="username" value="bjorn@harvold.com"/>
+        <property name="password" value="lactose8"/>
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.connectiontimeout">15000</prop>
+                <prop key="mail.smtp.timeout">15000</prop>
+                <prop key="mail.smtp.auth">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Default mail message impl by Spring -->
+    <bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.email" update-strategy="container-managed"/>
+        <property name="from" value="do-not-reply@hxcel.com"/>
+        <property name="replyTo" value="do-not-reply@hxcel.com"/>
+    </bean>
+</beans>

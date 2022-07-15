@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://www.springframework.org/schema/jms
+                           http://www.springframework.org/schema/jms/spring-jms-2.5.xsd
+                           http://cxf.apache.org/jaxws
+                           http://cxf.apache.org/schemas/jaxws.xsd">
+
+    <context:annotation-config/>
+
+    <!-- ============================== WEB SERVICE CLIENT============================== -->
+    <!-- COMMON -->
+    <bean id="userWSClient" class="com.hxcel.globalhealth.web.ws.impl.UserWebServiceImpl" factory-bean="userWSFactory" factory-method="create"/>
+
+    <bean id="userWSFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+        <property name="serviceClass" value="com.hxcel.globalhealth.web.ws.UserWebService"/>
+        <property name="address" value="${webservice.test.url}/UserWebService"/>
+    </bean>
+
+    <bean id="referenceDataWSClient" class="com.hxcel.globalhealth.web.ws.impl.ReferenceDataWebServiceImpl" factory-bean="referenceDataWSFactory" factory-method="create"/>
+
+    <bean id="referenceDataWSFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+        <property name="serviceClass" value="com.hxcel.globalhealth.web.ws.ReferenceDataWebService"/>
+        <property name="address" value="${webservice.test.url}/ReferenceDataWebService"/>
+    </bean>
+    <!-- COMMON -->
+    <!-- PATIENT -->
+    <bean id="patientWSClient" class="com.hxcel.globalhealth.web.ws.impl.PatientWebServiceImpl" factory-bean="patientWSFactory" factory-method="create"/>
+
+    <bean id="patientWSFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+        <property name="serviceClass" value="com.hxcel.globalhealth.web.ws.PatientWebService"/>
+        <property name="address" value="${webservice.test.url}/PatientWebService"/>
+        <!--<property name="outInterceptors">
+            <list>
+                <ref bean="wss4jOutInterceptor"/>
+                <ref bean="saajOutInterceptor"/>
+            </list>
+        </property>-->
+    </bean>
+    <!-- PATIENT -->
+    <!-- PHR -->
+    <bean id="phrWSClient" class="com.hxcel.globalhealth.web.ws.impl.PhrWebServiceImpl" factory-bean="phrWSFactory" factory-method="create"/>
+
+    <bean id="phrWSFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+        <property name="serviceClass" value="com.hxcel.globalhealth.web.ws.PhrWebService"/>
+        <property name="address" value="${webservice.test.url}/PhrWebService"/>
+        <!--<property name="outInterceptors">
+            <list>
+                <ref bean="wss4jOutInterceptor"/>
+                <ref bean="saajOutInterceptor"/>
+            </list>
+        </property>-->
+    </bean>
+    <!-- PHR -->
+
+    <!-- ============================== WEB SERVICE CLIENT============================== -->
+    <!-- ============================== WSS4J ============================== -->
+    <!-- this is for ws-security -->
+    <bean id="wss4jOutInterceptor" class="org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor">
+        <constructor-arg>
+            <map>
+                <!-- All these constants are coming from the WSHandlerConstants and WSConstants for CXF-->
+                <entry key="action" value="UsernameToken Timestamp"/>
+                <entry key="timeToLive" value="100"/>
+                <entry key="precisionInMilliseconds" value="true"/>
+                <entry key="user" value="testUser4WS"/>
+                <entry key="passwordType" value="PasswordDigest"/>
+                <entry key="passwordCallbackClass" value="com.hxcel.globalhealth.web.utils.cxf.ClientPasswordCallback"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="saajOutInterceptor" class="org.apache.cxf.binding.soap.saaj.SAAJOutInterceptor"/>
+    <!-- ============================== WSS4J ============================== -->
+
+</beans>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.hxcel.globalhealth.service</groupId>
+        <artifactId>globalhealth-services</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth.service</groupId>
+    <artifactId>globalhealth-service-calendar</artifactId>
+    <packaging>jar</packaging>
+    <name>Globalhealth: Service Calendar (Java)</name>
+
+    <properties>
+        <spring.osgi.private>com.hxcel.globalhealth.service.calendar.*</spring.osgi.private>
+        <spring.osgi.export>!${spring.osgi.private}, com.hxcel.globalhealth.service.calendar</spring.osgi.export>
+        <spring.osgi.import>
+            com.springsource.javax.activation;version="${activation.version}",
+            com.springsource.org.apache.commons.httpclient;version="${commons.httpclient.version}"
+        </spring.osgi.import>
+        <spring.osgi.symbolic.name>${project.artifactId}</spring.osgi.symbolic.name>
+    </properties>
+
+    <dependencies>
+        <!-- osgi ready -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons.codec.version}</version> 
+        </dependency>
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>${commons.httpclient.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ical4j</groupId>
+            <artifactId>ical4j</artifactId>
+            <version>${ical4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osaf</groupId>
+            <artifactId>caldav4j</artifactId>
+            <version>${caldav4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>slide</groupId>
+            <artifactId>webdavlib</artifactId>
+            <version>${slide.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>${dom4j.version}</version>
+        </dependency>
+	</dependencies>
+</project>

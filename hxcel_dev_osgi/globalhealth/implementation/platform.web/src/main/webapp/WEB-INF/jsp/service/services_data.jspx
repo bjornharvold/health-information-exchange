@@ -1,0 +1,228 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:hxcel="urn:jsptagdir:/WEB-INF/tags/hxcel"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+<jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+<div id="servicesTable">
+<!-- alt text -->
+<spring:message var="altNew" code="entity.new" text="New"/>
+<spring:message var="altDelete" code="entity.delete" text="Delete"/>
+<spring:message var="altView" code="entity.view" text="View"/>
+
+<c:if test="${(bundleMessage != null and bundleMessage != '') or (param.bundleMessage != null and param.bundleMessage != '')}">
+	<div class="status_message"><h4>${bundleMessage} ${param.bundleMessage} <a href="javascript:replaceHtmlContent({id: 'servicesTable', url: '/secure/service/search.admin?index=0&amp;maxResults=10&amp;name=&amp;view=services.data'})">Click here to refresh page</a></h4></div>
+</c:if>
+
+<table class="list_table" cellpadding="0" cellspacing="2" border="0" width="100%">
+
+<thead>
+<tr>
+    <th width="8%" align="left" class="first_column"><spring:message code="service.bundle.date.modified" text="Modified Date"/></th>
+    <th width="34%" align="left"><spring:message code="service.bundle.name" text="Bundle Name"/></th>
+    <th width="34%" align="left"><spring:message code="service.symbolic.name" text="Symbolic Name"/></th>
+    <th width="8%"><spring:message code="service.bundle.version" text="Bundle Version"/></th>
+    <th width="8%"><spring:message code="service.bundle.state" text="State"/></th>
+    <th width="8%">&#160;</th>
+</tr>
+</thead>
+<tbody>
+
+<c:forEach items="${services}" var="bundle" varStatus="status">
+<c:choose>
+	<c:when test="${status.count % 2 == 0}">
+    	<c:set var="color" value="rowStyle1" scope="request"/>
+    </c:when>
+    <c:otherwise>
+    	<c:set var="color" value="rowStyle2" scope="request"/>
+    </c:otherwise>
+</c:choose>
+<tr class="${color}">
+	<td class="first_column"><fmt:formatDate value="${bundle.lastModified}" type="both" dateStyle="short" timeStyle="short" /></td>
+	<td class="row_title"><hxcel:truncate text="${bundle.bundleName}" maxLength="60"/></td>
+	<td><hxcel:truncate text="${bundle.symbolicName}" maxLength="75"/></td>
+	<td align="center"><hxcel:truncate text="${bundle.state}" maxLength="20"/></td>
+	<td align="center"><hxcel:truncate text="${bundle.version}" maxLength="20"/></td>
+	
+	<td align="right">
+		<a href="javascript:makeVisible('${bundle.bundleId}')" border="0"><img src="/images/icons/symbol_information_16.png" alt="start" width="16" height="16" border="0"/></a>&#160;
+		<c:choose>
+			<c:when test="${bundle.state != 'ACTIVE'}">
+				<a href="javascript:replaceHtmlContent({id: 'servicesTable', url: '/secure/service/start.admin?id=${bundle.bundleId}&amp;name=${name}&amp;index=${index}&amp;maxResults=${maxResults}'})" border="0"><img src="/images/icons/play_16.png" alt="start" width="16" height="16" border="0"/></a>&#160;
+				<img border="0" src="/images/icons/symbol_stop_grey_16.png" alt="stop" width="16" height="16"/>&#160;
+			</c:when>
+			<c:otherwise>
+				<img src="/images/icons/play_grey_16.gif" alt="started" width="16" height="16" border="0"/>&#160;
+				<a href="javascript:replaceHtmlContent({id: 'servicesTable', url: '/secure/service/stop.admin?id=${bundle.bundleId}&amp;name=${name}&amp;index=${index}&amp;maxResults=${maxResults}'})"><img border="0" src="/images/icons/symbol_stop_16.png" alt="stop" width="16" height="16"/></a>&#160;
+			</c:otherwise>
+		</c:choose>
+		<a href="javascript:bindFormLink({url: '/secure/service/upload.admin?id=${bundle.bundleId}', id: 'servicesTable', cssClass: 'jqmWindow'})"><img border="0" src="/images/icons/symbol_refresh_16.png" alt="stop" width="16" height="16"/></a>&#160;
+		<c:choose>
+			<c:when test="${bundle.state != 'UNINSTALLED'}">
+				<a href="javascript:replaceHtmlContent({id: 'servicesTable', url: '/secure/service/uninstall.admin?id=${bundle.bundleId}&amp;name=${name}&amp;index=${index}&amp;maxResults=${maxResults}'})"><img border="0" src="/images/icons/delete.png" alt="stop" width="16" height="16"/></a>
+			</c:when>
+			<c:otherwise>
+				<img border="0" src="/images/icons/delete_grey_16.png" alt="stop" width="16" height="16"/>
+			</c:otherwise>
+		</c:choose>
+    </td>
+</tr>
+<tr class="${color}">
+	<td colspan="6">
+	<table id="${bundle.bundleId}" width="100%" cellpadding="0" cellspacing="0" border="0" style="display:none;">
+		<tr>
+			<td>
+		<h2><spring:message code="service.bundle.information" text="Bundle Information"/></h2>
+		<ul>
+			<c:if test="${bundle.webContextPath != null and bundle.webContextPath != ''}">
+			<li><b><spring:message code="service.bundle.context.path" text="Context Path"/>:</b> ${bundle.webContextPath}</li>
+			</c:if>
+			<c:if test="${bundle.symbolicName != null and bundle.symbolicName != ''}">
+			<li><b><spring:message code="service.symbolic.name" text="Symbolic Name"/>:</b> ${bundle.symbolicName}</li>
+			</c:if>
+			<c:if test="${bundle.version != null and bundle.version != ''}">
+			<li><b><spring:message code="service.version" text="Version"/>:</b> ${bundle.version}</li>
+			</c:if>
+			<c:if test="${bundle.antVersion != null and bundle.antVersion != ''}">
+			<li><b><spring:message code="service.ant.version" text="Ant Version"/>:</b> ${bundle.antVersion}</li>
+			</c:if>
+			<c:if test="${bundle.archiverVersion != null and bundle.archiverVersion != ''}">
+			<li><b><spring:message code="service.archiver.version" text="Archiver Version"/>:</b> ${bundle.archiverVersion}</li>
+			</c:if>
+			<c:if test="${bundle.buildJdk != null and bundle.buildJdk != ''}">
+			<li><b><spring:message code="service.build.jdk" text="Build Jdk"/>:</b> ${bundle.buildJdk}</li>
+			</c:if>
+			<c:if test="${bundle.builtBy != null and bundle.builtBy != ''}">
+			<li><b><spring:message code="service.built.by" text="Built By"/>:</b> ${bundle.builtBy}</li>
+			</c:if>
+			<c:if test="${bundle.bundleActivator != null and bundle.bundleActivator != ''}">
+			<li><b><spring:message code="service.bundle.activator" text="Bundle Activator"/>:</b> ${bundle.bundleActivator}</li>
+			</c:if>
+			<c:if test="${bundle.bundleCopyright != null and bundle.bundleCopyright != ''}">
+			<li><b><spring:message code="service.bundle.copyright" text="Bundle Copyright"/>:</b> ${bundle.bundleCopyright}</li>
+			</c:if>
+			<c:if test="${bundle.bundleDescription != null and bundle.bundleDescription != ''}">
+			<li><b><spring:message code="service.bundle.description" text="Bundle Description"/>:</b> ${bundle.bundleDescription}</li>
+			</c:if>
+			<c:if test="${bundle.bundleDocUrl != null and bundle.bundleDocUrl != ''}">
+			<li><b><spring:message code="service.bundle.doc.url" text="Bundle Doc Url"/>:</b> ${bundle.bundleDocUrl}</li>
+			</c:if>
+			<c:if test="${bundle.bundleId != null and bundle.bundleId != ''}">
+			<li><b><spring:message code="service.bundle.id" text="Bundle Id"/>:</b> ${bundle.bundleId}</li>
+			</c:if>
+			<c:if test="${bundle.bundleLocalization != null and bundle.bundleLocalization != ''}">
+			<li><b><spring:message code="service.bundle.localization" text="Bundle Localization"/>:</b> ${bundle.bundleLocalization}</li>
+			</c:if>
+			<c:if test="${bundle.bundleManifestVersion != null and bundle.bundleManifestVersion != ''}">
+			<li><b><spring:message code="service.bundle.manifest.version" text="Bundle Manifest Version"/>:</b> ${bundle.bundleManifestVersion}</li>
+			</c:if>
+			<c:if test="${bundle.bundleName != null and bundle.bundleName != ''}">
+			<li><b><spring:message code="service.bundle.name" text="Bundle Name"/>:</b> ${bundle.bundleName}</li>
+			</c:if>
+			<c:if test="${bundle.bundleRequiredExecutionEnvironment != null and bundle.bundleRequiredExecutionEnvironment != ''}">
+			<li><b><spring:message code="service.bundle.required.execution.environment" text="Bundle Required Execution Environment"/>:</b> ${bundle.bundleRequiredExecutionEnvironment}</li>
+			</c:if>
+			<c:if test="${bundle.bundleVendor != null and bundle.bundleVendor != ''}">
+			<li><b><spring:message code="service.bundle.vendor" text="Bundle Vendor"/>:</b> ${bundle.bundleVendor}</li>
+			</c:if>
+			<c:if test="${bundle.bundleVersion != null and bundle.bundleVersion != ''}">
+			<li><b><spring:message code="service.bundle.version" text="Bundle Version"/>:</b> ${bundle.bundleVersion}</li>
+			</c:if>
+			<c:if test="${bundle.createdBy != null and bundle.createdBy != ''}">
+			<li><b><spring:message code="service.created.by" text="Created By"/>:</b> ${bundle.createdBy}</li>
+			</c:if>
+			<c:if test="${bundle.eclipseExtensibleApi != null and bundle.eclipseExtensibleApi != ''}">
+			<li><b><spring:message code="service.eclipse.extensible.api" text="Eclipse Extensible Api"/>:</b> ${bundle.eclipseExtensibleApi}</li>
+			</c:if>
+			<c:if test="${bundle.eclipseSystemBundle != null and bundle.eclipseSystemBundle != ''}">
+			<li><b><spring:message code="service.eclipse.system.bundle" text="Eclipse System Bundle"/>:</b> ${bundle.eclipseSystemBundle}</li>
+			</c:if>
+			<c:if test="${bundle.exportService != null and bundle.exportService != ''}">
+			<li><b><spring:message code="service.export.service" text="Export Service"/>:</b> ${bundle.exportService}</li>
+			</c:if>
+			<c:if test="${bundle.fragmentHost != null and bundle.fragmentHost != ''}">
+			<li><b><spring:message code="service.fragment.host" text="Fragment Host"/>:</b> ${bundle.fragmentHost}</li>
+			</c:if>
+			<c:if test="${bundle.implementationTitle != null and bundle.implementationTitle != ''}">
+			<li><b><spring:message code="service.implementation.title" text="Implementation Title"/>:</b> ${bundle.implementationTitle}</li>
+			</c:if>
+			<c:if test="${bundle.implementationVendor != null and bundle.implementationVendor != ''}">
+			<li><b><spring:message code="service.implementation.vendor" text="Implementation Vendor"/>:</b> ${bundle.implementationVendor}</li>
+			</c:if>
+			<c:if test="${bundle.implementationVersion != null and bundle.implementationVersion != ''}">
+			<li><b><spring:message code="service.implementation.version" text="Implementation Version"/>:</b> ${bundle.implementationVersion}</li>
+			</c:if>
+			<c:if test="${bundle.location != null and bundle.location != ''}">
+			<li><b><spring:message code="service.location" text="Location"/>:</b> ${bundle.location}</li>
+			</c:if>
+			<c:if test="${bundle.mainClass != null and bundle.mainClass != ''}">
+			<li><b><spring:message code="service.main.class" text="Main Class"/>:</b> ${bundle.mainClass}</li>
+			</c:if>
+			<c:if test="${bundle.manifestVersion != null and bundle.manifestVersion != ''}">
+			<li><b><spring:message code="service.manifest.version" text="Manifest Version"/>:</b> ${bundle.manifestVersion}</li>
+			</c:if>
+			<c:if test="${bundle.state != null and bundle.state != ''}">
+			<li><b><spring:message code="service.bundle.state" text="State"/>:</b> ${bundle.state}</li>
+			</c:if>
+		</ul>
+
+		<c:if test="${not empty bundle.registeredServices}">
+		<h2><spring:message code="service.bundle.registered.services" text="Registered Services"/></h2>
+		<ul>
+			<c:forEach items="${bundle.registeredServices}" var="service">
+			<li>
+				${service}
+			</li>
+			</c:forEach>
+		</ul>
+		</c:if>
+		
+		<c:if test="${not empty bundle.servicesInUse}">
+		<h2><spring:message code="service.bundle.services.in.use" text="In-Use Services"/></h2>
+		<ul>
+			<c:forEach items="${bundle.servicesInUse}" var="service">
+			<li>
+				${service}
+			</li>
+			</c:forEach>
+		</ul>
+		</c:if>
+		
+		<h2><spring:message code="service.exported.packages" text="Exported Packages"/></h2>
+		<ul>
+			<c:forEach items="${bundle.exportPackages}" var="pkg">
+			<li>
+				${pkg.package} ${pkg.version}
+			</li>
+			</c:forEach>
+		</ul>
+		
+		<h2><spring:message code="service.imported.packages" text="Imported Packages"/></h2>
+		<ul>
+			<c:forEach items="${bundle.importPackages}" var="pkg">
+			<li>
+				${pkg.package} ${pkg.version}
+			</li>
+			</c:forEach>
+		</ul>
+		</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</c:forEach>
+
+</tbody>
+</table>
+	<div class="paginator">
+            <hxcel:paginator id="servicesTable" url="/secure/service/search.admin" extraParameters="&amp;view=services.data" currentPage="${index}" rowsPerPage="${maxResults}" count="${count}"/>
+        </div>
+</div>
+</jsp:root>

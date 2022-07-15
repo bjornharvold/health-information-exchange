@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2006, ADD Ltd. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <bean id="mailService" class="com.hxcel.globalhealth.service.email.impl.MailServiceImpl">
+        <property name="velocityEngine" ref="velocityEngine"/>
+        <property name="mailMessage" ref="mailMessage"/>
+        <property name="mailSender" ref="mailSender"/>
+        <property name="mimeMessagePreparator" ref="mimeMessagePreparator"/>
+        <property name="mailEnabled" value="${mail.enabled}"/>
+    </bean>
+
+    <bean id="mimeMessagePreparator" class="com.hxcel.globalhealth.service.email.MyMimeMessagePreparator">
+        <property name="attachmentAssetRoot" value="${velocity.attachment}"/>
+        <property name="inlineAssetRoot" value="${velocity.inline}"/>
+        <property name="standardHeaders">
+            <map>
+                <entry key="Sender" value="Health XCEL, Inc"/>
+            </map>
+        </property>
+        <property name="from" value="${mail.from}"/>
+        <property name="replyTo" value="${mail.from}"/>
+    </bean>
+
+    <!-- Velocity is used among other things to create template emails -->
+    <!-- The template files should be bundles with the directory structure -->
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <props>
+                <prop key="resource.loader">class</prop>
+                <!-- via class -->
+                <prop key="class.resource.loader.class">
+                    org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+                </prop>
+                <prop key="runtime.log.logsystem.log4j.logger">com.hxcel.globalhealth.service.email</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Mailsender impl by Spring -->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="${mail.host}"/>
+        <property name="port" value="${mail.smtp.port}"/>
+        <property name="protocol" value="${mail.protocol}"/>
+        <property name="username" value="${mail.username}"/>
+        <property name="password" value="${mail.password}"/>
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.connectiontimeout">${mail.connection.timeout}</prop>
+                <prop key="mail.smtp.timeout">${mail.timeout}</prop>
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Default mail message impl by Spring -->
+    <bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage">
+        <property name="from" value="${mail.from}"/>
+        <property name="replyTo" value="${mail.from}"/>
+    </bean>
+</beans>

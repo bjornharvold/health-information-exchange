@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+    <!-- Now we expect all transactional info to be on the service beans -->
+    <tx:annotation-driven/>
+    
+    <!-- custom interceptor for persistence layer -->
+    <bean id="entityInterceptor" class="com.hxcel.globalhealth.domain.utils.hibernate.interceptor.EntityInterceptor"/>
+
+    <!-- custom project naming strategy for db tables -->
+    <bean id="namingStrategy" class="com.hxcel.globalhealth.domain.utils.hibernate.NamingStrategy">
+        <property name="tablePrefix" value="g"/>
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
+          scope="singleton">
+        <property name="dataSource" ref="lazyDataSourceProxy"/>
+        <property name="entityInterceptor" ref="entityInterceptor"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.hxcel.globalhealth.domain.patient.model.Patient</value>
+                <value>com.hxcel.globalhealth.domain.common.model.SystemAuditLogger</value>
+                <value>com.hxcel.globalhealth.domain.common.model.Country</value>
+                <value>com.hxcel.globalhealth.domain.common.model.Contact</value>
+                <value>com.hxcel.globalhealth.domain.common.model.Creditcard</value>
+                <value>com.hxcel.globalhealth.domain.common.model.Email</value>
+                <value>com.hxcel.globalhealth.domain.common.model.Image</value>
+                <value>com.hxcel.globalhealth.domain.common.model.InstantMessage</value>
+                <value>com.hxcel.globalhealth.domain.common.model.Location</value>
+                <value>com.hxcel.globalhealth.domain.common.model.LockedUser</value>
+                <value>com.hxcel.globalhealth.domain.common.model.Manager</value>
+                <value>com.hxcel.globalhealth.domain.common.model.News</value>
+                <value>com.hxcel.globalhealth.domain.common.model.Permission</value>
+                <value>com.hxcel.globalhealth.domain.common.model.Phone</value>
+                <value>com.hxcel.globalhealth.domain.common.model.Role</value>
+                <value>com.hxcel.globalhealth.domain.common.model.User</value>
+                <value>com.hxcel.globalhealth.domain.common.model.UserInfo</value>
+                <value>com.hxcel.globalhealth.domain.common.model.UserRole</value>
+                <value>com.hxcel.globalhealth.domain.emr.model.Diagnosis</value>
+                <value>com.hxcel.globalhealth.domain.emr.model.Emr</value>
+                <value>com.hxcel.globalhealth.domain.emr.model.EmrDiagnosis</value>
+                <value>com.hxcel.globalhealth.domain.emr.model.EmrFile</value>
+                <value>com.hxcel.globalhealth.domain.emr.model.BasicEmrEntry</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.AdvanceDirective</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.Allergy</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.AlternativeTreatment</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.Dental</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.Employer</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.FamilyHistory</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.Hospitalized</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.Immunization</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.Insurance</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.MedicalCondition</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.Medication</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.PersonalProfile</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.PhrContact</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.PhrLocation</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.Phr</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.PhrFile</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.Practitioner</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.Surgery</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.TravelImmunization</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.VisionContactLenses</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.VisionExam</value>
+                <value>com.hxcel.globalhealth.domain.phr.model.VisionGlasses</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.Application</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.ApplicationConfiguration</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.ApplicationRole</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.License</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.Organization</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.OrganizationLicense</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.OrganizationUser</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.OrganizationUserRole</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.Regulation</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.RegulationOverride</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntry</value>
+                <value>com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntryOverride</value>
+                <value>com.hxcel.globalhealth.domain.professional.model.Professional</value>
+                <value>com.hxcel.globalhealth.domain.professional.model.ProfessionalSettings</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.Association</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.Blog</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.BlogEntry</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.Certification</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.Group</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.ProfessionalProfile</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.Publication</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.PublicProfile</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.Recommendation</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.Specialty</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.Relationship</value>
+                <value>com.hxcel.globalhealth.domain.socialnetwork.model.Tag</value>
+            </list>
+        </property>
+        <property name="namingStrategy" ref="namingStrategy"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${hibernate.showsql}</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+
+                <!--<prop key="hibernate.cache.provider_class">com.tangosol.coherence.hibernate.CoherenceCacheProvider</prop>-->
+                <prop key="hibernate.cache.use_query_cache">true</prop>
+                <prop key="hibernate.cache.use_minimal_puts">true</prop>
+                <prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop>
+                <prop key="hibernate.current_session_context_class">thread</prop>
+            </props>
+        </property>
+        <property name="schemaUpdate" value="true"/>
+    </bean>
+
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- Parent bean for all our DAOs -->
+    <bean id="hibSupport" class="org.springframework.orm.hibernate3.support.HibernateDaoSupport" abstract="true"
+          lazy-init="true">
+        <property name="hibernateTemplate" ref="hibernateTemplate"/>
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!--<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager"/>-->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+
+    </bean>
+
+    <bean id="hibInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,130 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+
+    <spring:message var="option1" code="form.select" text="-- Please Select --"/>
+
+    <spring-form:form id="form" commandName="userForm" action="/secure/user/edit.admin" method="POST">
+
+        <table cellpadding="0" cellspacing="2" border="0" width="100%">
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="username" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td width="150" class="form_text"><spring:message code="user.username" text="Username"/>:&#160;</td>
+                <td width="250"><spring-form:input path="username" cssClass="textInput"/><span class="required">&#160;*</span></td>
+            </tr>
+            <c:if test="${userForm.id == null or userForm.id == ''}">
+                <tr>
+                    <td>&#160;</td>
+                    <td><spring-form:errors path="password" cssClass="errors"/></td>
+                </tr>
+                <tr>
+                    <td class="form_text"><spring:message code="user.password" text="Password"/>:&#160;</td>
+                    <td><spring-form:input path="password" cssClass="textInput"/><span class="required">&#160;*</span></td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><spring-form:errors path="passwordConfirm" cssClass="errors"/></td>
+                </tr>
+                <tr>
+                    <td class="form_text"><spring:message code="user.password.confirm" text="Confirm password"/>:&#160;</td>
+                    <td><spring-form:input path="passwordConfirm" cssClass="textInput"/><span class="required">&#160;*</span></td>
+                </tr>
+            </c:if>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="userInfo.salutation" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="user.salutation" text="Salutation"/>:&#160;</td>
+                <td>
+                    <spring-form:select path="userInfo.salutation" cssClass="textInput">
+                        <spring-form:option value="" label="${option1}"/>
+                        <spring-form:options items="${salutations}"/>
+                    </spring-form:select><span class="required">&#160;*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="userInfo.firstName" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="user.name.first" text="First name"/>:&#160;</td>
+                <td><spring-form:input path="userInfo.firstName" cssClass="textInput"/><span class="required">&#160;*</span></td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="userInfo.middleName" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="user.name.middle" text="Middle name"/>:&#160;</td>
+                <td><spring-form:input path="userInfo.middleName" cssClass="textInput"/><span class="required">&#160;*</span></td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="userInfo.lastName" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="user.name.last" text="Last name"/>:&#160;</td>
+                <td><spring-form:input path="userInfo.lastName" cssClass="textInput"/><span class="required">&#160;*</span></td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="userInfo.sex" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="user.sex" text="Gender"/>:&#160;</td>
+                <td>
+                    <spring-form:select path="userInfo.sex" cssClass="textInput">
+                        <spring-form:option value="" label="${option1}"/>
+                        <spring-form:options items="${sexes}"/>
+                    </spring-form:select><span class="required">&#160;*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="country" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="organization.country" text="Country"/>:&#160;</td>
+                <td>
+                    <spring-form:select path="country" cssClass="textInput">
+                        <spring-form:option value="${option1}"/>
+                        <spring-form:options items="${countries}" itemLabel="statusCode" itemValue="id"/>
+                    </spring-form:select><span class="required">&#160;*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="userStatus" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="user.status" text="Status"/>:&#160;</td>
+                <td>
+                    <spring-form:select path="userStatus" cssClass="textInput">
+                        <spring-form:option value="" label="${option1}"/>
+                        <spring-form:options items="${statuses}"/>
+                    </spring-form:select><span class="required">&#160;*</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <spring-form:hidden path="id"/>
+                </td>
+            </tr>
+        </table>
+
+    </spring-form:form>
+
+</jsp:root>

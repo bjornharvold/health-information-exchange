@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.hxcel.globalhealth.service</groupId>
+        <artifactId>globalhealth-services</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth.service</groupId>
+    <artifactId>globalhealth-service-cms</artifactId>
+    <packaging>jar</packaging>
+    <name>Globalhealth: Service CMS (Java)</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>globalhealth-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>${commons.httpclient.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>rhino</groupId>
+            <artifactId>js</artifactId>
+            <version>${rhino.javascript.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>

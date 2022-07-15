@@ -1,0 +1,44 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div style="height:20px;float:left;padding-right:5px;margin-top:12px;color:#72716e;">
+        <b>${ol.license.application.name}</b>
+    </div>
+    
+    <div id="tertiaryNavbar_${ol.id}">
+        <ul>
+            <li><a href="/secure/organization/licensed/application/view.admin?view=organization.licensed.application.data&amp;id=${ol.id}&amp;organizationId=${organization.id}&amp;platform=${ol.license.application.platform}"><span><spring:message code="page.overview.name" text="Overview"/></span></a></li>
+            <li><a href="/secure/organization/licensed/application/overrides/search.admin?id=${ol.id}&amp;organizationId=${organization.id}&amp;platform=${ol.license.application.platform}"><span><spring:message code="page.licensed.application.configuration.overrides" text="Configuration overrides"/></span></a></li>
+            <li><a href="/secure/organization/licensed/application/resourcebundle/overrides/search.admin?id=${ol.id}&amp;organizationId=${organization.id}&amp;platform=${ol.license.application.platform}"><span><spring:message code="page.licensed.application.resourcebundle.overrides" text="Internationalization overrides"/></span></a></li>
+        </ul>
+
+        <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+            <div class="closeSecondaryTab"><a href="javascript:removeSecondaryTab({label: '${ol.license.application.name}', id: 'secondaryNavbar_${organization.id}'})"><spring:message code="entity.close" text="CLOSE"/></a></div>
+        </security:authorize>
+    </div>
+
+    <!-- initialize secondary navbar -->
+    <script type="text/javascript">
+        var tertiaryOrganizationTabs = "#tertiaryNavbar_${ol.id} > ul";
+        var options = {fx: {
+            height: 'toggle',
+            opacity: 'toggle',
+            duration: 'fast'
+        },
+            add: function(e, ui) {
+                $(tertiaryOrganizationTabs).tabs("select", "#" + ui.panel.id);
+            }};
+
+        $(tertiaryOrganizationTabs).tabs(options);
+        
+    </script>
+</jsp:root>

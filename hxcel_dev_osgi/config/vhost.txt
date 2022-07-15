@@ -1,0 +1,1 @@
+/usr/local/psa/admin/sbin/websrvmng --reconfigure-vhost --vhost-name=<domain_name>

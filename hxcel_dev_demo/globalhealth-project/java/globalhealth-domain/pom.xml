@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.hxcel.globalhealth</groupId>
+        <artifactId>globalhealth-java</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>globalhealth-domain</artifactId>
+    <packaging>jar</packaging>
+    <name>Globalhealth: Domain (Java)</name>
+
+    <dependencies>
+        <!-- osgi ready -->
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>globalhealth-persistence</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>globalhealth-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hxcel.globalhealth.service</groupId>
+            <artifactId>globalhealth-service-cms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hxcel.globalhealth.service</groupId>
+            <artifactId>globalhealth-service-email</artifactId>
+        </dependency>
+        <!-- not ready yet
+        <dependency>
+            <groupId>com.hxcel.globalhealth.service</groupId>
+            <artifactId>globalhealth-service-calendar</artifactId>
+        </dependency>
+        -->
+        <!-- custom made osgi bundles from 3rd party -->
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+            <version>${dozer.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>springmodules</groupId>
+            <artifactId>springmodules</artifactId>
+            <version>${springmodules.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-annotations</artifactId>
+            <version>${hibernate.annotations.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-commons-annotations</artifactId>
+            <version>${hibernate.common.annotations.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate.validator.version}</version>
+        </dependency>
+
+        <!-- spring security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core-tiger</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency> 
+
+        <!-- used by data creators and parsing xml -->
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>${jaxen.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>org.aspectj-library</artifactId>
+            <version>${aspectj.version}</version>
+            <type>pom</type>
+        </dependency>
+
+    </dependencies>
+</project>

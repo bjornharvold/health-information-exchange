@@ -1,0 +1,53 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+
+    <spring-form:form id="form" commandName="applicationConfigurationForm" action="/secure/application/configuration/edit.admin" method="POST">
+
+        <table cellpadding="0" cellspacing="2" border="0" width="100%">
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="key" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td width="100" class="form_text"><spring:message code="configuration.key" text="Key"/>:&#160;</td>
+                <td width="250"><spring-form:input path="key" cssClass="textInput"/><span class="required">&#160;*</span></td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="value" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="configuration.value" text="Value"/>:&#160;</td>
+                <td><spring-form:input path="value" cssClass="textInput"/><span class="required">&#160;*</span></td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="exportable" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="configuration.exportable" text="Exportable"/>:&#160;</td>
+                <td>
+                    <spring-form:radiobutton path="exportable" value="true"/> <spring:message code="form.field.value.yes" text="Yes"/>,
+                    <spring-form:radiobutton path="exportable" value="false"/> <spring:message code="form.field.value.no" text="No"/>
+                    <span class="required">&#160;*</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><spring-form:hidden path="id"/>
+                    <input type="hidden" name="applicationId" value="${param.applicationId}"/></td>
+
+            </tr>
+        </table>
+    </spring-form:form>
+
+</jsp:root>

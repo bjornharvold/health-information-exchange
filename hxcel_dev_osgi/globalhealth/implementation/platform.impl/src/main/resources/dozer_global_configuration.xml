@@ -1,0 +1,120 @@
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+        "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd
+  -->
+<!DOCTYPE mappings SYSTEM "dozerbeanmapping.dtd">
+
+<mappings>
+    <configuration>
+        <stop-on-errors>false</stop-on-errors>
+        <date-format>MM/dd/yyyy HH:mm</date-format>
+        <wildcard>true</wildcard>
+        <trim-strings>false</trim-strings>
+
+        <custom-converters>
+            <!-- ======================== COMMON ======================== -->
+            <converter type="com.hxcel.globalhealth.platform.converter.EmailCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.Email</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.EmailDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.InstantMessageCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.InstantMessage</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.InstantMessageDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.LocationCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.Location</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.LocationDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.PhoneCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.Phone</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.PhoneDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.UserInfoCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.UserInfo</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.UserInfoDto</class-b>
+            </converter>
+            <!-- ======================== COMMON ======================== -->
+
+            <converter type="com.hxcel.globalhealth.platform.converter.ApplicationConfigurationCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.ApplicationConfiguration</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.ApplicationConfigurationDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.ApplicationConfigurationOverrideCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.ApplicationConfigurationOverride</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.ApplicationConfigurationOverrideDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.ApplicationCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.Application</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.ApplicationDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.ApplicationRoleCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.ApplicationRole</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.ApplicationRoleDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.LicenseCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.License</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.LicenseDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.OrganizationCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.Organization</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.OrganizationDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.OrganizationLicenseCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.OrganizationLicense</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.OrganizationLicenseDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.OrganizationUserCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.OrganizationUser</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.OrganizationUserDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.RegulationCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.Regulation</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.RegulationDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.RegulationOverrideCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.RegulationOverride</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.RegulationOverrideDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.ResourceBundleEntryCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.ResourceBundleEntry</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.ResourceBundleEntryDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.ResourceBundleEntryOverrideCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.ResourceBundleEntryOverride</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.ResourceBundleEntryOverrideDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.RoleCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.Role</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.RoleDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.UserCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.User</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.UserDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.platform.converter.UserRoleCustomConverter">
+                <class-a>com.hxcel.globalhealth.platform.model.UserRole</class-a>
+                <class-b>com.hxcel.globalhealth.platform.dto.UserRoleDto</class-b>
+            </converter>
+        </custom-converters>
+
+    </configuration>
+</mappings>

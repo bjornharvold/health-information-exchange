@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.hxcel.globalhealth</groupId>
+        <artifactId>implementation</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>phr.impl</artifactId>
+    <packaging>bundle</packaging>
+    <name>Personal Health Record Implementation</name>
+
+    <properties>
+
+        <export.package>
+            com.hxcel.globalhealth.phr;version="${project.version}"
+        </export.package>
+        <import.package>
+            org.slf4j,org.springframework.beans.factory;version="2.5",
+            org.springframework.beans.factory.annotation;version="2.5",
+            org.springframework.context;version="2.5",
+            org.springframework.core.io;version="2.5",
+            org.springframework.core.io.support;version="2.5",
+            org.springframework.util;version="2.5"
+        </import.package>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>common.impl</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

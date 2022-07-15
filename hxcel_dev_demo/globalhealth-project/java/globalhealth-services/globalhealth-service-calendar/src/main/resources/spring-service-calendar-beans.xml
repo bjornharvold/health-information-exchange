@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2006, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+    <!-- This is the guy to use if you want stuff to or from ICS xCAL -->
+    <bean id="iCalXCalManager" class="com.hxcel.globalhealth.service.calendar.impl.ICalXCalHandlerImpl">
+        <property name="XCal2ICalTransformer" ref="xCal2ICalTransformer"/>
+    </bean>
+
+    <bean id="xCal2ICalTransformer" class="com.hxcel.globalhealth.service.calendar.impl.XCal2ICalTransformerImpl" init-method="init">
+        <property name="xslTransformer" value="classpath:/xCal2iCal-1-3.xslt"/>
+    </bean>
+
+    <bean id="cosmoParent" class="com.hxcel.globalhealth.service.calendar.AbstractCosmoManager" abstract="true">
+        <property name="cosmoHost" value="${cosmo.host}"/>
+        <property name="cosmoPort" value="${cosmo.port}"/>
+        <property name="cosmoRootUser" value="${cosmo.username}"/>
+        <property name="cosmoRootPassword" value="${cosmo.password}"/>
+    </bean>
+
+    <bean id="cosmoUserManager" class="com.hxcel.globalhealth.service.calendar.CosmoUserManager" parent="cosmoParent">
+        <property name="cosmoRemoveUserPath" value="/cosmo/cmp/user"/>
+        <property name="cosmoSignupUserPath" value="/cosmo/cmp/signup"/>
+
+    </bean>
+
+    <bean id="cosmoCalDAVManager" class="com.hxcel.globalhealth.service.calendar.CosmoCalDAVManager" parent="cosmoParent">
+        <property name="defaultBasePath" value="/cosmo/home"/>
+        <property name="defaultCollection" value="default"/>
+    </bean>
+
+    <bean id="calDavMethodFactory" class="org.osaf.caldav4j.methods.CalDAV4JMethodFactory">
+        <property name="prodID" value="${cal.prod.id}"/>
+        <property name="calendarValidatingOutputter" value="true"/>
+    </bean>
+</beans>

@@ -1,0 +1,9 @@
+#
+# Copyright (c) 2006, Health XCEL Inc.. All Rights Reserved.
+#
+hibernate.showsql=false
+jdbc.url=jdbc:postgresql://localhost/globalhealth_db
+jdbc.username=ENC(VdKmZHLCsaLuMFzyOMSEGcAbb9K4/AFbPcP/CPaNuWY=)
+jdbc.password=ENC(TLiHa850+srgvEaedu63QXSfZTIHXgEM2y5cGSjPd44=)
+jdbc.driver=org.postgresql.Driver
+hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect

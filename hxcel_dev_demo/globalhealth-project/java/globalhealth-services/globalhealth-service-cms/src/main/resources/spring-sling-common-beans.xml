@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2006, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+    <!-- http client that all services are dependent on -->
+    <!-- common http client bean -->
+    <bean id="httpClient" class="org.apache.commons.httpclient.HttpClient">
+        <property name="connectionTimeout" value="${connection.timeout.milliseconds}"/>
+        <property name="httpConnectionFactoryTimeout" value="${connection.timeout.milliseconds}"/>
+        <property name="timeout" value="${connection.timeout.milliseconds}"/>
+        <property name="strictMode" value="true"/>
+        <property name="params" ref="httpClientParams"/>
+        <property name="httpConnectionManager" ref="httpConnectionManager"/>
+    </bean>
+
+    <bean id="httpClientParams" class="org.apache.commons.httpclient.params.HttpClientParams">
+        <property name="connectionManagerTimeout" value="${connection.timeout.milliseconds}"/>
+        <property name="contentCharset" value="UTF-8"/>
+        <property name="uriCharset" value="UTF-8"/>
+        <property name="soTimeout" value="${connection.timeout.milliseconds}"/>
+        <property name="version">
+            <bean class="org.apache.commons.httpclient.HttpVersion">
+                <constructor-arg value="1"/>
+                <constructor-arg value="1"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="httpConnectionManager" class="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager">
+        <property name="params" ref="httpConnectionManagerParams"/>
+        <property name="maxConnectionsPerHost" value="${default.max.connections.per.host}"/>
+        <property name="maxTotalConnections" value="${max.total.connections}"/>
+    </bean>
+
+    <bean id="httpConnectionManagerParams" class="org.apache.commons.httpclient.params.HttpConnectionManagerParams">
+        <property name="connectionTimeout" value="${connection.timeout.milliseconds}"/>
+        <property name="defaultMaxConnectionsPerHost" value="${default.max.connections.per.host}"/>
+        <property name="maxTotalConnections" value="${max.total.connections}"/>
+        <property name="soTimeout" value="${connection.timeout.milliseconds}"/>
+        <property name="staleCheckingEnabled" value="true"/>
+    </bean>
+</beans>

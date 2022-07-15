@@ -1,0 +1,80 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <c:choose>
+        <c:when test="${platform == true}">
+            <c:set var="tableId" value="${organization.id}_platformLicenseTable"/>
+        </c:when>
+        <c:otherwise>
+            <c:set var="tableId" value="${organization.id}_applicationLicenseTable"/>
+        </c:otherwise>
+    </c:choose>
+
+    <div id="${tableId}">
+        <table cellpadding="2" cellspacing="0" border="0" width="100%" class="list_table">
+            <thead>
+                <tr>
+                    <th align="left" width="10%" class="first_column"><spring:message code="entity.date.created" text="Created"/></th>
+                    <th width="10%" align="left"><spring:message code="organization.application.license.details" text="License details"/></th>
+                    <th width="10%" align="left"><spring:message code="application.name" text="Name"/></th>
+                    <th width="10%" align="left"><spring:message code="application.owner" text="Owner"/></th>
+                    <th width="2%" align="left"><spring:message code="application.version" text="Version"/></th>
+                    <th width="2%">&#160;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:choose>
+                    <c:when test="${empty applications}">
+                        <tr>
+                            <td align="center" height="350" colspan="6">
+                                <spring:message code="entity.empty" text="No records have been created for this section"/>
+                            </td>
+                        </tr>
+                    </c:when>
+                    <c:otherwise>
+                        <!-- here are apps the organization owns -->
+                        <c:forEach items="${applications}" var="ol" varStatus="status">
+                            <c:choose>
+                                <c:when test="${status.count % 2 == 0}">
+                                    <c:set var="color" value="rowStyle1" scope="request"/>
+                                </c:when>
+                                <c:otherwise>
+                                    <c:set var="color" value="rowStyle2" scope="request"/>
+                                </c:otherwise>
+                            </c:choose>
+                            <tr class="${color}">
+                                <td class="first_column"><fmt:formatDate value="${ol.createdDate}" dateStyle="long"/></td>
+                                <td>
+                                    ${ol.license.name} - ${ol.license.licenseType}
+                                </td>
+
+                                <td class="row_title">${ol.license.application.name}</td>
+                                <td>${ol.license.application.owner.name}</td>
+                                <td>${ol.license.application.appVersion}</td>
+                                <td align="right">
+                                    <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                                        <a href="javascript:addSecondaryTab({ url: '/secure/organization/licensed/application/view.admin?id=${ol.id}&amp;organizationId=${organization.id}&amp;platform=${platform}', id: 'secondaryNavbar_${organization.id}', label: '${ol.license.application.name}'} )"><img src="/images/icons/newtab.png" alt="${altView}" title="${altView}" border="0"/></a>
+                                    </security:authorize>&#160;
+                                    <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                                        <a href="javascript:replaceHtmlContent({url: '/secure/organization/licensed/application/delete.admin?id=${ol.id}&amp;view=organization.licensed.applications.data&amp;organizationId=${organization.id}&amp;platform=${platform}', id: '${tableId}'})" title="${altDelete}">
+                                            <img src="/images/icons/delete.png" alt="${altDelete}" border="0"/>
+                                        </a>
+                                    </security:authorize>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </c:otherwise>
+                </c:choose>
+            </tbody>
+        </table>
+    </div>
+</jsp:root>

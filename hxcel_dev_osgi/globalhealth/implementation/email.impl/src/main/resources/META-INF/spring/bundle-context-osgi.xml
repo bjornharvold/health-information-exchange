@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2006, Health XCEL Inc.. All Rights Reserved.
+  -->
+<beans:beans xmlns="http://www.springframework.org/schema/osgi"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/osgi
+                                 http://www.springframework.org/schema/osgi/spring-osgi-1.2.xsd
+                                 http://www.springframework.org/schema/osgi-compendium
+                                 http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd
+                                 http://www.springframework.org/schema/beans
+                                 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <service interface="com.hxcel.globalhealth.email.spec.MailService" ref="mailService"/>
+
+    <osgix:cm-properties persistent-id="com.hxcel.globalhealth.email" id="mailConfig">
+        <beans:prop key="mail.host">smtp.1and1.com</beans:prop>
+        <beans:prop key="mail.protocol">smtp</beans:prop>
+        <beans:prop key="mail.smtp.port">25</beans:prop>
+        <beans:prop key="mail.smtp.auth">true</beans:prop>
+        <beans:prop key="mail.username">bjorn@harvold.com</beans:prop>
+        <beans:prop key="mail.password">lactose8</beans:prop>
+        <beans:prop key="mail.timeout">15000</beans:prop>
+        <beans:prop key="mail.connection.timeout">15000</beans:prop>
+        <beans:prop key="mail.from">do-not-reply@hxcel.com</beans:prop>
+        <beans:prop key="mail.sender">Health XCEL, Inc</beans:prop>
+        <beans:prop key="mail.enabled">true</beans:prop>
+        <beans:prop key="velocity.attachment">/velocity/attachment/</beans:prop>
+        <beans:prop key="velocity.inline">/velocity/inline/</beans:prop>
+    </osgix:cm-properties>
+
+</beans:beans>

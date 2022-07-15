@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:cxf="http://cxf.apache.org/core"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://www.springframework.org/schema/jms
+                           http://www.springframework.org/schema/jms/spring-jms-2.5.xsd
+                           http://cxf.apache.org/jaxws
+                           http://cxf.apache.org/schemas/jaxws.xsd
+                           http://cxf.apache.org/core
+                           http://cxf.apache.org/schemas/core.xsd">
+
+    <!-- required cxf ws imports -->
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+
+    <!--
+        <bean id="aegisDatabinding" class="org.apache.cxf.aegis.databinding.AegisDatabinding"/>
+    -->
+    <bean id="serviceFactory" class="org.apache.cxf.jaxws.support.JaxWsServiceFactoryBean"/>
+
+    <!-- this is to fix a current bug in cxf v2.0.3  caused because of context:annotation-config above-->
+    <!--<util:list id="activationNamespaces" value-type="java.lang.String"/>-->
+
+    <cxf:bus>
+        <cxf:features>
+            <cxf:logging/>
+        </cxf:features>
+    </cxf:bus>
+
+    <!-- ============================== WSS4J ============================== -->
+    <!-- these three beans below are for ws-security -->
+    <bean id="wss4jInInterceptor" class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor">
+        <constructor-arg>
+            <map>
+                <!-- All these constants are coming from the WSHandlerConstants and WSConstants for CXF-->
+                <entry key="action" value="UsernameToken Timestamp"/>
+                <entry key="timeToLive" value="100"/>
+                <entry key="precisionInMilliseconds" value="true"/>
+                <entry key="user" value="ws-client"/>
+                <entry key="passwordType" value="PasswordDigest"/>
+                <!--<entry key="passwordCallbackClass" value="com.hxcelglobalhealth.domain.utils.cxf.ServerPasswordCallback"/>-->
+                <entry key="passwordCallbackRef" value-ref="wss4jPasswordCallback"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="saajInInterceptor" class="org.apache.cxf.binding.soap.saaj.SAAJInInterceptor"/>
+
+    <bean id="validateUserTokenInterceptor" class="com.hxcel.globalhealth.web.utils.cxf.ValidateUserTokenInterceptor">
+        <constructor-arg value="post-protocol"/>
+    </bean>
+
+    <bean id="wss4jPasswordCallback" class="com.hxcel.globalhealth.web.utils.cxf.ServerPasswordCallback">
+
+    </bean>
+    <!-- ============================== WSS4J ============================== -->
+
+    <!-- All our web service extend this bean -->
+    <bean id="abstractWebService" class="com.hxcel.globalhealth.web.ws.AbstractWebService" abstract="true">
+        <property name="vendorName" value="${application.vendor}"/>
+        <property name="vendorId" value="${application.vendor.id}"/>
+        <property name="version" value="${application.version}"/>
+    </bean>
+</beans>

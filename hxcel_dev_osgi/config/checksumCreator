@@ -1,0 +1,12 @@
+#! /bin/bash
+
+# rm the old checksum files
+find . -type f | egrep '.(md5|sha1)$' | xargs rm -f
+
+# make md5 sum files
+for f in `find . -type f | egrep '.(jar|xml|pom)$' `; do  
+md5sum $f | awk '{print $1}' > $f.md5
+sha1sum $f | awk '{print $1}' > $f.sha1
+echo "Creating: $f.md5"
+echo "Creating: $f.sha1"
+done

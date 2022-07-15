@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/security
+                           http://www.springframework.org/schema/security/spring-security-2.0.2.xsd">
+
+    <!-- spring security for the web layer -->
+    <security:http auto-config="true" access-denied-page="/403.jspx">
+        <security:intercept-url pattern="/secure/*" access="ROLE_ADMINISTRATOR"/>
+        <!--<intercept-url pattern="/index.admin" access="IS_AUTHENTICATED_REMEMBERED" />-->
+        <!--Disable web URI authorization, as we're using <global-method-security> and have @Secured the services layer instead
+     <intercept-url pattern="/listAccounts.html" access="IS_AUTHENTICATED_REMEMBERED" />
+     <intercept-url pattern="/post.html" access="ROLE_TELLER" />
+     <intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />-->
+
+        <!-- Uncomment to limit the number of sessions a user can have -->
+        <security:concurrent-session-control max-sessions="1" exception-if-maximum-exceeded="true"/>
+        
+        <security:form-login login-page="/index.html" authentication-failure-url="/index.html?success=false"
+                             always-use-default-target="true" default-target-url="/secure/homepage.html"/>
+        <security:logout logout-success-url="/index.html"/>
+    </security:http>
+</beans>

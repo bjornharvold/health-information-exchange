@@ -1,0 +1,56 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <spring:message var="option1" code="form.select" text="-- Please Select --"/>
+
+    <spring-form:form id="form" commandName="countryForm" action="/secure/country/edit.admin" method="POST">
+
+        <table cellpadding="0" cellspacing="2" border="0" width="100%">
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="statusCode" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td width="100" class="form_text"><spring:message code="country.name" text="Country name"/>:&#160;</td>
+                <td width="150"><spring-form:input path="statusCode" cssClass="textInput"/><span class="required">&#160;*</span></td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="countryCode" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="country.code" text="Country code"/>:&#160;</td>
+                <td><spring-form:input path="countryCode" cssClass="textInput"/><span class="required">&#160;*</span></td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="language" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="country.language" text="Language"/>:&#160;</td>
+                <td><spring-form:input path="language" cssClass="textInput" maxlength="2"/><span class="required">&#160;*</span></td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td><spring-form:errors path="currencyCode" cssClass="errors"/></td>
+            </tr>
+            <tr>
+                <td class="form_text"><spring:message code="country.currency.code" text="Type"/>:&#160;</td>
+                <td><spring-form:input path="currencyCode" cssClass="textInput"/><span class="required">&#160;*</span></td>
+            </tr>
+            <tr>
+                <td colspan="2"><spring-form:hidden path="id"/></td>
+            </tr>
+        </table>
+    </spring-form:form>
+
+</jsp:root>

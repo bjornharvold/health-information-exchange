@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2006, Health XCEL Inc.. All Rights Reserved.
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool.xsd
+                           http://cxf.apache.org/jaxws
+                           http://cxf.apache.org/schemas/jaxws.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- allow autowiring -->
+    <context:annotation-config/>
+
+    <!-- scan for components -->
+    <!-- won't work for OSGi as we cannot do autowiring
+    <context:component-scan base-package="com.hxcel.globalhealth.platform.controller"/>
+    -->
+
+    <!-- controllers -->
+    <bean id="applicationConfigurationFormController" class="com.hxcel.globalhealth.platform.controller.application.ApplicationConfigurationFormController">
+        <property name="applicationService" ref="applicationService"/>
+    </bean>
+
+    <bean id="applicationController" class="com.hxcel.globalhealth.platform.controller.application.ApplicationController">
+        <property name="applicationService" ref="applicationService"/>
+    </bean>
+
+    <bean id="applicationFormController" class="com.hxcel.globalhealth.platform.controller.application.ApplicationFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+        <property name="organizationPropertyEditor" ref="organizationPropertyEditor"/>
+    </bean>
+
+    <bean id="applicationIconUploadFormController" class="com.hxcel.globalhealth.platform.controller.application.ApplicationIconUploadFormController">
+        <property name="applicationService" ref="applicationService"/>
+    </bean>
+
+    <bean id="applicationLicenseFormController" class="com.hxcel.globalhealth.platform.controller.application.ApplicationLicenseFormController">
+        <property name="applicationService" ref="applicationService"/>
+    </bean>
+
+    <bean id="applicationResourceBundleFormController" class="com.hxcel.globalhealth.platform.controller.application.ApplicationResourceBundleFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="countryService" ref="countryService"/>
+        <property name="applicationPropertyEditor" ref="applicationPropertyEditor"/>
+        <property name="countryPropertyEditor" ref="countryPropertyEditor"/>
+    </bean>
+
+    <bean id="applicationResourceBundleUploadFormController" class="com.hxcel.globalhealth.platform.controller.application.ApplicationResourceBundleUploadFormController">
+        <property name="applicationService" ref="applicationService"/>
+    </bean>
+
+    <bean id="applicationRoleFormController" class="com.hxcel.globalhealth.platform.controller.application.ApplicationRoleFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean id="applicationSwfUploadFormController" class="com.hxcel.globalhealth.platform.controller.application.ApplicationSwfUploadFormController">
+        <property name="applicationService" ref="applicationService"/>
+    </bean>
+
+    <bean id="countryController" class="com.hxcel.globalhealth.platform.controller.country.CountryController">
+        <property name="countryService" ref="countryService"/>
+    </bean>
+
+    <bean id="countryFormController" class="com.hxcel.globalhealth.platform.controller.country.CountryFormController">
+        <property name="countryService" ref="countryService"/>
+        <property name="organizationPropertyEditor" ref="organizationPropertyEditor"/>
+    </bean>
+
+    <bean id="regulationOverrideFormController" class="com.hxcel.globalhealth.platform.controller.country.RegulationOverrideFormController">
+        <property name="countryService" ref="countryService"/>
+        <property name="countryPropertyEditor" ref="countryPropertyEditor"/>
+        <property name="regulationPropertyEditor" ref="regulationPropertyEditor"/>
+    </bean>
+
+    <bean id="licensedApplicationConfigurationOverrideFormController" class="com.hxcel.globalhealth.platform.controller.organization.LicensedApplicationConfigurationOverrideFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+        <property name="applicationConfigurationPropertyEditor" ref="applicationConfigurationPropertyEditor"/>
+        <property name="organizationLicensePropertyEditor" ref="organizationLicensePropertyEditor"/>
+    </bean>
+
+    <bean id="licensedApplicationResourceBundleOverrideFormController" class="com.hxcel.globalhealth.platform.controller.organization.LicensedApplicationResourceBundleOverrideFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+        <property name="organizationLicensePropertyEditor" ref="organizationLicensePropertyEditor"/>
+        <property name="resourceBundleEntryPropertyEditor" ref="resourceBundleEntryPropertyEditor"/>
+    </bean>
+
+    <bean id="organizationApplicationConfigurationFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationApplicationConfigurationFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+    </bean>
+
+    <bean id="organizationApplicationFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationApplicationFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+        <property name="organizationPropertyEditor" ref="organizationPropertyEditor"/>
+    </bean>
+
+    <bean id="organizationApplicationIconUploadFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationApplicationIconUploadFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+    </bean>
+
+    <bean id="organizationApplicationLicenseFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationApplicationLicenseFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+    </bean>
+
+    <bean id="organizationApplicationResourceBundleFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationApplicationResourceBundleFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+        <property name="countryService" ref="countryService"/>
+        <property name="applicationPropertyEditor" ref="applicationPropertyEditor"/>
+        <property name="countryPropertyEditor" ref="countryPropertyEditor"/>
+    </bean>
+
+    <bean id="organizationApplicationResourceBundleUploadFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationApplicationResourceBundleUploadFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+    </bean>
+
+    <bean id="organizationApplicationRoleFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationApplicationRoleFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean id="organizationApplicationSwfUploadFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationApplicationSwfUploadFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+    </bean>
+
+    <bean id="organizationController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean id="organizationFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationFormController">
+        <property name="organizationService" ref="organizationService"/>
+        <property name="countryPropertyEditor" ref="countryPropertyEditor"/>
+        <property name="organizationPropertyEditor" ref="organizationPropertyEditor"/>
+        <property name="countryService" ref="countryService"/>
+    </bean>
+
+    <bean id="organizationIconUploadFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationIconUploadFormController">
+        <property name="organizationService" ref="organizationService"/>
+    </bean>
+
+    <bean id="organizationLicenseFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationLicenseFormController">
+        <property name="applicationService" ref="applicationService"/>
+        <property name="organizationService" ref="organizationService"/>
+    </bean>
+
+    <bean id="organizationUserFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationUserFormController">
+        <property name="countryService" ref="countryService"/>
+        <property name="organizationService" ref="organizationService"/>
+        <property name="userService" ref="userService"/>
+        <property name="organizationPropertyEditor" ref="organizationPropertyEditor"/>
+        <property name="countryPropertyEditor" ref="countryPropertyEditor"/>
+    </bean>
+
+    <bean id="organizationUserRoleFormController" class="com.hxcel.globalhealth.platform.controller.organization.OrganizationUserRoleFormController">
+        <property name="organizationService" ref="organizationService"/>
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean id="regulationController" class="com.hxcel.globalhealth.platform.controller.regulation.RegulationController">
+        <property name="countryService" ref="countryService"/>
+    </bean>
+
+    <bean id="regulationFormController" class="com.hxcel.globalhealth.platform.controller.regulation.RegulationFormController">
+        <property name="countryService" ref="countryService"/>
+    </bean>
+
+    <bean id="roleController" class="com.hxcel.globalhealth.platform.controller.role.RoleController">
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean id="roleFormController" class="com.hxcel.globalhealth.platform.controller.role.RoleFormController">
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean id="userController" class="com.hxcel.globalhealth.platform.controller.user.UserController">
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean id="userFormController" class="com.hxcel.globalhealth.platform.controller.user.UserFormController">
+        <property name="userService" ref="userService"/>
+        <property name="countryService" ref="countryService"/>
+        <property name="countryPropertyEditor" ref="countryPropertyEditor"/>
+    </bean>
+
+    <bean id="userIconUploadFormController" class="com.hxcel.globalhealth.platform.controller.user.UserIconUploadFormController">
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean id="userRoleFormController" class="com.hxcel.globalhealth.platform.controller.user.UserRoleFormController">
+        <property name="userService" ref="userService"/>
+    </bean>
+
+    <bean id="homepageController" class="com.hxcel.globalhealth.platform.controller.HomepageController">
+        <property name="userService" ref="userService"/>
+        <property name="applicationService" ref="applicationService"/>
+        <property name="countryService" ref="countryService"/>
+        <property name="organizationService" ref="organizationService"/>
+    </bean>
+
+    <bean id="pageController" class="com.hxcel.globalhealth.platform.controller.PageController"/>
+
+    <bean id="serviceController" class="com.hxcel.globalhealth.platform.controller.service.ServiceController"/>
+
+    <bean id="bundleUploadFormController" class="com.hxcel.globalhealth.platform.controller.service.BundleUploadFormController"/>
+
+    <!-- This is only because we registered the listener in web.xml -->
+    <!-- We have to do this so we have access to the WebApplicationContext -->
+    <!-- Don't remove -->
+    <!-- Also messageSource needs to be here as Spring is looking for it -->
+    <!-- Base messageSource can be the last resort parent keys where the system goes looking -->
+    <!-- Meaning all the translated files go under conf/i18n while the english version is also in the classpath controller package -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>administration</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>

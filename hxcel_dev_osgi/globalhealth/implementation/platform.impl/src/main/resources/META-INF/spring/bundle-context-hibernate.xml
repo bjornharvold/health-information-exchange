@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool.xsd">
+    <!-- Now we expect all transactional info to be on the service beans -->
+    <tx:annotation-driven/>
+
+    <!-- wrapping dataSource reference into a lazy datasource -->
+    <bean id="lazyDataSourceProxy" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy" primary="true">
+        <property name="targetDataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- custom interceptor for persistence layer -->
+    <bean id="entityInterceptor" class="com.hxcel.globalhealth.common.hibernate.interceptor.EntityInterceptor"/>
+
+    <!-- custom project naming strategy for db tables -->
+    <bean id="namingStrategy" class="com.hxcel.globalhealth.common.hibernate.NamingStrategy">
+        <property name="tablePrefix" value="platform"/>
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
+          scope="singleton">
+        <property name="dataSource" ref="lazyDataSourceProxy"/>
+        <property name="entityInterceptor" ref="entityInterceptor"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.hxcel.globalhealth.platform.model.Country</value>
+                <value>com.hxcel.globalhealth.platform.model.Email</value>
+                <value>com.hxcel.globalhealth.platform.model.Image</value>
+                <value>com.hxcel.globalhealth.platform.model.InstantMessage</value>
+                <value>com.hxcel.globalhealth.platform.model.Location</value>
+                <value>com.hxcel.globalhealth.platform.model.Phone</value>
+                <value>com.hxcel.globalhealth.platform.model.UserInfo</value>
+                <value>com.hxcel.globalhealth.platform.model.Application</value>
+                <value>com.hxcel.globalhealth.platform.model.ApplicationConfiguration</value>
+                <value>com.hxcel.globalhealth.platform.model.ApplicationConfigurationOverride</value>
+                <value>com.hxcel.globalhealth.platform.model.ApplicationRole</value>
+                <value>com.hxcel.globalhealth.platform.model.License</value>
+                <value>com.hxcel.globalhealth.platform.model.Organization</value>
+                <value>com.hxcel.globalhealth.platform.model.OrganizationLicense</value>
+                <value>com.hxcel.globalhealth.platform.model.OrganizationUser</value>
+                <value>com.hxcel.globalhealth.platform.model.OrganizationUserRole</value>
+                <value>com.hxcel.globalhealth.platform.model.Regulation</value>
+                <value>com.hxcel.globalhealth.platform.model.RegulationOverride</value>
+                <value>com.hxcel.globalhealth.platform.model.ResourceBundleEntry</value>
+                <value>com.hxcel.globalhealth.platform.model.ResourceBundleEntryOverride</value>
+                <value>com.hxcel.globalhealth.platform.model.Role</value>
+                <value>com.hxcel.globalhealth.platform.model.User</value>
+                <value>com.hxcel.globalhealth.platform.model.UserRole</value>
+            </list>
+        </property>
+        <property name="namingStrategy" ref="namingStrategy"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+
+                <!--<prop key="hibernate.cache.provider_class">com.tangosol.coherence.hibernate.CoherenceCacheProvider</prop>-->
+                <prop key="hibernate.cache.use_query_cache">true</prop>
+                <prop key="hibernate.cache.use_minimal_puts">true</prop>
+                <prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop>
+                <prop key="hibernate.current_session_context_class">thread</prop>
+            </props>
+        </property>
+        <property name="schemaUpdate" value="true"/>
+    </bean>
+
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- Parent bean for all our DAOs -->
+    <bean id="hibSupport" class="org.springframework.orm.hibernate3.support.HibernateDaoSupport" abstract="true"
+          lazy-init="true">
+        <property name="hibernateTemplate" ref="hibernateTemplate"/>
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!--<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager"/>-->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="hibInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+</beans>

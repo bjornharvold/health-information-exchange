@@ -1,0 +1,30 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="${country.id}_regulationOverrides">
+        <div class="page_header regulation_override">
+            <div class="titleName"><spring:message code="page.country.regulation.overrides" text="Regulation overrides"/></div>
+            <div class="newEntity">
+                <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                    <a href="javascript:bindFormLink({url: '/secure/country/regulation/override/edit.admin?countryId=${country.id}', id: '${country.id}_regulationOverridesTable', cssClass: 'jqmWindow'})" title="${altNew}"><spring:message code="entity.new" text="NEW"/></a>
+                </security:authorize>
+            </div>
+            <div class="searchField">
+                <input type="text" name="search" onkeyup="replaceHtmlContent({url:'/secure/country/regulation/search.admin?id=${country.id}&amp;view=country.regulation.overrides.data&amp;name=' + this.value, id: '${country.id}_regulationOverridesTable'});" class="textInput"/>
+            </div>
+        </div>
+
+        <div class="contentSeparator"><!----></div>
+        
+        <jsp:include page="regulation_overrides_data.jspx" flush="true"/>
+    </div>
+</jsp:root>

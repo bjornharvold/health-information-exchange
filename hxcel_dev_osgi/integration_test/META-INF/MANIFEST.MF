@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Private-Package: integration_test;version="1.0.0-SNAPSHOT"
+Tool: Bnd-0.0.238
+Bundle-Name: Integration Test
+Created-By: 1.6.0_07 (Apple Inc.)
+Bundle-Vendor: Health XCEL, Inc.
+Bundle-Version: 1.0.0.SNAPSHOT
+Bnd-LastModified: 1230043389471
+Bundle-ManifestVersion: 2
+Bundle-DocURL: http://www.hxcel.com
+Bundle-SymbolicName: com.hxcel.integration_test
+Originally-Created-By: 1.6.0_07 (Apple Inc.)
+

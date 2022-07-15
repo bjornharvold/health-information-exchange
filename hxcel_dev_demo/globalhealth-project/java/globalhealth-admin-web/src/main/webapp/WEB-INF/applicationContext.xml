@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2006, Health XCEL Inc.. All Rights Reserved.
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://cxf.apache.org/jaxws
+                           http://cxf.apache.org/schemas/jaxws.xsd">
+
+    <!--                                                                      -->
+    <!-- The EncryptablePropertyPlaceholderConfigurer will read the           -->
+    <!-- .properties files and make their values accessible as ${var}         -->
+    <!--                                                                      -->
+    <!-- Our "configurationEncryptor" bean (which implements                  -->
+    <!-- org.jasypt.encryption.StringEncryptor) is set as a constructor arg.  -->
+    <!--                                                                      -->
+    <bean id="propertyConfigurer" class="org.jasypt.spring.properties.EncryptablePropertyPlaceholderConfigurer" depends-on="stringEncryptor">
+        <constructor-arg ref="stringEncryptor"/>
+        <property name="locations">
+            <list>
+                <value>classpath:service-cms-override.properties</value>
+                <value>classpath:domain-override.properties</value>
+                <value>classpath:persistence-override.properties</value>
+                <value>classpath:admin-override.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- This is only because we registered the listener in web.xml -->
+    <!-- We have to do this so we have access to the WebApplicationContext -->
+    <!-- Don't remove -->
+    <!-- Also messageSource needs to be here as Spring is looking for it -->
+    <!-- Base messageSource can be the last resort parent keys where the system goes looking -->
+    <!-- Meaning all the translated files go under conf/i18n while the english version is also in the classpath controller package -->
+    <bean id="baseMessageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>service-cms-override</value>
+                <value>domain-override</value>
+                <value>persistence-override</value>
+                <value>admin-override</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= RESOURCE DEFINITIONS ========================= -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource" primary="true">
+        <property name="cacheSeconds" value="${message.source.reload.time.seconds}"/>
+        <property name="parentMessageSource">
+            <ref bean="baseMessageSource"/>
+        </property>
+        <property name="basenames">
+            <list>
+                <value>/WEB-INF/conf/i18n/administration</value>
+            </list>
+        </property>
+    </bean>
+
+    <import resource="classpath:spring-admin-web-security-beans.xml"/>
+    <import resource="classpath:spring-domain-beans-for-admin-app.xml"/>
+</beans>

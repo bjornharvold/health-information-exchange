@@ -1,0 +1,102 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="${organization.id}_${application.id}">
+        <spring:message var="altEdit" code="entity.edit" text="Edit"/>
+        <spring:message var="altClose" code="entity.close" text="Close"/>
+        <spring:message var="cmsHost" code="http.base.url" text="http://localhost:8888"/>
+        <spring:message var="applicationPublishInfo" code="application.publish.info" text="In order to publish you have to have uploaded all the assets. To unpublish, no one can be licensing the application from you."/>
+
+        <div class="page_header overview">
+            <div class="titleName"><spring:message code="page.overview.name" text="Overview"/></div>
+            <div class="editEntity">
+                <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                    <a href="javascript:bindFormLink({url: '/secure/organization/application/edit.admin?platform=${application.platform}&amp;id=${application.id}&amp;owner=${organization.id}', id: '${organization.id}_${application.id}', cssClass: 'jqmWindow'})"><img src="/images/icons/edit_pen.png" alt="${altEdit}" title="${altEdit}" border="0"/></a>
+                </security:authorize>
+            </div>
+        </div>
+
+        <div class="module_550">
+            <table cellpadding="2" cellspacing="0" border="0" width="100%" class="content_table">
+                <tbody>
+                <tr class="rowStyle1">
+                    <td width="25%" class="content_item_header"><spring:message code="entity.action" text="Action"/>: <img src="/images/icons/information.png" alt="info" height="16" width="16" border="0" title="${applicationPublishInfo}"/></td>
+                    <td width="75%" class="content_item">
+                        <c:if test="${publishable == true and application.applicationStatus != 'PUBLISHED'}">
+                            <spring:message var="publish" code="application.publish" text="Publish"/>
+                            <a href="javascript:replaceHtmlContent({url: '/secure/organization/application/publish.admin?organizationId=${organization.id}&amp;id=${application.id}&amp;status=PUBLISHED&amp;view=organization.application.data', id: '${organization.id}_${application.id}'})">
+                                ${publish} <img src="/images/icons/flag_green.png" alt="${publish}" border="0"/>
+                            </a>&#160;&#160;
+                        </c:if>
+                        <c:if test="${unpublishable == true and application.applicationStatus != 'UNPUBLISHED'}">
+                            <spring:message var="unpublish" code="application.unpublish" text="Unpublish"/>
+                            <a href="javascript:replaceHtmlContent({url: '/secure/organization/application/publish.admin?organizationId=${organization.id}&amp;id=${application.id}&amp;status=UNPUBLISHED&amp;view=organization.application.data', id: '${organization.id}_${application.id}'})">
+                                ${unpublish} <img src="/images/icons/flag_red.png" alt="${unpublish}" border="0"/>
+                            </a>
+                        </c:if>
+                    </td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="application.name" text="Name"/>:</td>
+                    <td class="content_item">${application.name}</td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="application.description" text="Description"/>:</td>
+                    <td class="content_item">${application.description}</td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="application.owner" text="Owner"/>:</td>
+                    <td class="content_item">${application.owner.name}</td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="application.version" text="Version"/>:</td>
+                    <td class="content_item">${application.appVersion}</td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="application.status" text="Status"/>:</td>
+                    <td class="content_item">
+                        <c:choose>
+                            <c:when test="${application.applicationStatus == 'UNPUBLISHED'}">
+                                <img src="/images/icons/flag_red.png" alt="" border="0"/>
+                            </c:when>
+                            <c:when test="${application.applicationStatus == 'PUBLISHED'}">
+                                <img src="/images/icons/flag_green.png" alt="" border="0"/>
+                            </c:when>
+                        </c:choose>
+                    </td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="application.type" text="Type"/>:</td>
+                    <td class="content_item">${application.applicationType}</td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="entity.date.created" text="Created"/>:</td>
+                    <td class="content_item"><fmt:formatDate value="${application.createdDate}" dateStyle="long"/></td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="entity.date.updated" text="Updated"/>:</td>
+                    <td class="content_item"><fmt:formatDate value="${application.lastUpdate}" dateStyle="long"/></td>
+                </tr>
+                <c:if test="${application.platform == true and application.applicationStatus == 'PUBLISHED'}">
+                    <tr class="rowStyle2">
+                        <td class="content_item_header"><spring:message code="application.launch.url" text="Preview"/>:</td>
+                        <td class="content_item"><a href="javascript:openNewWindow({url: '/platform/${application.owner.id}/${application.id}.html', title: '${application.name}', width: '800', height: '600'})"><spring:message code="click.here" text=" Click here"/></a></td>
+                    </tr>
+                </c:if>
+                </tbody>
+            </table>
+        </div>
+
+        <jsp:include page="organization_application_swfinfo.jspx" flush="true"/>
+    </div>
+
+</jsp:root>

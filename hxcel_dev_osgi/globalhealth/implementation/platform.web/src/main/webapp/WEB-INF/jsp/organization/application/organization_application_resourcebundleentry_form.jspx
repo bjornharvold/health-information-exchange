@@ -1,0 +1,68 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+        <spring:message var="option1" code="form.select" text="-- Please Select --"/>
+        
+        <spring-form:form id="form" commandName="organizationApplicationResourceBundleForm" action="/secure/organization/application/resourcebundle/edit.admin" method="POST">
+
+            <table cellpadding="0" cellspacing="2" border="0" width="100%">
+                <tr>
+                    <td>&#160;</td>
+                    <td><spring-form:errors path="country" cssClass="errors"/></td>
+                </tr>
+                <tr>
+                    <td class="form_text"><spring:message code="resourcebundleentry.country" text="Country"/>:&#160;</td>
+                    <td>
+                        <spring-form:select path="country" cssClass="textInput">
+                            <spring-form:option value="${option1}"/>
+                            <spring-form:options items="${countries}" itemLabel="statusCode" itemValue="id"/>
+                        </spring-form:select><span class="required">&#160;*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><spring-form:errors path="key" cssClass="errors"/></td>
+                </tr>
+                <tr>
+                    <td width="100" class="form_text"><spring:message code="resourcebundleentry.key" text="Key"/>:&#160;</td>
+                    <td width="250"><spring-form:input path="key" cssClass="textInput"/><span class="required">&#160;*</span></td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><spring-form:errors path="value" cssClass="errors"/></td>
+                </tr>
+                <tr>
+                    <td class="form_text"><spring:message code="resourcebundleentry.value" text="Value"/>:&#160;</td>
+                    <td><spring-form:input path="value" cssClass="textInput"/><span class="required">&#160;*</span></td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td><spring-form:errors path="description" cssClass="errors"/></td>
+                </tr>
+                <tr valign="top">
+                    <td class="form_text"><spring:message code="resourcebundleentry.description" text="Description"/>:&#160;</td>
+                    <td>
+                        <spring-form:textarea path="description" cssClass="textArea"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <spring-form:hidden path="id"/>
+                        <input type="hidden" name="application" value="${param.applicationId}"/>
+                        <input type="hidden" name="applicationId" value="${param.applicationId}"/>
+                        <input type="hidden" name="organizationId" value="${organization.id}"/>
+                    </td>
+                </tr>
+            </table>
+        </spring-form:form>
+
+</jsp:root>

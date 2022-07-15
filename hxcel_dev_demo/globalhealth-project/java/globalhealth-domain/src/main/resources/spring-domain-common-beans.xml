@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://www.springframework.org/schema/jms
+                           http://www.springframework.org/schema/jms/spring-jms-2.5.xsd
+                           http://cxf.apache.org/jaxws
+                           http://cxf.apache.org/schemas/jaxws.xsd">
+
+    <!-- ============================== MANAGERS ============================== -->
+    <bean id="userManager" class="com.hxcel.globalhealth.domain.common.impl.UserManagerImpl">
+        <property name="largeIconWidth" value="${icon.large.width}"/>
+        <property name="mediumIconWidth" value="${icon.medium.width}"/>
+        <property name="smallIconWidth" value="${icon.small.width}"/>
+    </bean>
+    <bean id="referenceManager" class="com.hxcel.globalhealth.domain.common.impl.ReferenceManagerImpl"/>
+    <bean id="loggingManager" class="com.hxcel.globalhealth.domain.common.impl.LoggingManagerImpl"/>
+    <!-- ============================== MANAGERS ============================== -->
+
+    <!-- ============================== CONVERTERS ============================== -->
+    <bean id="userCustomConverter" class="com.hxcel.globalhealth.domain.common.converter.UserCustomConverter">
+        <property name="dao" ref="userDAO"/>
+    </bean>
+
+    <bean id="emailCustomConverter" class="com.hxcel.globalhealth.domain.common.converter.EmailCustomConverter">
+        <property name="dao" ref="emailDAO"/>
+    </bean>
+
+    <bean id="contactCustomConverter" class="com.hxcel.globalhealth.domain.common.converter.ContactCustomConverter">
+        <property name="dao" ref="contactDAO"/>
+    </bean>
+
+    <bean id="instantMessageCustomConverter" class="com.hxcel.globalhealth.domain.common.converter.InstantMessageCustomConverter">
+        <property name="dao" ref="instantMessageDAO"/>
+    </bean>
+
+    <bean id="locationCustomConverter" class="com.hxcel.globalhealth.domain.common.converter.LocationCustomConverter">
+        <property name="dao" ref="locationDAO"/>
+    </bean>
+
+    <bean id="permissionCustomConverter" class="com.hxcel.globalhealth.domain.common.converter.PermissionCustomConverter">
+        <property name="dao" ref="permissionDAO"/>
+    </bean>
+
+    <bean id="phoneCustomConverter" class="com.hxcel.globalhealth.domain.common.converter.PhoneCustomConverter">
+        <property name="dao" ref="phoneDAO"/>
+    </bean>
+
+    <bean id="userInfoCustomConverter" class="com.hxcel.globalhealth.domain.common.converter.UserInfoCustomConverter">
+        <property name="dao" ref="userInfoDAO"/>
+    </bean>
+    <!-- ============================== CONVERTERS ============================== -->
+
+    <!-- custom property editors -->
+    <bean id="countryPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="countryDAO"/>
+        <property name="dataAccessMethod" value="getCountry"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+
+    <!-- ============================== DAO ============================== -->
+    <bean id="auditTrailDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.AuditTrailDAOHibernate"
+          parent="hibSupport"/>
+
+    <bean id="creditcardDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.CreditcardDAOHibernate"
+          parent="hibSupport"/>
+
+    <bean id="countryDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.CountryDAOHibernate"
+          parent="hibSupport"/>
+
+    <bean id="emailDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.EmailDAOHibernate" parent="hibSupport"/>
+
+    <bean id="instantMessageDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.InstantMessageDAOHibernate"
+          parent="hibSupport"/>
+
+    <bean id="contactDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.ContactDAOHibernate"
+          parent="hibSupport"/>
+
+    <bean id="locationDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.LocationDAOHibernate"
+          parent="hibSupport"/>
+
+    <bean id="phoneDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.PhoneDAOHibernate" parent="hibSupport"/>
+
+    <bean id="lockedUserDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.LockedUserDAOHibernate"
+          parent="hibSupport"/>
+
+    <bean id="newsDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.NewsDAOHibernate" parent="hibSupport"/>
+
+    <bean id="userDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.UserDAOHibernate" parent="hibSupport"/>
+    <bean id="roleDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.RoleDAOHibernate" parent="hibSupport"/>
+
+    <bean id="userInfoDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.UserInfoDAOHibernate" parent="hibSupport"/>
+    <bean id="userRoleDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.UserRoleDAOHibernate" parent="hibSupport"/>
+
+    <bean id="permissionDAO" class="com.hxcel.globalhealth.domain.common.dao.impl.PermissionDAOHibernate" parent="hibSupport"/>
+    <!-- ============================== DAO ============================== -->
+</beans>

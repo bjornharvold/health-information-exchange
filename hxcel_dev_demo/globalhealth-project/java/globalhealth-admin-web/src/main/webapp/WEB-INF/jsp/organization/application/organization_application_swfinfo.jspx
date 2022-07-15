@@ -1,0 +1,89 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:hxcel="urn:jsptagdir:/WEB-INF/tags/hxcel"
+          version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="${organization.id}_${application.id}_swfinfo" class="swf_info">
+        <spring:message var="smallIcon" code="image.thumbnail.small" text="Small icon"/>
+        <spring:message var="mediumIcon" code="image.thumbnail.medium" text="Medium icon"/>
+        <spring:message var="largeIcon" code="image.thumbnail.large" text="Large icon"/>
+        <spring:message var="cmsHost" code="http.base.url" text="http://localhost:8888"/>
+        <spring:message var="swfApp" code="application.swf" text="SWF"/>
+
+        <table cellpadding="2" cellspacing="0" border="0" width="100%" class="content_table">
+            <tr class="rowStyle1">
+                <td class="swf_content" align="center" height="50">
+                    <c:choose>
+                        <c:when test="${application.image.smallIconUrl != null}">
+                            <img src="${cmsHost}${application.image.smallIconUrl}" alt="${smallIcon}" title="${smallIcon}" height="16" width="16"/>
+                        </c:when>
+                        <c:otherwise>
+                            <img src="/images/common/16x16.png" alt="placeholder" width="16" height="16"/>
+                        </c:otherwise>
+                    </c:choose>
+                </td>
+                <td class="content_item">
+                    <a href="javascript:bindFormLink({url: '/secure/organization/application/icon/upload.admin?size=SMALL&amp;id=${application.id}&amp;organizationId=${organization.id}', id: '${organization.id}_${application.id}', cssClass: 'jqmWindow'})"><spring:message code="image.thumbnail.upload.small" text="Upload small icon"/></a><br/>
+                    <spring:message code="image.thumbnail.small.resolution" text="16x16"/>
+                </td>
+            </tr>
+            <tr class="rowStyle2">
+                <td class="swf_content" align="center" height="50">
+                    <c:choose>
+                        <c:when test="${application.image.mediumIconUrl != null}">
+                            <img src="${cmsHost}${application.image.mediumIconUrl}" alt="${mediumIcon}" title="${mediumIcon}" height="32" width="32"/>
+                        </c:when>
+                        <c:otherwise>
+                            <img src="/images/common/32x32.png" alt="placeholder" width="32" height="32"/>
+                        </c:otherwise>
+                    </c:choose>
+                </td>
+                <td class="content_item">
+                    <a href="javascript:bindFormLink({url: '/secure/organization/application/icon/upload.admin?size=MEDIUM&amp;id=${application.id}&amp;organizationId=${organization.id}', id: '${organization.id}_${application.id}', cssClass: 'jqmWindow'})"><spring:message code="image.thumbnail.upload.medium" text="Upload medium icon"/></a><br/>
+                    <spring:message code="image.thumbnail.medium.resolution" text="32x32"/>
+                </td>
+            </tr>
+            <tr class="rowStyle1">
+                <td class="swf_content" align="center" height="80">
+                    <c:choose>
+                        <c:when test="${application.image.largeIconUrl != null}">
+                            <img src="${cmsHost}${application.image.largeIconUrl}" alt="${largeIcon}" title="${largeIcon}" height="72" width="72"/>
+                        </c:when>
+                        <c:otherwise>
+                            <img src="/images/common/72x72.png" alt="placeholder" width="72" height="72"/>
+                        </c:otherwise>
+                    </c:choose>
+                </td>
+                <td class="content_item">
+                    <a href="javascript:bindFormLink({url: '/secure/organization/application/icon/upload.admin?size=LARGE&amp;id=${application.id}&amp;organizationId=${organization.id}', id: '${organization.id}_${application.id}', cssClass: 'jqmWindow'})"><spring:message code="image.thumbnail.upload.large" text="Upload large icon"/></a><br/>
+                    <spring:message code="image.thumbnail.large.resolution" text="72x72"/>
+                </td>
+            </tr>
+            <tr class="rowStyle2">
+                <td class="swf_content" align="center" height="80">
+                    <c:choose>
+                        <c:when test="${application.swfUrl != null}">
+                            <img src="/images/common/swf72x72.png" alt="enabled" height="72" width="72"/>
+                        </c:when>
+                        <c:otherwise>
+                            <img src="/images/common/swf72x72disabled.png" alt="disabled" height="72" width="72"/>
+                        </c:otherwise>
+                    </c:choose>
+                </td>
+                <td class="content_item">
+                    <a href="javascript:bindFormLink({url: '/secure/organization/application/swf/upload.admin?id=${application.id}&amp;organizationId=${organization.id}', id: '${organization.id}_${application.id}', cssClass: 'jqmWindow'})"><spring:message code="swf.upload" text="Upload SWF"/></a><br/><br/>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</jsp:root>

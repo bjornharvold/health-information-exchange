@@ -1,0 +1,76 @@
+/*
+ * Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+ */
+
+package com.hxcel.globalhealth.platform.converter;
+
+import com.hxcel.globalhealth.common.converter.AbstractConverter;
+import com.hxcel.globalhealth.platform.dto.ImageDto;
+import com.hxcel.globalhealth.common.model.AbstractEntity;
+import com.hxcel.globalhealth.platform.model.Image;
+import com.hxcel.globalhealth.common.spec.dto.IAbstractDto;
+import com.hxcel.globalhealth.platform.dto.ApplicationDto;
+import com.hxcel.globalhealth.platform.dto.OrganizationDto;
+import com.hxcel.globalhealth.platform.model.Application;
+import com.hxcel.globalhealth.platform.model.Organization;
+import net.sf.dozer.util.mapping.MappingException;
+import net.sf.dozer.util.mapping.converters.CustomConverter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ *
+ */
+public class ApplicationCustomConverter extends AbstractConverter implements CustomConverter {
+    private final static Logger log = LoggerFactory.getLogger(ApplicationCustomConverter.class);
+
+    protected IAbstractDto toDto(IAbstractDto dto, AbstractEntity source, Class destClass, Class sourceClass) {
+        if (source instanceof Application && dto instanceof ApplicationDto) {
+            Application entity = (Application) source;
+
+            ((ApplicationDto) dto).setApplicationStatus(entity.getApplicationStatus());
+            ((ApplicationDto) dto).setApplicationType(entity.getApplicationType());
+            ((ApplicationDto) dto).setAppVersion(entity.getAppVersion());
+            ((ApplicationDto) dto).setDescription(entity.getDescription());
+            ((ApplicationDto) dto).setName(entity.getName());
+            ((ApplicationDto) dto).setPlatform(entity.getPlatform());
+            ((ApplicationDto) dto).setSwfUrl(entity.getSwfUrl());
+            ((ApplicationDto) dto).setImage((ImageDto) mapperIF.map(entity.getImage(), ImageDto.class));
+            ((ApplicationDto) dto).setOwner((OrganizationDto) mapperIF.map(entity.getOwner(), OrganizationDto.class));
+        } else {
+            throw new MappingException("Converter " + this.getClass().getCanonicalName() + " used incorrectly. Arguments passed in were: " + dto + " and " + source);
+        }
+
+        return dto;
+    }
+
+    /**
+     * This method should only get called once by the production code (at the generation of the user with the system)
+     *
+     * @param entity
+     * @param source
+     * @param destClass
+     * @param sourceClass
+     * @return
+     */
+    protected AbstractEntity toEntity(AbstractEntity entity, IAbstractDto source, Class destClass, Class sourceClass) {
+        if (source instanceof ApplicationDto && entity instanceof Application) {
+            ApplicationDto dto = (ApplicationDto) source;
+
+            ((Application) entity).setApplicationStatus(dto.getApplicationStatus());
+            ((Application) entity).setApplicationType(dto.getApplicationType());
+            ((Application) entity).setAppVersion(dto.getAppVersion());
+            ((Application) entity).setDescription(dto.getDescription());
+            ((Application) entity).setName(dto.getName());
+            ((Application) entity).setPlatform(dto.getPlatform());
+            ((Application) entity).setSwfUrl(dto.getSwfUrl());
+            ((Application) entity).setImage((Image) mapperIF.map(dto.getImage(), Image.class));
+            ((Application) entity).setOwner((Organization) mapperIF.map(dto.getOwner(), Organization.class));
+
+        } else {
+            throw new MappingException("Converter " + this.getClass().getCanonicalName() + " used incorrectly. Arguments passed in were: " + entity + " and " + source);
+        }
+
+        return entity;
+    }
+}

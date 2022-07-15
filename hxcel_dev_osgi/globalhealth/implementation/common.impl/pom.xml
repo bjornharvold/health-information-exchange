@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+    	<groupId>com.hxcel.globalhealth</groupId>
+    	<artifactId>implementation</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>common.impl</artifactId>
+    <packaging>bundle</packaging>
+    <name>Common Implementation</name>
+
+    <properties>
+        <export.package>
+            com.hxcel.globalhealth.common;version="${project.version}",
+            com.hxcel.globalhealth.common.converter;version="${project.version}",
+            com.hxcel.globalhealth.common.dao;version="${project.version}",
+            com.hxcel.globalhealth.common.dao.impl;version="${project.version}",
+            com.hxcel.globalhealth.common.dto;version="${project.version}",
+            com.hxcel.globalhealth.common.hibernate;version="${project.version}",
+            com.hxcel.globalhealth.common.hibernate.impl;version="${project.version}",
+            com.hxcel.globalhealth.common.hibernate.interceptor;version="${project.version}",
+            com.hxcel.globalhealth.common.image;version="${project.version}",
+            com.hxcel.globalhealth.common.locale;version="${project.version}",
+            com.hxcel.globalhealth.common.model;version="${project.version}",
+            com.hxcel.globalhealth.common.propertyeditor;version="${project.version}",
+            org.springmodules.web.propertyeditors;version="${project.version}",
+            org.jdesktop.swingx.graphics;version="${project.version}"
+        </export.package>
+        <import.package>
+            com.hxcel.globalhealth.common.spec;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.dto;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.hibernate;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.image;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.model.enums;version="${project.version}",
+            javax.imageio,
+            javax.persistence,
+            net.sf.dozer.util.mapping;version="${dozer.version}",
+            net.sf.dozer.util.mapping.converters;version="${dozer.version}",
+            org.apache.commons.lang;version="${commons.lang.version}",
+            org.apache.commons.lang.builder;version="${commons.lang.version}",
+            org.hibernate;version="${hibernate.version}",
+            org.hibernate.annotations.common.reflection;version="${hibernate.common.annotations.version}",
+            org.hibernate.annotations;version="${hibernate.annotations.version}",
+            org.hibernate.cfg;version="${hibernate.version}",
+            org.hibernate.criterion;version="${hibernate.version}",
+            org.hibernate.type;version="${hibernate.version}",
+            org.hibernate.usertype;version="${hibernate.version}",
+            org.hibernate.validator;version="${hibernate.validator.version}",
+            org.jasypt.hibernate.type;version="${jasypt.version}",
+            org.slf4j;version="${slf4j.version}",
+            org.springframework.beans;version="${spring.version}",
+            org.springframework.beans.propertyeditors;version="${spring.version}",
+            org.springframework.beans.factory.annotation;version="${spring.version}",
+            org.springframework.dao;version="${spring.version}",
+            org.springframework.orm;version="${spring.version}",
+            org.springframework.orm.hibernate3;version="${spring.version}",
+            org.springframework.orm.hibernate3.support;version="${spring.version}",
+            org.springframework.stereotype;version="${spring.version}",
+            org.springframework.transaction;version="${spring.version}"
+        </import.package>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>common.spec</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.transaction</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.annotations</artifactId>
+            <version>${hibernate.annotations.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.annotations.common</artifactId>
+            <version>${hibernate.common.annotations.version}</version>
+        </dependency>
+
+        <!--
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.ejb</artifactId>
+            <version>${hibernate.ejb.version}</version>
+        </dependency>
+        -->
+        
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>com.springsource.javax.persistence</artifactId>
+            <version>${javax.persistence.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.validator</artifactId>
+            <version>${hibernate.validator.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jasypt</groupId>
+            <artifactId>com.springsource.org.jasypt.encryption</artifactId>
+            <version>${jasypt.version}</version>
+        </dependency>
+
+        <!-- spring security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>org.springframework.security</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>org.springframework.security.annotation</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>org.springframework.security.acls</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>org.springframework.security.taglibs</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.dozer</groupId>
+            <artifactId>com.springsource.net.sf.dozer.util.mapping</artifactId>
+            <version>${dozer.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

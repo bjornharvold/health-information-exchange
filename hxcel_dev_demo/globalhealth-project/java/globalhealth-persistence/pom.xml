@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.hxcel.globalhealth</groupId>
+        <artifactId>globalhealth-java</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>globalhealth-persistence</artifactId>
+    <packaging>jar</packaging>
+    <name>Globalhealth: Persistence (Java)</name>
+
+    <dependencies>
+        <!-- utility classes we have written -->
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>globalhealth-utils</artifactId>
+        </dependency>
+
+        <!-- datasource logger utility -->
+        <dependency>
+            <groupId>com.p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+            <version>${p6spy.version}</version>
+        </dependency>
+
+        <!-- apache commons dependencies -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>${commons.dbcp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-pool</groupId>
+            <artifactId>commons-pool</artifactId>
+            <version>${commons.pool.version}</version>
+        </dependency>
+
+        <!-- Hibernate with dependencies -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.objectweb</groupId>
+            <artifactId>asm-all</artifactId>
+            <version>${asm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss</groupId>
+            <artifactId>javassist</artifactId>
+            <version>${javassist.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jboss.hibernate.cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>${cglib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>com.springsource.org.apache.derby</artifactId>
+            <version>${derby.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>com.springsource.javax.persistence</artifactId>
+            <version>${javax.persistence.version}</version> 
+        </dependency>
+        <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>${javax.transaction.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>${dom4j.version}</version>
+        </dependency>
+
+        <!-- ehcache with dependencies-->
+        <dependency>
+            <groupId>net.sourceforge</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>${ehcache.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.emory.mathcs.backport</groupId>
+            <artifactId>backport-util-concurrent</artifactId>
+            <version>${backport.util.concurrent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.jsr107cache</groupId>
+            <artifactId>com.springsource.net.sf.jsr107cache</artifactId>
+            <version>${jsr107cache.version}</version>
+        </dependency>
+        <!-- clustering support for ehcache -->
+        <dependency>
+            <groupId>org.jgroups</groupId>
+            <artifactId>jgroups</artifactId>
+            <version>${jgroups.version}</version>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,45 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" xmlns:img="urn:jsptld:/WEB-INF/tlds/taglibs-image.tld" xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:spring="http://www.springframework.org/tags"
+          xmlns:tiles="http://struts.apache.org/tags-tiles" xmlns:cewolf="urn:jsptld:/WEB-INF/tlds/cewolf.tld" xmlns:hxcel="urn:jsptld:/WEB-INF/tlds/hxcel.tld"
+          version="2.0">
+    <jsp:directive.tag body-content="empty"/>
+    <jsp:directive.attribute name="path" rtexprvalue="true" required="true"/>
+    <jsp:directive.attribute name="help" rtexprvalue="true" required="true"/>
+    <jsp:directive.attribute name="accesskey" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="tabindex" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onblur" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onfocus" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onclick" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="ondblclick" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onmouseover" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onmouseout" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onmousemove" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onmousedown" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onmouseup" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onkeydown" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onkeyup" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onkeypress" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onselect" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="onchange" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="disabled" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="readonly" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="style" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="styleClass" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="styleId" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="alt" rtexprvalue="true" required="false"/>
+    <jsp:directive.attribute name="title" rtexprvalue="true" required="false"/>
+
+    <spring:bind path="${path}">
+        <c:if test="${status.error}"><img src="/images/warning.jpg" alt="${status.errorMessage}" style="vertical-align:middle;"/></c:if>
+        <hxcel:text status="${status}" accesskey="${accesskey}" tabindex="${tabindex}"
+                     onblur="${onblur}" onfocus="${onfocus}" onclick="${onclick}"
+                     ondblclick="${ondblclick}" onmouseover="${onmouseover}" onmouseout="${onmouseout}"
+                     onmousemove="${onmousemove}" onmousedown="${onmousedown}" onmouseup="${onmouseup}"
+                     onkeydown="${onkeydown}" onkeyup="${onkeyup}" onkeypress="${onkeypress}"
+                     onselect="${onselect}" disabled="${disabled}" readonly="${readonly}"
+                     style="${style}" styleClass="${styleClass}" styleId="${styleid}"
+                     alt="${alt}" title="${title}"/><a
+            class="helpLink" href="javascript:openHelp('${help}')"><img border="0" alt="${link_help}" title="${link_help}" src="/images/icon-help.gif"/></a>
+        <c:if test="${status.error}"><br/><span class="red">${status.errorMessage}</span></c:if>
+    </spring:bind>
+</jsp:root>

@@ -1,0 +1,1085 @@
+2009-09-25 18:59:28,881 INFO  ContextLoader.initWebApplicationContext():189 - Root WebApplicationContext: initialization started
+2009-09-25 18:59:28,903 INFO  AbstractApplicationContext.prepareRefresh():412 - Refreshing org.springframework.web.context.support.XmlWebApplicationContext@76e222eb: display name [Root WebApplicationContext]; startup date [Fri Sep 25 18:59:28 EDT 2009]; root of context hierarchy
+2009-09-25 18:59:28,933 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2009-09-25 18:59:29,145 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-admin-web-security-beans.xml]
+2009-09-25 18:59:29,283 INFO  HttpSecurityBeanDefinitionParser.registerConcurrentSessionControlBeansIfRequired():253 - Concurrent session filter in use, setting 'forceEagerSessionCreation' to true
+2009-09-25 18:59:29,299 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-beans-for-admin-app.xml]
+2009-09-25 18:59:29,343 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-utils-beans.xml]
+2009-09-25 18:59:29,361 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-hibernate-beans.xml]
+2009-09-25 18:59:29,411 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-utils-beans.xml]
+2009-09-25 18:59:29,441 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-utils-encryption-beans.xml]
+2009-09-25 18:59:29,476 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-security-beans.xml]
+2009-09-25 18:59:29,527 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-property-editor-beans.xml]
+2009-09-25 18:59:29,554 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-platform-beans.xml]
+2009-09-25 18:59:29,585 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-common-beans.xml]
+2009-09-25 18:59:29,613 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-data-creator-beans.xml]
+2009-09-25 18:59:29,654 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-emr-beans.xml]
+2009-09-25 18:59:29,678 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-patient-beans.xml]
+2009-09-25 18:59:29,697 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-phr-beans.xml]
+2009-09-25 18:59:29,758 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-professional-beans.xml]
+2009-09-25 18:59:29,792 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-domain-social-network-beans.xml]
+2009-09-25 18:59:29,809 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-datasource-beans.xml]
+2009-09-25 18:59:29,824 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-service-cms-beans.xml]
+2009-09-25 18:59:29,867 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-utils-encryption-beans.xml]
+2009-09-25 18:59:30,118 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'hibernateStringEncryptor': replacing [Generic bean: class [org.jasypt.hibernate.encryptor.HibernatePBEStringEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.jasypt.hibernate.encryptor.HibernatePBEStringEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,119 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'hibernateByteEncryptor': replacing [Generic bean: class [org.jasypt.hibernate.encryptor.HibernatePBEByteEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.jasypt.hibernate.encryptor.HibernatePBEByteEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,120 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'hibernateIntegerEncryptor': replacing [Generic bean: class [org.jasypt.hibernate.encryptor.HibernatePBEBigIntegerEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.jasypt.hibernate.encryptor.HibernatePBEBigIntegerEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,121 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'hibernateBigDecimalEncryptor': replacing [Generic bean: class [org.jasypt.hibernate.encryptor.HibernatePBEBigDecimalEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.jasypt.hibernate.encryptor.HibernatePBEBigDecimalEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,122 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'stringEncryptor': replacing [Generic bean: class [org.jasypt.encryption.pbe.StandardPBEStringEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.jasypt.encryption.pbe.StandardPBEStringEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,123 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'byteEncryptor': replacing [Generic bean: class [org.jasypt.encryption.pbe.StandardPBEByteEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.jasypt.encryption.pbe.StandardPBEByteEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,123 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'bigIntegerEncryptor': replacing [Generic bean: class [org.jasypt.encryption.pbe.StandardPBEBigIntegerEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.jasypt.encryption.pbe.StandardPBEBigIntegerEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,124 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'bigDecimalEncryptor': replacing [Generic bean: class [org.jasypt.encryption.pbe.StandardPBEBigDecimalEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.jasypt.encryption.pbe.StandardPBEBigDecimalEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,125 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'passwordEncryptor': replacing [Generic bean: class [org.jasypt.util.password.StrongPasswordEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.jasypt.util.password.StrongPasswordEncryptor]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,125 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'encryptionProvider': replacing [Generic bean: class [org.bouncycastle.jce.provider.BouncyCastleProvider]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.bouncycastle.jce.provider.BouncyCastleProvider]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,126 INFO  DefaultListableBeanFactory.registerBeanDefinition():467 - Overriding bean definition for bean 'envPBEConfig': replacing [Generic bean: class [org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]] with [Generic bean: class [org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring-utils-encryption-beans.xml]]
+2009-09-25 18:59:30,127 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-sling-common-beans.xml]
+2009-09-25 18:59:30,141 INFO  XmlBeanDefinitionReader.loadBeanDefinitions():323 - Loading XML bean definitions from class path resource [spring-sling-beans.xml]
+2009-09-25 18:59:30,159 INFO  AbstractApplicationContext.obtainFreshBeanFactory():427 - Bean factory for application context [org.springframework.web.context.support.XmlWebApplicationContext@76e222eb]: org.springframework.beans.factory.support.DefaultListableBeanFactory@7fdb04ed
+2009-09-25 18:59:30,373 INFO  PropertiesLoaderSupport.loadProperties():178 - Loading properties file from class path resource [service-cms-override.properties]
+2009-09-25 18:59:30,374 INFO  PropertiesLoaderSupport.loadProperties():178 - Loading properties file from class path resource [domain-override.properties]
+2009-09-25 18:59:30,375 INFO  PropertiesLoaderSupport.loadProperties():178 - Loading properties file from class path resource [persistence-override.properties]
+2009-09-25 18:59:30,376 INFO  PropertiesLoaderSupport.loadProperties():178 - Loading properties file from class path resource [admin-override.properties]
+2009-09-25 18:59:30,480 INFO  AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization():1197 - Bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2009-09-25 18:59:30,486 INFO  AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization():1197 - Bean '(inner bean)' is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2009-09-25 18:59:30,492 INFO  AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization():1197 - Bean '_delegatingMethodDefinitionSource' is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2009-09-25 18:59:30,497 INFO  AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization():1197 - Bean '_methodDefinitionSourceAdvisor' is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2009-09-25 18:59:30,499 INFO  AbstractApplicationContext$BeanPostProcessorChecker.postProcessAfterInitialization():1197 - Bean 'org.springframework.transaction.config.internalTransactionAdvisor' is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2009-09-25 18:59:30,747 INFO  DefaultListableBeanFactory.preInstantiateSingletons():414 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7fdb04ed: defining beans [propertyConfigurer,baseMessageSource,messageSource,_authenticationManager,_filterChainProxy,_httpSessionContextIntegrationFilter,_filterChainProxyPostProcessor,_filterChainList,_securityContextHolderAwareRequestFilter,_accessManager,_portMapper,_exceptionTranslationFilter,_filterSecurityInterceptor,_sessionRegistry,_concurrentSessionController,_concurrentSessionFilter,_sessionFixationProtectionFilter,_anonymousProcessingFilter,_rememberMeServices,_rememberMeFilter,_rememberMeServicesInjectionBeanPostProcessor,_logoutFilter,_basicAuthenticationEntryPoint,_basicAuthenticationFilter,_formLoginFilter,_formLoginEntryPoint,_entryPointInjectionBeanPostProcessor,_userServiceInjectionPostProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,mapperIF,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,entityInterceptor,namingStrategy,sessionFactory,hibernateTemplate,hibSupport,transactionManager,hibInterceptor,hibernateStringEncryptor,hibernateByteEncryptor,hibernateIntegerEncryptor,hibernateBigDecimalEncryptor,stringEncryptor,byteEncryptor,bigIntegerEncryptor,bigDecimalEncryptor,passwordEncryptor,encryptionProvider,envPBEConfig,imageResizer,passwordEncoder,_protectPointcutPostProcessor,_delegatingMethodDefinitionSource,_methodSecurityInterceptor,_methodSecurityInterceptorPostProcessor,_methodDefinitionSourceAdvisor,org.springframework.security.providers.dao.DaoAuthenticationProvider#0,org.springframework.security.config.AuthenticationProviderBeanDefinitionParser$AuthenticationProviderCacheResolver#0,accessDecisionManager,roleVoter,customPropertyEditorRegistrar,userPropertyEditor,platformManager,applicationConfigurationPropertyEditor,applicationPropertyEditor,organizationPropertyEditor,organizationLicensePropertyEditor,regulationPropertyEditor,resourceBundleEntryPropertyEditor,applicationDAO,applicationConfigurationDAO,applicationRoleDAO,licenseDAO,organizationDAO,organizationConfigurationDAO,organizationLicenseDAO,organizationUserDAO,organizationUserRoleDAO,regulationDAO,regulationOverrideDAO,resourceBundleEntryDAO,resourceBundleEntryOverrideDAO,userManager,referenceManager,loggingManager,userCustomConverter,emailCustomConverter,contactCustomConverter,instantMessageCustomConverter,locationCustomConverter,permissionCustomConverter,phoneCustomConverter,userInfoCustomConverter,countryPropertyEditor,auditTrailDAO,creditcardDAO,countryDAO,emailDAO,instantMessageDAO,contactDAO,locationDAO,phoneDAO,lockedUserDAO,newsDAO,userDAO,roleDAO,userInfoDAO,userRoleDAO,permissionDAO,dataCreationManager,abstractDataCreator,adminDataCreator,countryDataCreator,icd10DataCreator,icpc2DataCreator,godOrganizationDataCreator,roleDataCreator,journalManager,emrDAO,basicEmrEntryDAO,emrDiagnosisDAO,diagnosisDAO,patientManager,patientCustomConverter,patientDAO,phrManager,abstractPhrCustomConverter,advanceDirectiveCustomConverter,allergyCustomConverter,alternativeTreatmentCustomConverter,dentalCustomConverter,employerCustomConverter,familyHistoryCustomConverter,hospitalizedCustomConverter,immunizationCustomConverter,insuranceCustomConverter,medicalConditionCustomConverter,medicationCustomConverter,personalProfileCustomConverter,phrContactCustomConverter,phrFileCustomConverter,phrLocationCustomConverter,practitionerCustomConverter,surgeryCustomConverter,travelImmunizationCustomConverter,visionContactLensesCustomConverter,visionExamCustomConverter,visionGlassesCustomConverter,phrDAO,advanceDirectiveDAO,allergyDAO,alternativeTreatmentDAO,dentalDAO,employerDAO,visionContactLensDAO,visionExamDAO,visionGlassesDAO,familyHistoryDAO,phrFileDAO,hospitalizedDAO,immunizationDAO,insuranceDAO,phrLocationDAO,medicalConditionDAO,medicationDAO,personalProfileDAO,phrContactDAO,practitionerDAO,surgeryDAO,travelImmunizationDAO,professionalDAO,socialNetworkManager,relationshipManager,publicProfileCustomConverter,groupCustomConverter,groupDAO,publicProfileDAO,relationshipDAO,recommendationDAO,dataSource,loggedDataSource,lazyDataSourceProxy,httpClient,httpClientParams,httpConnectionManager,httpConnectionManagerParams,cmsService]; root of factory hierarchy
+2009-09-25 18:59:31,305 INFO  Version.<clinit>():15 - Hibernate Annotations 3.4.0.GA
+2009-09-25 18:59:31,328 INFO  Environment.<clinit>():543 - Hibernate 3.3.1.GA
+2009-09-25 18:59:31,331 INFO  Environment.<clinit>():576 - hibernate.properties not found
+2009-09-25 18:59:31,334 INFO  Environment.buildBytecodeProvider():709 - Bytecode provider name : javassist
+2009-09-25 18:59:31,336 INFO  Environment.<clinit>():627 - using JDK 1.4 java.sql.Timestamp handling
+2009-09-25 18:59:31,367 INFO  Version.<clinit>():14 - Hibernate Commons Annotations 3.1.0.GA
+2009-09-25 18:59:31,469 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.patient.model.Patient
+2009-09-25 18:59:31,474 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: patientstatus
+2009-09-25 18:59:31,475 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: patienttype
+2009-09-25 18:59:31,491 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.patient.model.Patient on table g_Patient
+2009-09-25 18:59:31,544 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.SystemAuditLogger
+2009-09-25 18:59:31,545 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: logtype
+2009-09-25 18:59:31,546 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: accessentrytype
+2009-09-25 18:59:31,547 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.SystemAuditLogger on table g_SystemAuditLogger
+2009-09-25 18:59:31,550 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.Country
+2009-09-25 18:59:31,551 INFO  QueryBinder.bindQuery():64 - Binding Named query: countrycd_get_countries => SELECT cc FROM Country cc WHERE cc.exchangeRate IS NOT NULL ORDER BY cc.statusCode
+2009-09-25 18:59:31,552 INFO  QueryBinder.bindQuery():64 - Binding Named query: countrycd_get_countries_by_currency_code => SELECT cc FROM Country cc WHERE cc.currencyCode = :currencyCode
+2009-09-25 18:59:31,553 INFO  QueryBinder.bindQuery():64 - Binding Named query: countrycd_get_country_by_name => SELECT cc FROM Country cc WHERE cc.statusCode = :countryName
+2009-09-25 18:59:31,554 INFO  QueryBinder.bindQuery():64 - Binding Named query: countrycd_get_country_by_locale => SELECT cc FROM Country cc WHERE cc.countryCode = :countryCode AND cc.language = :languageCode
+2009-09-25 18:59:31,554 INFO  QueryBinder.bindQuery():64 - Binding Named query: countrycd_get_country_by_country_code => SELECT cc FROM Country cc WHERE cc.countryCode = :countryCode
+2009-09-25 18:59:31,555 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.Country on table g_Country
+2009-09-25 18:59:31,558 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.Contact
+2009-09-25 18:59:31,559 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: contactType
+2009-09-25 18:59:31,561 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.Contact on table g_Contact
+2009-09-25 18:59:31,577 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.Creditcard
+2009-09-25 18:59:31,578 INFO  QueryBinder.bindQuery():64 - Binding Named query: creditcard_get_creditcards_by_user_id => SELECT cc FROM Creditcard cc WHERE cc.user.id = :userId
+2009-09-25 18:59:31,579 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: cctype
+2009-09-25 18:59:31,580 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,581 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,581 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,591 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.Creditcard on table g_Creditcard
+2009-09-25 18:59:31,594 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.Email
+2009-09-25 18:59:31,595 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: emailtype
+2009-09-25 18:59:31,595 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,597 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,598 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.Email on table g_Email
+2009-09-25 18:59:31,600 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.Image
+2009-09-25 18:59:31,601 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,602 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.Image on table g_Image
+2009-09-25 18:59:31,603 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.InstantMessage
+2009-09-25 18:59:31,604 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: imtype
+2009-09-25 18:59:31,605 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,606 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.InstantMessage on table g_InstantMessage
+2009-09-25 18:59:31,608 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.Location
+2009-09-25 18:59:31,609 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: locationType
+2009-09-25 18:59:31,610 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,610 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,611 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.Location on table g_Location
+2009-09-25 18:59:31,614 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.LockedUser
+2009-09-25 18:59:31,615 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedInteger
+2009-09-25 18:59:31,616 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.LockedUser on table g_LockedUser
+2009-09-25 18:59:31,618 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.Manager
+2009-09-25 18:59:31,638 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.Manager on table g_Manager
+2009-09-25 18:59:31,640 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.News
+2009-09-25 18:59:31,641 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,641 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.News on table g_News
+2009-09-25 18:59:31,644 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.Permission
+2009-09-25 18:59:31,645 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,646 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,647 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,647 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.Permission on table g_Permission
+2009-09-25 18:59:31,653 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.Phone
+2009-09-25 18:59:31,654 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phonetype
+2009-09-25 18:59:31,655 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,655 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.Phone on table g_Phone
+2009-09-25 18:59:31,659 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.Role
+2009-09-25 18:59:31,661 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.Role on table g_Role
+2009-09-25 18:59:31,663 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.User
+2009-09-25 18:59:31,676 INFO  QueryBinder.bindQuery():64 - Binding Named query: user_authenticate_user => SELECT u FROM User u WHERE u.username = :username AND u.password = :password
+2009-09-25 18:59:31,680 INFO  QueryBinder.bindQuery():64 - Binding Named query: user_get_user_by_username => SELECT u FROM User u WHERE u.username = :username
+2009-09-25 18:59:31,680 INFO  QueryBinder.bindQuery():64 - Binding Named query: user_get_user_by_username_exclude_user_id => SELECT u FROM User u WHERE u.username = :username AND u.id <> :userId
+2009-09-25 18:59:31,681 INFO  QueryBinder.bindQuery():64 - Binding Named query: user_get_clients => SELECT u FROM User u WHERE u.id in (:ids)
+2009-09-25 18:59:31,681 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: status
+2009-09-25 18:59:31,682 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: country
+2009-09-25 18:59:31,682 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,683 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.User on table g_User
+2009-09-25 18:59:31,686 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.UserInfo
+2009-09-25 18:59:31,687 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: salutation
+2009-09-25 18:59:31,688 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: sex
+2009-09-25 18:59:31,688 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,689 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.UserInfo on table g_UserInfo
+2009-09-25 18:59:31,692 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.common.model.UserRole
+2009-09-25 18:59:31,693 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.common.model.UserRole on table g_UserRole
+2009-09-25 18:59:31,694 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.emr.model.Diagnosis
+2009-09-25 18:59:31,695 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: diagnosistype
+2009-09-25 18:59:31,696 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.emr.model.Diagnosis on table g_Diagnosis
+2009-09-25 18:59:31,699 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.emr.model.Emr
+2009-09-25 18:59:31,699 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: status
+2009-09-25 18:59:31,700 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.emr.model.Emr on table g_Emr
+2009-09-25 18:59:31,702 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.emr.model.EmrDiagnosis
+2009-09-25 18:59:31,703 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: diagnoserType
+2009-09-25 18:59:31,703 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: emrtype
+2009-09-25 18:59:31,704 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,704 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,705 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,705 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.emr.model.EmrDiagnosis on table g_EmrDiagnosis
+2009-09-25 18:59:31,710 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.emr.model.EmrFile
+2009-09-25 18:59:31,710 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: emrtype
+2009-09-25 18:59:31,711 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,711 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,712 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,712 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.emr.model.EmrFile on table g_EmrFile
+2009-09-25 18:59:31,715 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.emr.model.BasicEmrEntry
+2009-09-25 18:59:31,716 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: emrtype
+2009-09-25 18:59:31,716 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,717 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,717 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,718 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.emr.model.BasicEmrEntry on table g_BasicEmrEntry
+2009-09-25 18:59:31,720 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.AdvanceDirective
+2009-09-25 18:59:31,721 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: adtype
+2009-09-25 18:59:31,721 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,722 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,722 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,723 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,728 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,728 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,729 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.AdvanceDirective on table g_AdvanceDirective
+2009-09-25 18:59:31,733 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.Allergy
+2009-09-25 18:59:31,733 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: frequencyType
+2009-09-25 18:59:31,734 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: allergyReactionType
+2009-09-25 18:59:31,734 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: treatmentType
+2009-09-25 18:59:31,735 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: allergyType
+2009-09-25 18:59:31,735 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,736 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,737 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,737 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,738 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,738 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,739 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,739 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.Allergy on table g_Allergy
+2009-09-25 18:59:31,744 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.AlternativeTreatment
+2009-09-25 18:59:31,745 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: medicalConditionType
+2009-09-25 18:59:31,745 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: alternativeTreatmentType
+2009-09-25 18:59:31,746 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,747 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,747 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,748 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,748 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,749 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,749 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,750 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.AlternativeTreatment on table g_AlternativeTreatment
+2009-09-25 18:59:31,754 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.Dental
+2009-09-25 18:59:31,755 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: reasontype
+2009-09-25 18:59:31,755 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,756 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,756 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,757 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,757 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,758 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,758 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,759 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.Dental on table g_Dental
+2009-09-25 18:59:31,762 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.Employer
+2009-09-25 18:59:31,762 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: profession
+2009-09-25 18:59:31,763 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,763 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,764 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,764 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,765 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,765 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,766 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.Employer on table g_Employer
+2009-09-25 18:59:31,770 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.FamilyHistory
+2009-09-25 18:59:31,771 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: relativeConditionType
+2009-09-25 18:59:31,771 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: relativeType
+2009-09-25 18:59:31,772 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,772 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,773 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,773 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,774 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,774 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,787 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.FamilyHistory on table g_FamilyHistory
+2009-09-25 18:59:31,791 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.Hospitalized
+2009-09-25 18:59:31,791 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: medicalConditionType
+2009-09-25 18:59:31,792 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,792 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,793 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,793 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,794 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,794 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,795 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,796 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.Hospitalized on table g_Hospitalized
+2009-09-25 18:59:31,798 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.Immunization
+2009-09-25 18:59:31,799 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: immunizationType
+2009-09-25 18:59:31,799 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,800 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,800 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,801 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,801 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,802 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,802 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,803 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.Immunization on table g_Immunization
+2009-09-25 18:59:31,806 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.Insurance
+2009-09-25 18:59:31,806 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,807 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,807 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,808 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,808 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,809 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,809 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.Insurance on table g_Insurance
+2009-09-25 18:59:31,812 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.MedicalCondition
+2009-09-25 18:59:31,813 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: medicalConditionType
+2009-09-25 18:59:31,813 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,814 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,814 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,814 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,815 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,815 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,816 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,816 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.MedicalCondition on table g_MedicalCondition
+2009-09-25 18:59:31,820 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.Medication
+2009-09-25 18:59:31,820 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: medicationFrequency
+2009-09-25 18:59:31,821 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: medicalConditionType
+2009-09-25 18:59:31,821 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: medicationType
+2009-09-25 18:59:31,822 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,822 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,823 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,823 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,824 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,824 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,825 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.Medication on table g_Medication
+2009-09-25 18:59:31,829 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.PersonalProfile
+2009-09-25 18:59:31,830 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: language
+2009-09-25 18:59:31,830 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: maritalStatus
+2009-09-25 18:59:31,831 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: religion
+2009-09-25 18:59:31,831 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: race
+2009-09-25 18:59:31,832 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: bloodType
+2009-09-25 18:59:31,832 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,833 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,833 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,834 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,834 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,835 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,835 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,836 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.PersonalProfile on table g_PersonalProfile
+2009-09-25 18:59:31,842 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.PhrContact
+2009-09-25 18:59:31,843 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,844 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,844 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,845 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,845 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,846 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,846 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.PhrContact on table g_PhrContact
+2009-09-25 18:59:31,849 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.PhrLocation
+2009-09-25 18:59:31,849 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,850 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,850 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,851 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,851 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,852 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,852 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.PhrLocation on table g_PhrLocation
+2009-09-25 18:59:31,855 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.Phr
+2009-09-25 18:59:31,856 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.Phr on table g_Phr
+2009-09-25 18:59:31,857 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.PhrFile
+2009-09-25 18:59:31,857 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,858 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,860 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,865 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,866 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,866 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,867 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedInteger
+2009-09-25 18:59:31,867 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.PhrFile on table g_PhrFile
+2009-09-25 18:59:31,870 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.Practitioner
+2009-09-25 18:59:31,871 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,871 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,872 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,872 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,873 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,873 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,874 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.Practitioner on table g_Practitioner
+2009-09-25 18:59:31,876 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.Surgery
+2009-09-25 18:59:31,876 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: surgerytype
+2009-09-25 18:59:31,884 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,885 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,885 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,886 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,886 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,887 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,887 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,888 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.Surgery on table g_Surgery
+2009-09-25 18:59:31,891 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.TravelImmunization
+2009-09-25 18:59:31,892 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,892 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,893 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,893 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,894 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,895 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,895 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,896 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.TravelImmunization on table g_TravelImmunization
+2009-09-25 18:59:31,898 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.VisionContactLenses
+2009-09-25 18:59:31,899 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: lenstype
+2009-09-25 18:59:31,899 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,900 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,900 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,901 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,901 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,902 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,902 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,903 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.VisionContactLenses on table g_VisionContactLenses
+2009-09-25 18:59:31,908 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.VisionExam
+2009-09-25 18:59:31,909 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: reasontype
+2009-09-25 18:59:31,909 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,909 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,910 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,910 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,911 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,911 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,912 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,912 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.VisionExam on table g_VisionExam
+2009-09-25 18:59:31,934 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.phr.model.VisionGlasses
+2009-09-25 18:59:31,935 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: nonPrescriptionGlassesType
+2009-09-25 18:59:31,935 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: prescriptionGlassesType
+2009-09-25 18:59:31,936 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rstatus
+2009-09-25 18:59:31,936 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: rtype
+2009-09-25 18:59:31,936 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:31,937 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: phrtype
+2009-09-25 18:59:31,937 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedString
+2009-09-25 18:59:31,938 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedBoolean
+2009-09-25 18:59:31,938 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: encryptedDate
+2009-09-25 18:59:31,939 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.phr.model.VisionGlasses on table g_VisionGlasses
+2009-09-25 18:59:31,943 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.Application
+2009-09-25 18:59:31,944 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: applicationStatus
+2009-09-25 18:59:31,944 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: applicationType
+2009-09-25 18:59:31,945 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.Application on table g_Application
+2009-09-25 18:59:31,948 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.ApplicationConfiguration
+2009-09-25 18:59:31,948 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.ApplicationConfiguration on table g_ApplicationConfiguration
+2009-09-25 18:59:31,950 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride
+2009-09-25 18:59:31,951 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride on table g_ApplicationConfigurationOverride
+2009-09-25 18:59:31,952 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.ApplicationRole
+2009-09-25 18:59:31,953 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.ApplicationRole on table g_ApplicationRole
+2009-09-25 18:59:31,954 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.License
+2009-09-25 18:59:31,955 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: licenseType
+2009-09-25 18:59:31,955 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: status
+2009-09-25 18:59:31,956 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.License on table g_License
+2009-09-25 18:59:31,959 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.Organization
+2009-09-25 18:59:31,959 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: type
+2009-09-25 18:59:31,960 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: status
+2009-09-25 18:59:31,960 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.Organization on table g_Organization
+2009-09-25 18:59:31,963 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.OrganizationLicense
+2009-09-25 18:59:31,964 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: status
+2009-09-25 18:59:31,964 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.OrganizationLicense on table g_OrganizationLicense
+2009-09-25 18:59:31,966 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.OrganizationUser
+2009-09-25 18:59:31,967 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: status
+2009-09-25 18:59:31,968 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.OrganizationUser on table g_OrganizationUser
+2009-09-25 18:59:31,969 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.OrganizationUserRole
+2009-09-25 18:59:31,970 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.OrganizationUserRole on table g_OrganizationUserRole
+2009-09-25 18:59:31,971 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.Regulation
+2009-09-25 18:59:31,972 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: regulationtype
+2009-09-25 18:59:31,972 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.Regulation on table g_Regulation
+2009-09-25 18:59:31,974 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.RegulationOverride
+2009-09-25 18:59:31,975 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.RegulationOverride on table g_RegulationOverride
+2009-09-25 18:59:31,976 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntry
+2009-09-25 18:59:31,977 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntry on table g_ResourceBundleEntry
+2009-09-25 18:59:31,978 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntryOverride
+2009-09-25 18:59:31,979 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntryOverride on table g_ResourceBundleEntryOverride
+2009-09-25 18:59:31,980 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.professional.model.Professional
+2009-09-25 18:59:31,981 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: protype
+2009-09-25 18:59:31,981 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: prostatus
+2009-09-25 18:59:31,982 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.professional.model.Professional on table g_Professional
+2009-09-25 18:59:31,984 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.professional.model.ProfessionalSettings
+2009-09-25 18:59:31,984 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.professional.model.ProfessionalSettings on table g_ProfessionalSettings
+2009-09-25 18:59:31,986 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.Association
+2009-09-25 18:59:31,987 INFO  QueryBinder.bindQuery():229 - Binding named query: association_get_associations_by_professional_id => FROM Association a WHERE a.professional.id = :professionalId
+2009-09-25 18:59:31,988 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.Association on table g_Association
+2009-09-25 18:59:31,989 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.Blog
+2009-09-25 18:59:31,989 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.Blog on table g_Blog
+2009-09-25 18:59:31,991 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.BlogEntry
+2009-09-25 18:59:31,992 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.BlogEntry on table g_BlogEntry
+2009-09-25 18:59:31,993 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.Certification
+2009-09-25 18:59:31,993 INFO  QueryBinder.bindQuery():229 - Binding named query: certification_get_certifications_by_professional_id => FROM Certification c WHERE c.professional.id = :professionalId
+2009-09-25 18:59:31,994 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.Certification on table g_Certification
+2009-09-25 18:59:31,995 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.Group
+2009-09-25 18:59:32,012 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: gstatus
+2009-09-25 18:59:32,012 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: visibility
+2009-09-25 18:59:32,013 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: grouptype
+2009-09-25 18:59:32,013 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:32,014 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.Group on table g_Group
+2009-09-25 18:59:32,017 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.ProfessionalProfile
+2009-09-25 18:59:32,018 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.ProfessionalProfile on table g_ProfessionalProfile
+2009-09-25 18:59:32,021 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.Publication
+2009-09-25 18:59:32,021 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.Publication on table g_Publication
+2009-09-25 18:59:32,022 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.PublicProfile
+2009-09-25 18:59:32,023 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.PublicProfile on table g_PublicProfile
+2009-09-25 18:59:32,024 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.Recommendation
+2009-09-25 18:59:32,025 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: entitytype
+2009-09-25 18:59:32,025 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: recommendationtype
+2009-09-25 18:59:32,026 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.Recommendation on table g_Recommendation
+2009-09-25 18:59:32,028 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.Specialty
+2009-09-25 18:59:32,028 INFO  QueryBinder.bindQuery():229 - Binding named query: specialty_get_specialties_by_professional_id => FROM Specialty c WHERE c.professional.id = :professionalId
+2009-09-25 18:59:32,029 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: specialtytype
+2009-09-25 18:59:32,029 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.Specialty on table g_Specialty
+2009-09-25 18:59:32,031 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.Relationship
+2009-09-25 18:59:32,032 INFO  QueryBinder.bindQuery():64 - Binding Named query: relationship_get_requested_ids_only => SELECT r.requestedId FROM Relationship r WHERE r.requesterId = :requesterId AND r.requestedType = :requestedType AND r.status = :status
+2009-09-25 18:59:32,032 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: relstatus
+2009-09-25 18:59:32,033 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: requestType
+2009-09-25 18:59:32,033 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.Relationship on table g_Relationship
+2009-09-25 18:59:32,035 INFO  AnnotationBinder.bindClass():419 - Binding entity from annotated class: com.hxcel.globalhealth.domain.socialnetwork.model.Tag
+2009-09-25 18:59:32,036 INFO  AnnotationBinder.bindTypeDef():969 - Binding type definition: country
+2009-09-25 18:59:32,042 INFO  EntityBinder.bindTable():422 - Bind entity com.hxcel.globalhealth.domain.socialnetwork.model.Tag on table g_Tag
+2009-09-25 18:59:32,091 INFO  Version.<clinit>():17 - Hibernate Validator 3.1.0.GA
+2009-09-25 18:59:32,266 INFO  LocalSessionFactoryBean.buildSessionFactory():730 - Building new Hibernate SessionFactory
+2009-09-25 18:59:32,270 INFO  HibernateSearchEventListenerRegister.enableHibernateSearch():53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2009-09-25 18:59:32,442 INFO  ConnectionProviderFactory.newConnectionProvider():95 - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2009-09-25 18:59:32,469 INFO  SettingsFactory.buildSettings():116 - RDBMS: PostgreSQL, version: 8.4.0
+2009-09-25 18:59:32,469 INFO  SettingsFactory.buildSettings():117 - JDBC driver: PostgreSQL Native Driver, version: PostgreSQL 8.3 JDBC4 with SSL (build 603)
+2009-09-25 18:59:32,483 INFO  Dialect.<init>():175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2009-09-25 18:59:32,487 INFO  TransactionFactoryFactory.buildTransactionFactory():62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+2009-09-25 18:59:32,489 INFO  TransactionManagerLookupFactory.getTransactionManagerLookup():80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2009-09-25 18:59:32,489 INFO  SettingsFactory.buildSettings():170 - Automatic flush during beforeCompletion(): disabled
+2009-09-25 18:59:32,490 INFO  SettingsFactory.buildSettings():174 - Automatic session close at end of transaction: disabled
+2009-09-25 18:59:32,490 INFO  SettingsFactory.buildSettings():181 - JDBC batch size: 15
+2009-09-25 18:59:32,491 INFO  SettingsFactory.buildSettings():184 - JDBC batch updates for versioned data: disabled
+2009-09-25 18:59:32,492 INFO  SettingsFactory.buildSettings():189 - Scrollable result sets: enabled
+2009-09-25 18:59:32,492 INFO  SettingsFactory.buildSettings():197 - JDBC3 getGeneratedKeys(): disabled
+2009-09-25 18:59:32,493 INFO  SettingsFactory.buildSettings():205 - Connection release mode: auto
+2009-09-25 18:59:32,494 INFO  SettingsFactory.buildSettings():232 - Default batch fetch size: 1
+2009-09-25 18:59:32,494 INFO  SettingsFactory.buildSettings():236 - Generate SQL with comments: disabled
+2009-09-25 18:59:32,495 INFO  SettingsFactory.buildSettings():240 - Order SQL updates by primary key: disabled
+2009-09-25 18:59:32,496 INFO  SettingsFactory.buildSettings():244 - Order SQL inserts for batching: disabled
+2009-09-25 18:59:32,497 INFO  SettingsFactory.createQueryTranslatorFactory():420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2009-09-25 18:59:32,499 INFO  ASTQueryTranslatorFactory.<init>():47 - Using ASTQueryTranslatorFactory
+2009-09-25 18:59:32,500 INFO  SettingsFactory.buildSettings():252 - Query language substitutions: {}
+2009-09-25 18:59:32,501 INFO  SettingsFactory.buildSettings():257 - JPA-QL strict compliance: disabled
+2009-09-25 18:59:32,501 INFO  SettingsFactory.buildSettings():262 - Second-level cache: enabled
+2009-09-25 18:59:32,502 INFO  SettingsFactory.buildSettings():266 - Query cache: enabled
+2009-09-25 18:59:32,504 INFO  SettingsFactory.createRegionFactory():405 - Cache region factory : org.hibernate.cache.impl.bridge.RegionFactoryCacheProviderBridge
+2009-09-25 18:59:32,505 INFO  RegionFactoryCacheProviderBridge.<init>():61 - Cache provider: org.hibernate.cache.EhCacheProvider
+2009-09-25 18:59:32,507 INFO  SettingsFactory.buildSettings():276 - Optimize cache for minimal puts: enabled
+2009-09-25 18:59:32,507 INFO  SettingsFactory.buildSettings():285 - Structured second-level cache entries: disabled
+2009-09-25 18:59:32,508 INFO  SettingsFactory.createQueryCacheFactory():384 - Query cache factory: org.hibernate.cache.StandardQueryCacheFactory
+2009-09-25 18:59:32,511 INFO  SettingsFactory.buildSettings():314 - Statistics: disabled
+2009-09-25 18:59:32,511 INFO  SettingsFactory.buildSettings():318 - Deleted entity synthetic identifier rollback: disabled
+2009-09-25 18:59:32,512 INFO  SettingsFactory.buildSettings():333 - Default entity-mode: pojo
+2009-09-25 18:59:32,513 INFO  SettingsFactory.buildSettings():337 - Named query checking : enabled
+2009-09-25 18:59:32,621 INFO  SessionFactoryImpl.<init>():187 - building session factory
+2009-09-25 18:59:32,698 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.Allergy]; using defaults.
+2009-09-25 18:59:33,086 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.FamilyHistory]; using defaults.
+2009-09-25 18:59:33,103 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.VisionExam]; using defaults.
+2009-09-25 18:59:33,170 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.Immunization]; using defaults.
+2009-09-25 18:59:33,185 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.common.model.Permission]; using defaults.
+2009-09-25 18:59:33,191 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.common.model.Contact]; using defaults.
+2009-09-25 18:59:33,197 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.PhrContact]; using defaults.
+2009-09-25 18:59:33,217 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.VisionContactLenses]; using defaults.
+2009-09-25 18:59:33,232 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.PersonalProfile]; using defaults.
+2009-09-25 18:59:33,285 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.PhrLocation]; using defaults.
+2009-09-25 18:59:33,299 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.AlternativeTreatment]; using defaults.
+2009-09-25 18:59:33,308 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.Surgery]; using defaults.
+2009-09-25 18:59:33,316 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.Employer]; using defaults.
+2009-09-25 18:59:33,337 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.Practitioner]; using defaults.
+2009-09-25 18:59:33,347 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.AdvanceDirective]; using defaults.
+2009-09-25 18:59:33,354 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.Hospitalized]; using defaults.
+2009-09-25 18:59:33,378 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.Insurance]; using defaults.
+2009-09-25 18:59:33,403 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.TravelImmunization]; using defaults.
+2009-09-25 18:59:33,441 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.Dental]; using defaults.
+2009-09-25 18:59:33,450 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.VisionGlasses]; using defaults.
+2009-09-25 18:59:33,466 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.Medication]; using defaults.
+2009-09-25 18:59:33,529 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.PhrFile]; using defaults.
+2009-09-25 18:59:33,599 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [com.hxcel.globalhealth.domain.phr.model.MedicalCondition]; using defaults.
+2009-09-25 18:59:33,785 INFO  SessionFactoryObjectFactory.addInstance():105 - Not binding factory to JNDI, no JNDI name configured
+2009-09-25 18:59:33,788 INFO  UpdateTimestampsCache.<init>():57 - starting update timestamps cache at region: org.hibernate.cache.UpdateTimestampsCache
+2009-09-25 18:59:33,789 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [org.hibernate.cache.UpdateTimestampsCache]; using defaults.
+2009-09-25 18:59:33,791 INFO  StandardQueryCache.<init>():75 - starting query cache at region: org.hibernate.cache.StandardQueryCache
+2009-09-25 18:59:33,791 WARN  EhCacheProvider.buildCache():93 - Could not find configuration [org.hibernate.cache.StandardQueryCache]; using defaults.
+2009-09-25 18:59:33,933 INFO  LocalSessionFactoryBean.updateDatabaseSchema():950 - Updating database schema for Hibernate SessionFactory
+2009-09-25 18:59:34,000 INFO  Dialect.<init>():175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2009-09-25 18:59:34,087 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_AdvanceDirective
+2009-09-25 18:59:34,091 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_AdvanceDirective_Permission
+2009-09-25 18:59:34,094 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Allergy
+2009-09-25 18:59:34,097 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Allergy_Permission
+2009-09-25 18:59:34,100 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_AlternativeTreatment
+2009-09-25 18:59:34,104 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_AlternativeTreatment_Permission
+2009-09-25 18:59:34,106 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Application
+2009-09-25 18:59:34,110 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ApplicationConfiguration
+2009-09-25 18:59:34,113 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ApplicationConfigurationOverride
+2009-09-25 18:59:34,120 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ApplicationRole
+2009-09-25 18:59:34,130 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Association
+2009-09-25 18:59:34,134 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_BasicEmrEntry
+2009-09-25 18:59:34,137 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_BasicEmrEntry_Permission
+2009-09-25 18:59:34,139 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Blog
+2009-09-25 18:59:34,142 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_BlogEntry
+2009-09-25 18:59:34,161 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Blog_BlogEntry
+2009-09-25 18:59:34,164 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Certification
+2009-09-25 18:59:34,173 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Contact
+2009-09-25 18:59:34,177 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Contact_Location
+2009-09-25 18:59:34,180 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Country
+2009-09-25 18:59:34,183 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Creditcard
+2009-09-25 18:59:34,187 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Dental
+2009-09-25 18:59:34,190 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Dental_Permission
+2009-09-25 18:59:34,193 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Diagnosis
+2009-09-25 18:59:34,196 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Diagnosis_Diagnosis
+2009-09-25 18:59:34,199 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Email
+2009-09-25 18:59:34,203 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Employer
+2009-09-25 18:59:34,214 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Employer_Location
+2009-09-25 18:59:34,217 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Employer_Permission
+2009-09-25 18:59:34,220 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Emr
+2009-09-25 18:59:34,223 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_EmrDiagnosis
+2009-09-25 18:59:34,226 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_EmrDiagnosis_Permission
+2009-09-25 18:59:34,229 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_EmrFile
+2009-09-25 18:59:34,231 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_EmrFile_Permission
+2009-09-25 18:59:34,234 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_FamilyHistory
+2009-09-25 18:59:34,237 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_FamilyHistory_Permission
+2009-09-25 18:59:34,239 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Group
+2009-09-25 18:59:34,242 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Hospitalized
+2009-09-25 18:59:34,245 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Hospitalized_Permission
+2009-09-25 18:59:34,248 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Image
+2009-09-25 18:59:34,250 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Immunization
+2009-09-25 18:59:34,253 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Immunization_Permission
+2009-09-25 18:59:34,256 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_InstantMessage
+2009-09-25 18:59:34,259 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Insurance
+2009-09-25 18:59:34,263 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Insurance_Permission
+2009-09-25 18:59:34,266 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_License
+2009-09-25 18:59:34,269 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Location
+2009-09-25 18:59:34,272 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_LockedUser
+2009-09-25 18:59:34,275 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Manager
+2009-09-25 18:59:34,277 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_MedicalCondition
+2009-09-25 18:59:34,280 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_MedicalCondition_Permission
+2009-09-25 18:59:34,283 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Medication
+2009-09-25 18:59:34,286 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Medication_Permission
+2009-09-25 18:59:34,288 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_News
+2009-09-25 18:59:34,291 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Organization
+2009-09-25 18:59:34,293 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_OrganizationLicense
+2009-09-25 18:59:34,296 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_OrganizationUser
+2009-09-25 18:59:34,299 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_OrganizationUserRole
+2009-09-25 18:59:34,302 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Patient
+2009-09-25 18:59:34,306 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Permission
+2009-09-25 18:59:34,309 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PersonalProfile
+2009-09-25 18:59:34,312 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PersonalProfile_Permission
+2009-09-25 18:59:34,315 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Phone
+2009-09-25 18:59:34,318 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Phr
+2009-09-25 18:59:34,320 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrContact
+2009-09-25 18:59:34,323 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrContact_Permission
+2009-09-25 18:59:34,326 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrFile
+2009-09-25 18:59:34,329 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrFile_Permission
+2009-09-25 18:59:34,331 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrLocation
+2009-09-25 18:59:34,334 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrLocation_Permission
+2009-09-25 18:59:34,337 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Practitioner
+2009-09-25 18:59:34,341 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Practitioner_Permission
+2009-09-25 18:59:34,346 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Professional
+2009-09-25 18:59:34,349 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile
+2009-09-25 18:59:34,352 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile_Association
+2009-09-25 18:59:34,355 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile_Blog
+2009-09-25 18:59:34,357 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile_Certification
+2009-09-25 18:59:34,360 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile_Publication
+2009-09-25 18:59:34,363 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile_Specialty
+2009-09-25 18:59:34,365 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalSettings
+2009-09-25 18:59:34,368 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PublicProfile
+2009-09-25 18:59:34,370 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PublicProfile_Blog
+2009-09-25 18:59:34,373 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Publication
+2009-09-25 18:59:34,375 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Recommendation
+2009-09-25 18:59:34,379 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Regulation
+2009-09-25 18:59:34,382 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_RegulationOverride
+2009-09-25 18:59:34,386 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Relationship
+2009-09-25 18:59:34,389 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ResourceBundleEntry
+2009-09-25 18:59:34,391 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ResourceBundleEntryOverride
+2009-09-25 18:59:34,394 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Role
+2009-09-25 18:59:34,397 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Specialty
+2009-09-25 18:59:34,399 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Specialty_Image
+2009-09-25 18:59:34,402 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Surgery
+2009-09-25 18:59:34,405 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Surgery_Permission
+2009-09-25 18:59:34,408 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_SystemAuditLogger
+2009-09-25 18:59:34,411 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Tag
+2009-09-25 18:59:34,413 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_TravelImmunization
+2009-09-25 18:59:34,416 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_TravelImmunization_Permission
+2009-09-25 18:59:34,437 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_User
+2009-09-25 18:59:34,440 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_UserInfo
+2009-09-25 18:59:34,443 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_UserInfo_Email
+2009-09-25 18:59:34,445 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_UserInfo_InstantMessage
+2009-09-25 18:59:34,448 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_UserInfo_Phone
+2009-09-25 18:59:34,450 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_UserRole
+2009-09-25 18:59:34,453 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_User_Manager
+2009-09-25 18:59:34,455 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionContactLenses
+2009-09-25 18:59:34,459 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionContactLenses_Permission
+2009-09-25 18:59:34,462 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionExam
+2009-09-25 18:59:34,465 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionExam_Permission
+2009-09-25 18:59:34,468 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionGlasses
+2009-09-25 18:59:34,471 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionGlasses_Permission
+2009-09-25 18:59:34,477 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_AdvanceDirective
+2009-09-25 18:59:34,480 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_AdvanceDirective_Permission
+2009-09-25 18:59:34,483 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Allergy
+2009-09-25 18:59:34,485 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Allergy_Permission
+2009-09-25 18:59:34,488 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_AlternativeTreatment
+2009-09-25 18:59:34,490 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_AlternativeTreatment_Permission
+2009-09-25 18:59:34,493 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Application
+2009-09-25 18:59:34,496 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ApplicationConfiguration
+2009-09-25 18:59:34,498 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ApplicationConfigurationOverride
+2009-09-25 18:59:34,501 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ApplicationRole
+2009-09-25 18:59:34,503 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Association
+2009-09-25 18:59:34,506 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_BasicEmrEntry
+2009-09-25 18:59:34,509 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_BasicEmrEntry_Permission
+2009-09-25 18:59:34,512 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Blog
+2009-09-25 18:59:34,516 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_BlogEntry
+2009-09-25 18:59:34,519 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Blog_BlogEntry
+2009-09-25 18:59:34,522 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Certification
+2009-09-25 18:59:34,524 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Contact
+2009-09-25 18:59:34,527 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Contact_Location
+2009-09-25 18:59:34,529 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Country
+2009-09-25 18:59:34,532 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Creditcard
+2009-09-25 18:59:34,535 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Dental
+2009-09-25 18:59:34,537 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Dental_Permission
+2009-09-25 18:59:34,540 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Diagnosis
+2009-09-25 18:59:34,542 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Diagnosis_Diagnosis
+2009-09-25 18:59:34,545 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Email
+2009-09-25 18:59:34,547 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Employer
+2009-09-25 18:59:34,550 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Employer_Location
+2009-09-25 18:59:34,557 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Employer_Permission
+2009-09-25 18:59:34,560 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Emr
+2009-09-25 18:59:34,562 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_EmrDiagnosis
+2009-09-25 18:59:34,565 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_EmrDiagnosis_Permission
+2009-09-25 18:59:34,568 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_EmrFile
+2009-09-25 18:59:34,571 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_EmrFile_Permission
+2009-09-25 18:59:34,573 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_FamilyHistory
+2009-09-25 18:59:34,576 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_FamilyHistory_Permission
+2009-09-25 18:59:34,578 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Group
+2009-09-25 18:59:34,581 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Hospitalized
+2009-09-25 18:59:34,583 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Hospitalized_Permission
+2009-09-25 18:59:34,586 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Image
+2009-09-25 18:59:34,589 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Immunization
+2009-09-25 18:59:34,592 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Immunization_Permission
+2009-09-25 18:59:34,597 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_InstantMessage
+2009-09-25 18:59:34,599 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Insurance
+2009-09-25 18:59:34,602 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Insurance_Permission
+2009-09-25 18:59:34,605 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_License
+2009-09-25 18:59:34,607 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Location
+2009-09-25 18:59:34,610 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_LockedUser
+2009-09-25 18:59:34,613 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Manager
+2009-09-25 18:59:34,615 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_MedicalCondition
+2009-09-25 18:59:34,618 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_MedicalCondition_Permission
+2009-09-25 18:59:34,620 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Medication
+2009-09-25 18:59:34,623 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Medication_Permission
+2009-09-25 18:59:34,625 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_News
+2009-09-25 18:59:34,628 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Organization
+2009-09-25 18:59:34,631 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_OrganizationLicense
+2009-09-25 18:59:34,636 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_OrganizationUser
+2009-09-25 18:59:34,639 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_OrganizationUserRole
+2009-09-25 18:59:34,642 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Patient
+2009-09-25 18:59:34,644 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Permission
+2009-09-25 18:59:34,647 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PersonalProfile
+2009-09-25 18:59:34,650 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PersonalProfile_Permission
+2009-09-25 18:59:34,653 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Phone
+2009-09-25 18:59:34,655 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Phr
+2009-09-25 18:59:34,658 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrContact
+2009-09-25 18:59:34,660 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrContact_Permission
+2009-09-25 18:59:34,663 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrFile
+2009-09-25 18:59:34,666 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrFile_Permission
+2009-09-25 18:59:34,669 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrLocation
+2009-09-25 18:59:34,672 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PhrLocation_Permission
+2009-09-25 18:59:34,676 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Practitioner
+2009-09-25 18:59:34,685 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Practitioner_Permission
+2009-09-25 18:59:34,688 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Professional
+2009-09-25 18:59:34,690 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile
+2009-09-25 18:59:34,693 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile_Association
+2009-09-25 18:59:34,696 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile_Blog
+2009-09-25 18:59:34,698 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile_Certification
+2009-09-25 18:59:34,701 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile_Publication
+2009-09-25 18:59:34,703 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalProfile_Specialty
+2009-09-25 18:59:34,706 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ProfessionalSettings
+2009-09-25 18:59:34,709 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PublicProfile
+2009-09-25 18:59:34,713 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_PublicProfile_Blog
+2009-09-25 18:59:34,717 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Publication
+2009-09-25 18:59:34,720 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Recommendation
+2009-09-25 18:59:34,722 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Regulation
+2009-09-25 18:59:34,725 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_RegulationOverride
+2009-09-25 18:59:34,728 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Relationship
+2009-09-25 18:59:34,730 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ResourceBundleEntry
+2009-09-25 18:59:34,733 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_ResourceBundleEntryOverride
+2009-09-25 18:59:34,735 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Role
+2009-09-25 18:59:34,738 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Specialty
+2009-09-25 18:59:34,740 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Specialty_Image
+2009-09-25 18:59:34,743 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Surgery
+2009-09-25 18:59:34,746 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Surgery_Permission
+2009-09-25 18:59:34,748 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_SystemAuditLogger
+2009-09-25 18:59:34,752 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_Tag
+2009-09-25 18:59:34,757 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_TravelImmunization
+2009-09-25 18:59:34,759 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_TravelImmunization_Permission
+2009-09-25 18:59:34,762 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_User
+2009-09-25 18:59:34,765 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_UserInfo
+2009-09-25 18:59:34,768 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_UserInfo_Email
+2009-09-25 18:59:34,770 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_UserInfo_InstantMessage
+2009-09-25 18:59:34,773 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_UserInfo_Phone
+2009-09-25 18:59:34,776 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_UserRole
+2009-09-25 18:59:34,778 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_User_Manager
+2009-09-25 18:59:34,781 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionContactLenses
+2009-09-25 18:59:34,783 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionContactLenses_Permission
+2009-09-25 18:59:34,786 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionExam
+2009-09-25 18:59:34,789 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionExam_Permission
+2009-09-25 18:59:34,793 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionGlasses
+2009-09-25 18:59:34,797 INFO  DatabaseMetadata.getTableMetadata():119 - table not found: g_VisionGlasses_Permission
+2009-09-25 18:59:37,143 INFO  InitLogger.log():44 - Trying to find Dozer configuration file: dozer.properties
+2009-09-25 18:59:37,148 INFO  InitLogger.log():44 - Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2009-09-25 18:59:37,149 INFO  InitLogger.log():44 - Initializing Dozer.  Version: 4.2.1, Thread Name:main, Is this JDK 1.5.x?:true
+2009-09-25 18:59:37,218 WARN  DozerInitializer.init():60 - Unable to register Dozer JMX MBeans with the PlatformMBeanServer.  Dozer will still function normally, but management via JMX may not be available
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at net.sf.dozer.util.mapping.DozerInitializer.registerJMXBean(DozerInitializer.java:111)
+	at net.sf.dozer.util.mapping.DozerInitializer.registerJMXBeans(DozerInitializer.java:91)
+	at net.sf.dozer.util.mapping.DozerInitializer.init(DozerInitializer.java:58)
+	at net.sf.dozer.util.mapping.DozerBeanMapper.<clinit>(DozerBeanMapper.java:56)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:100)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:61)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:877)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:839)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:440)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:671)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:610)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:412)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.injectFields(InjectionMetadata.java:105)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessAfterInstantiation(AutowiredAnnotationBeanPostProcessor.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:959)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:269)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:104)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:269)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:104)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:287)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:126)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:729)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:381)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:255)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:199)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:45)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:579)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:156)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1215)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:548)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:348)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:107)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:151)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:151)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:222)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:384)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:320)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:205)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:490)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeStandaloneGoal(DefaultLifecycleExecutor.java:569)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:539)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+2009-09-25 18:59:37,223 INFO  InitLogger.log():44 - Initializing a new instance of the dozer bean mapper.
+2009-09-25 18:59:43,399 INFO  EntryPointInjectionBeanPostProcessor.postProcessBeforeInitialization():30 - Selecting AuthenticationEntryPoint for use in ExceptionTranslationFilter
+2009-09-25 18:59:43,416 INFO  EntryPointInjectionBeanPostProcessor.postProcessBeforeInitialization():38 - Using main configured AuthenticationEntryPoint.
+2009-09-25 18:59:43,416 INFO  EntryPointInjectionBeanPostProcessor.postProcessBeforeInitialization():46 - Using bean 'org.springframework.security.ui.webapp.AuthenticationProcessingFilterEntryPoint@590aeb1f' as the entry point.
+2009-09-25 18:59:43,513 INFO  AbstractSecurityInterceptor.afterPropertiesSet():216 - Validated configuration attributes
+2009-09-25 18:59:43,653 INFO  RememberMeServicesInjectionBeanPostProcessor.postProcessBeforeInitialization():43 - Setting RememberMeServices on bean _basicAuthenticationFilter
+2009-09-25 18:59:43,723 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():57 - Checking sorted filter chain: [org.springframework.security.concurrent.ConcurrentSessionFilter[ order=100; ], org.springframework.security.context.HttpSessionContextIntegrationFilter[ order=200; ], org.springframework.security.ui.logout.LogoutFilter[ order=300; ], org.springframework.security.ui.webapp.AuthenticationProcessingFilter[ order=700; ], org.springframework.security.ui.basicauth.BasicProcessingFilter[ order=1000; ], org.springframework.security.wrapper.SecurityContextHolderAwareRequestFilter[ order=1100; ], org.springframework.security.ui.rememberme.RememberMeProcessingFilter[ order=1200; ], org.springframework.security.providers.anonymous.AnonymousProcessingFilter[ order=1300; ], org.springframework.security.ui.ExceptionTranslationFilter[ order=1400; ], org.springframework.security.ui.SessionFixationProtectionFilter[ order=1600; ], org.springframework.security.intercept.web.FilterSecurityInterceptor@4d22366e]
+2009-09-25 18:59:43,723 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():74 - Filter chain...
+2009-09-25 18:59:43,724 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [0] - org.springframework.security.concurrent.ConcurrentSessionFilter[ order=100; ]
+2009-09-25 18:59:43,724 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [1] - org.springframework.security.context.HttpSessionContextIntegrationFilter[ order=200; ]
+2009-09-25 18:59:43,724 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [2] - org.springframework.security.ui.logout.LogoutFilter[ order=300; ]
+2009-09-25 18:59:43,725 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [3] - org.springframework.security.ui.webapp.AuthenticationProcessingFilter[ order=700; ]
+2009-09-25 18:59:43,725 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [4] - org.springframework.security.ui.basicauth.BasicProcessingFilter[ order=1000; ]
+2009-09-25 18:59:43,725 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [5] - org.springframework.security.wrapper.SecurityContextHolderAwareRequestFilter[ order=1100; ]
+2009-09-25 18:59:43,725 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [6] - org.springframework.security.ui.rememberme.RememberMeProcessingFilter[ order=1200; ]
+2009-09-25 18:59:43,726 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [7] - org.springframework.security.providers.anonymous.AnonymousProcessingFilter[ order=1300; ]
+2009-09-25 18:59:43,726 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [8] - org.springframework.security.ui.ExceptionTranslationFilter[ order=1400; ]
+2009-09-25 18:59:43,726 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [9] - org.springframework.security.ui.SessionFixationProtectionFilter[ order=1600; ]
+2009-09-25 18:59:43,727 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():78 - [10] - org.springframework.security.intercept.web.FilterSecurityInterceptor@4d22366e
+2009-09-25 18:59:43,727 INFO  FilterChainProxyPostProcessor.checkLoginPageIsntProtected():134 - Checking whether login URL '/index.html' is accessible with your configuration
+2009-09-25 18:59:43,728 INFO  FilterChainProxyPostProcessor.postProcessBeforeInitialization():91 - FilterChainProxy: FilterChainProxy[ UrlMatcher = org.springframework.security.util.AntUrlPathMatcher[requiresLowerCase='true']; Filter Chains: {/**=[org.springframework.security.concurrent.ConcurrentSessionFilter[ order=100; ], org.springframework.security.context.HttpSessionContextIntegrationFilter[ order=200; ], org.springframework.security.ui.logout.LogoutFilter[ order=300; ], org.springframework.security.ui.webapp.AuthenticationProcessingFilter[ order=700; ], org.springframework.security.ui.basicauth.BasicProcessingFilter[ order=1000; ], org.springframework.security.wrapper.SecurityContextHolderAwareRequestFilter[ order=1100; ], org.springframework.security.ui.rememberme.RememberMeProcessingFilter[ order=1200; ], org.springframework.security.providers.anonymous.AnonymousProcessingFilter[ order=1300; ], org.springframework.security.ui.ExceptionTranslationFilter[ order=1400; ], org.springframework.security.ui.SessionFixationProtectionFilter[ order=1600; ], org.springframework.security.intercept.web.FilterSecurityInterceptor@4d22366e]}]
+2009-09-25 18:59:43,797 INFO  HibernateTransactionManager.afterPropertiesSet():421 - Using DataSource [org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy@52dce479] of Hibernate SessionFactory for HibernateTransactionManager
+2009-09-25 18:59:43,996 INFO  AbstractSecurityInterceptor.afterPropertiesSet():216 - Validated configuration attributes
+2009-09-25 18:59:45,347 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.common.model.Country com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getCountry(com.hxcel.globalhealth.domain.common.model.enums.CountryCd) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,348 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.common.model.Country com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getCountry(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,352 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Organization com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getOrganization(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,355 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.common.model.Role com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getRole(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,357 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Organization com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateOrganization(com.hxcel.globalhealth.domain.platform.model.Organization) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,359 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Organization com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.addOrganizationIcon(java.lang.String,java.lang.String,java.io.InputStream,com.hxcel.globalhealth.domain.platform.model.enums.IconSizeCd) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,361 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Organization com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deactivateOrganization(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,364 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Application com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateApplication(com.hxcel.globalhealth.domain.platform.model.Application) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,366 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Application com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deactivateApplication(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,368 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.License com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.addApplicationLicense(java.lang.String,com.hxcel.globalhealth.domain.platform.model.License) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,371 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.License com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getLicense(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException,com.hxcel.globalhealth.domain.utils.hibernate.PersistenceException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,374 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.License com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.updateLicense(com.hxcel.globalhealth.domain.platform.model.License) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,376 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.OrganizationUser com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.registerUserWithOrganization(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,379 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchApplicationsOwnedByOrganization(java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,382 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.OrganizationUser com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteOrganizationUser(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,384 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.OrganizationLicense com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateOrganizationLicense(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,386 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.OrganizationLicense com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.unlicenseThirdPartyApplication(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,387 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForOrganizations(java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,390 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForApplications(java.lang.String,java.lang.Boolean,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,391 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForApplicationsCount(java.lang.String,java.lang.Boolean) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,393 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Application com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getApplication(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,395 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getOrganizationThinList() throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,397 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationConfiguration com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getApplicationConfiguration(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,399 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationConfiguration com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.addApplicationConfiguration(java.lang.String,com.hxcel.globalhealth.domain.platform.model.ApplicationConfiguration) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,401 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationConfiguration com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.updateApplicationConfiguration(com.hxcel.globalhealth.domain.platform.model.ApplicationConfiguration) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,403 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationConfiguration com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteApplicationConfiguration(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,405 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.License com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteApplicationLicense(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,407 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getApplicationConfigurationOverride(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,409 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.addApplicationConfigurationOverride(java.lang.String,com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,411 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.updateApplicationConfigurationOverride(com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,412 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Application com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.addApplicationIcon(java.lang.String,java.lang.String,java.io.InputStream,com.hxcel.globalhealth.domain.platform.model.enums.IconSizeCd) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,414 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Application com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.addApplicationSwf(java.lang.String,java.lang.String,java.io.InputStream) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,416 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForOrganizationsCount(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,417 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteApplicationConfigurationOverride(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,419 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.common.model.Role com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getRoleByStatusCode(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,421 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.common.model.Role com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateRole(com.hxcel.globalhealth.domain.common.model.Role) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,422 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForRoles(java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,424 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForRolesCount(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,426 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.common.model.Role com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteRole(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,427 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.addApplicationRoles(java.lang.String,java.util.List) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,429 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationRole com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.addApplicationRole(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,431 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationRole com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteApplicationRole(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,432 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getLicensedApplicationsExcludeOwner(java.lang.String,java.lang.Boolean) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,434 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.licenseApplicationsForOrganization(java.lang.String,java.util.List) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,435 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.registerUsersWithOrganization(java.lang.String,java.util.List) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,437 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForOrganizationUsers(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,439 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchOrganizationUsersCount(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,441 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForLicensedThirdPartyApplications(java.lang.String,java.lang.String,java.lang.Boolean,com.hxcel.globalhealth.domain.platform.model.enums.OrganizationLicenseStatusCd,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,443 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchLicensedThirdPartyApplicationsCount(java.lang.String,java.lang.String,java.lang.Boolean,com.hxcel.globalhealth.domain.platform.model.enums.OrganizationLicenseStatusCd) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,445 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForLicensedThirdPartyApplicationConfigurationOverrides(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,447 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForLicensedThirdPartyApplicationConfigurationOverridesCount(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,448 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateApplicationConfigurationOverride(com.hxcel.globalhealth.domain.platform.model.ApplicationConfigurationOverride) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,450 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchApplicationsOwnedByOrganizationCount(java.lang.String,java.lang.String,java.lang.Boolean) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,452 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForApplicationLicenses(java.lang.String,java.lang.String,com.hxcel.globalhealth.domain.platform.model.enums.LicenseStatusCd,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,453 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForApplicationLicensesCount(java.lang.String,java.lang.String,com.hxcel.globalhealth.domain.platform.model.enums.LicenseStatusCd) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,455 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForApplicationRoles(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,456 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForApplicationRolesCount(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,458 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForApplicationConfigurations(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,459 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForApplicationConfigurationsCount(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,461 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Boolean com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.isApplicationPublishable(com.hxcel.globalhealth.domain.platform.model.Application) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,462 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Boolean com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.isApplicationUnpublishable(com.hxcel.globalhealth.domain.platform.model.Application) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,479 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public void com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.publishApplication(java.lang.String,com.hxcel.globalhealth.domain.platform.model.enums.ApplicationStatusCd) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,481 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.dto.LaunchableApplicationDto com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getLaunchableApplication(java.lang.String,java.lang.String,boolean) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,482 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.OrganizationLicense com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getOrganizationLicense(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,484 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForCountries(java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,486 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForCountriesCount(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,487 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.common.model.Country com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateCountry(com.hxcel.globalhealth.domain.common.model.Country) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,489 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForOrganizationUserRoles(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,490 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchOrganizationUserRolesCount(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,492 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.OrganizationUser com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getOrganizationUser(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,493 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForRegulations(java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,495 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForRegulationsCount(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,496 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Regulation com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateRegulation(com.hxcel.globalhealth.domain.platform.model.Regulation) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,498 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Regulation com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getRegulation(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,499 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.Regulation com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteRegulation(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,503 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForRegulationOverridesByCountry(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,504 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForRegulationOverridesByCountryCount(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,506 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.RegulationOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getRegulationOverride(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,508 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.RegulationOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateRegulationOverride(com.hxcel.globalhealth.domain.platform.model.RegulationOverride) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,509 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.RegulationOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteRegulationOverride(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,511 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getLastModifiedApplications(java.lang.Boolean,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,512 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getLastModifiedRegulations(java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,514 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getLastModifiedCountries(java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,516 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getLastModifiedOrganizations(java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,517 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getLastModifiedUsers(java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,519 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getLastModifiedRoles(java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,520 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForResourceBundleEntries(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,522 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForResourceBundleEntriesCount(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,524 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntry com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateResourceBundle(com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntry) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,527 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntry com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getResourceBundleEntry(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,536 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateOrganizationUserRoles(java.lang.String,java.util.List) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,538 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.OrganizationUserRole com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteOrganizationUserRole(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,540 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.OrganizationUser com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateOrganizationUser(com.hxcel.globalhealth.domain.platform.model.OrganizationUser) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,541 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntry com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteResourceBundleEntry(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,543 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForUsersWithExcludes(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,545 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForUsersWithExcludesCount(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,547 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public void com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.addApplicationResourceBundle(java.lang.String,java.lang.String,java.io.InputStream) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,549 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.util.List com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForLicensedThirdPartyApplicationResourceBundleEntryOverrides(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,551 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public java.lang.Integer com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.searchForLicensedThirdPartyApplicationResourceBundleEntryOverridesCount(java.lang.String,java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,554 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntryOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.deleteResourceBundleEntryOverride(java.lang.String) throws com.hxcel.globalhealth.domain.utils.hibernate.PersistenceException,com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,574 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntryOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.saveOrUpdateResourceBundleEntryOverride(java.lang.String,com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntryOverride) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:45,576 INFO  MapBasedMethodDefinitionSource.addSecureMethod():116 - Adding secure method [RegisteredMethod[com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl; public com.hxcel.globalhealth.domain.platform.model.ResourceBundleEntryOverride com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl.getResourceBundleEntryOverride(java.lang.String) throws com.hxcel.globalhealth.domain.DomainException]] with attributes [[ROLE_ADMINISTRATOR]]
+2009-09-25 18:59:46,493 INFO  DataCreationManager.init():32 - Creating data with: Country Data Creator
+2009-09-25 18:59:46,944 INFO  CountryDataCreator.create():64 - Populated 213 countries in db
+2009-09-25 18:59:46,945 INFO  CountryDataCreator.create():65 - Omitted 0 countries from db. Already exists.
+2009-09-25 18:59:47,087 INFO  DataCreationManager.init():34 - Success: Country Data Creator
+2009-09-25 18:59:47,087 INFO  DataCreationManager.init():32 - Creating data with: God Organization Data Creator
+2009-09-25 18:59:47,111 INFO  OrganizationDataCreator.create():41 - Created org successfully with id: 4028804523f36e420123f36e7b2700d6
+2009-09-25 18:59:47,114 INFO  DataCreationManager.init():34 - Success: God Organization Data Creator
+2009-09-25 18:59:47,115 INFO  DataCreationManager.init():32 - Creating data with: Role Data Creator
+2009-09-25 18:59:47,128 INFO  RoleDataCreator.create():50 - Populated 2 roles in db
+2009-09-25 18:59:47,128 INFO  RoleDataCreator.create():51 - Omitted 0 roles from db. Already exists.
+2009-09-25 18:59:47,131 INFO  DataCreationManager.init():34 - Success: Role Data Creator
+2009-09-25 18:59:47,132 INFO  DataCreationManager.init():32 - Creating data with: Administration Data Creator
+2009-09-25 18:59:47,272 TRACE RelationshipManagerImpl.createRelationshipNow():93 - Creating a relationship between requester id: 4028804523f36e420123f36e7bbd00d9(of type USER) and requested id: 4028804523f36e420123f36e7bc800dd(of type PATIENT)
+2009-09-25 18:59:47,278 INFO  UserDataCreator.create():56 - Populated 1 administrators in db
+2009-09-25 18:59:47,278 INFO  UserDataCreator.create():57 - Omitted 0 administrators from db. Already exists.
+2009-09-25 18:59:47,290 INFO  DefaultSingletonBeanRegistry.destroySingletons():399 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7fdb04ed: defining beans [propertyConfigurer,baseMessageSource,messageSource,_authenticationManager,_filterChainProxy,_httpSessionContextIntegrationFilter,_filterChainProxyPostProcessor,_filterChainList,_securityContextHolderAwareRequestFilter,_accessManager,_portMapper,_exceptionTranslationFilter,_filterSecurityInterceptor,_sessionRegistry,_concurrentSessionController,_concurrentSessionFilter,_sessionFixationProtectionFilter,_anonymousProcessingFilter,_rememberMeServices,_rememberMeFilter,_rememberMeServicesInjectionBeanPostProcessor,_logoutFilter,_basicAuthenticationEntryPoint,_basicAuthenticationFilter,_formLoginFilter,_formLoginEntryPoint,_entryPointInjectionBeanPostProcessor,_userServiceInjectionPostProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,mapperIF,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,entityInterceptor,namingStrategy,sessionFactory,hibernateTemplate,hibSupport,transactionManager,hibInterceptor,hibernateStringEncryptor,hibernateByteEncryptor,hibernateIntegerEncryptor,hibernateBigDecimalEncryptor,stringEncryptor,byteEncryptor,bigIntegerEncryptor,bigDecimalEncryptor,passwordEncryptor,encryptionProvider,envPBEConfig,imageResizer,passwordEncoder,_protectPointcutPostProcessor,_delegatingMethodDefinitionSource,_methodSecurityInterceptor,_methodSecurityInterceptorPostProcessor,_methodDefinitionSourceAdvisor,org.springframework.security.providers.dao.DaoAuthenticationProvider#0,org.springframework.security.config.AuthenticationProviderBeanDefinitionParser$AuthenticationProviderCacheResolver#0,accessDecisionManager,roleVoter,customPropertyEditorRegistrar,userPropertyEditor,platformManager,applicationConfigurationPropertyEditor,applicationPropertyEditor,organizationPropertyEditor,organizationLicensePropertyEditor,regulationPropertyEditor,resourceBundleEntryPropertyEditor,applicationDAO,applicationConfigurationDAO,applicationRoleDAO,licenseDAO,organizationDAO,organizationConfigurationDAO,organizationLicenseDAO,organizationUserDAO,organizationUserRoleDAO,regulationDAO,regulationOverrideDAO,resourceBundleEntryDAO,resourceBundleEntryOverrideDAO,userManager,referenceManager,loggingManager,userCustomConverter,emailCustomConverter,contactCustomConverter,instantMessageCustomConverter,locationCustomConverter,permissionCustomConverter,phoneCustomConverter,userInfoCustomConverter,countryPropertyEditor,auditTrailDAO,creditcardDAO,countryDAO,emailDAO,instantMessageDAO,contactDAO,locationDAO,phoneDAO,lockedUserDAO,newsDAO,userDAO,roleDAO,userInfoDAO,userRoleDAO,permissionDAO,dataCreationManager,abstractDataCreator,adminDataCreator,countryDataCreator,icd10DataCreator,icpc2DataCreator,godOrganizationDataCreator,roleDataCreator,journalManager,emrDAO,basicEmrEntryDAO,emrDiagnosisDAO,diagnosisDAO,patientManager,patientCustomConverter,patientDAO,phrManager,abstractPhrCustomConverter,advanceDirectiveCustomConverter,allergyCustomConverter,alternativeTreatmentCustomConverter,dentalCustomConverter,employerCustomConverter,familyHistoryCustomConverter,hospitalizedCustomConverter,immunizationCustomConverter,insuranceCustomConverter,medicalConditionCustomConverter,medicationCustomConverter,personalProfileCustomConverter,phrContactCustomConverter,phrFileCustomConverter,phrLocationCustomConverter,practitionerCustomConverter,surgeryCustomConverter,travelImmunizationCustomConverter,visionContactLensesCustomConverter,visionExamCustomConverter,visionGlassesCustomConverter,phrDAO,advanceDirectiveDAO,allergyDAO,alternativeTreatmentDAO,dentalDAO,employerDAO,visionContactLensDAO,visionExamDAO,visionGlassesDAO,familyHistoryDAO,phrFileDAO,hospitalizedDAO,immunizationDAO,insuranceDAO,phrLocationDAO,medicalConditionDAO,medicationDAO,personalProfileDAO,phrContactDAO,practitionerDAO,surgeryDAO,travelImmunizationDAO,professionalDAO,socialNetworkManager,relationshipManager,publicProfileCustomConverter,groupCustomConverter,groupDAO,publicProfileDAO,relationshipDAO,recommendationDAO,dataSource,loggedDataSource,lazyDataSourceProxy,httpClient,httpClientParams,httpConnectionManager,httpConnectionManagerParams,cmsService]; root of factory hierarchy
+2009-09-25 18:59:47,298 INFO  AbstractSessionFactoryBean.destroy():246 - Closing Hibernate SessionFactory
+2009-09-25 18:59:47,298 INFO  SessionFactoryImpl.close():805 - closing
+2009-09-25 18:59:47,345 ERROR ContextLoader.initWebApplicationContext():215 - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataCreationManager' defined in class path resource [spring-domain-data-creator-beans.xml]: Invocation of init method failed; nested exception is org.jasypt.exceptions.EncryptionInitializationException: Password not set for Password Based Encryptor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:473)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:729)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:381)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:255)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:199)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:45)
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:579)
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:156)
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1215)
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:548)
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:348)
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:107)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:151)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:156)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerCollection.doStart(HandlerCollection.java:151)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.handler.HandlerWrapper.doStart(HandlerWrapper.java:130)
+	at org.mortbay.jetty.Server.doStart(Server.java:222)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.plugin.Jetty6PluginServer.start(Jetty6PluginServer.java:132)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:384)
+	at org.mortbay.jetty.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:320)
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo.execute(AbstractJettyRunMojo.java:205)
+	at org.mortbay.jetty.plugin.Jetty6RunMojo.execute(Jetty6RunMojo.java:184)
+	at org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManager.java:490)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLifecycleExecutor.java:694)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeStandaloneGoal(DefaultLifecycleExecutor.java:569)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLifecycleExecutor.java:539)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFailures(DefaultLifecycleExecutor.java:387)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(DefaultLifecycleExecutor.java:348)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycleExecutor.java:180)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:328)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:138)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:362)
+	at org.apache.maven.cli.compat.CompatibleMain.main(CompatibleMain.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+	at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+	at org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+Caused by: org.jasypt.exceptions.EncryptionInitializationException: Password not set for Password Based Encryptor
+	at org.jasypt.encryption.pbe.StandardPBEByteEncryptor.initialize(StandardPBEByteEncryptor.java:541)
+	at org.jasypt.encryption.pbe.StandardPBEStringEncryptor.initialize(StandardPBEStringEncryptor.java:488)
+	at org.jasypt.encryption.pbe.StandardPBEStringEncryptor.encrypt(StandardPBEStringEncryptor.java:541)
+	at org.jasypt.hibernate.type.AbstractEncryptedAsStringType.nullSafeSet(AbstractEncryptedAsStringType.java:154)
+	at org.hibernate.type.CustomType.nullSafeSet(CustomType.java:169)
+	at org.hibernate.persister.entity.AbstractEntityPersister.dehydrate(AbstractEntityPersister.java:2025)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2271)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2688)
+	at org.hibernate.action.EntityInsertAction.execute(EntityInsertAction.java:79)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:279)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:263)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:167)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at org.springframework.orm.hibernate3.HibernateTransactionManager.doCommit(HibernateTransactionManager.java:655)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:709)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:678)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:321)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:116)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)
+	at $Proxy43.create(Unknown Source)
+	at com.hxcel.globalhealth.domain.datacreation.DataCreationManager.init(DataCreationManager.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1413)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1334)
+	... 54 more

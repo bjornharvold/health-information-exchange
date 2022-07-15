@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/osgi"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/osgi
+                                 http://www.springframework.org/schema/osgi/spring-osgi-1.2.xsd
+                                 http://www.springframework.org/schema/osgi-compendium
+                                 http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd
+                                 http://www.springframework.org/schema/beans
+                                 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <service interface="com.hxcel.globalhealth.calendar.spec.CalendarService" ref="calendarService"/>
+
+    <osgix:cm-properties persistent-id="com.hxcel.globalhealth.calendar" id="calendarConfig">
+            <beans:prop key="calendar.url">http://localhost:8080/chandler</beans:prop>
+            <beans:prop key="calendar.username">root</beans:prop>
+            <beans:prop key="calendar.password">cosmo</beans:prop>
+            <beans:prop key="calendar.connection.timeout.milliseconds">30000</beans:prop>
+            <beans:prop key="calendar.max.connections.per.host">300</beans:prop>
+            <beans:prop key="calendar.default.max.connections.per.host">300</beans:prop>
+            <beans:prop key="calendar.max.total.connections">500</beans:prop>
+    </osgix:cm-properties>
+</beans:beans>

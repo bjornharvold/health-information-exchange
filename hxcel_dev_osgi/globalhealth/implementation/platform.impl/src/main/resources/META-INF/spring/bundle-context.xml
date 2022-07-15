@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/jms
+                           http://www.springframework.org/schema/jms/spring-jms.xsd
+                           http://www.springframework.org/schema/osgi-compendium
+                           http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
+    <context:annotation-config/>
+
+    <!-- services that we can export -->
+    <bean id="userService" class="com.hxcel.globalhealth.platform.UserServiceImpl">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.email" update-strategy="container-managed"/>
+        <property name="largeIconWidth" value="72"/>
+        <property name="mediumIconWidth" value="32"/>
+        <property name="smallIconWidth" value="16"/>
+    </bean>
+
+    <bean id="applicationService" class="com.hxcel.globalhealth.platform.ApplicationServiceImpl">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.email" update-strategy="container-managed"/>
+        <property name="largeIconWidth" value="72"/>
+        <property name="mediumIconWidth" value="32"/>
+        <property name="smallIconWidth" value="16"/>
+    </bean>
+
+    <bean id="organizationService" class="com.hxcel.globalhealth.platform.OrganizationServiceImpl">
+        <osgix:managed-properties persistent-id="com.hxcel.globalhealth.email" update-strategy="container-managed"/>
+        <property name="largeIconWidth" value="72"/>
+        <property name="mediumIconWidth" value="32"/>
+        <property name="smallIconWidth" value="16"/>
+    </bean>
+
+    <bean id="countryService" class="com.hxcel.globalhealth.platform.CountryServiceImpl"/>
+
+    <!-- custom property editors -->
+    <bean id="applicationConfigurationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="applicationConfigurationDAO"/>
+        <property name="dataAccessMethod" value="getApplicationConfiguration"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="applicationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="applicationDAO"/>
+        <property name="dataAccessMethod" value="getApplication"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="countryPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="countryDAO"/>
+        <property name="dataAccessMethod" value="getCountry"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="organizationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="organizationDAO"/>
+        <property name="dataAccessMethod" value="getOrganization"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="organizationLicensePropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="organizationLicenseDAO"/>
+        <property name="dataAccessMethod" value="getOrganizationLicense"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="regulationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="regulationDAO"/>
+        <property name="dataAccessMethod" value="getRegulation"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="resourceBundleEntryPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="resourceBundleEntryDAO"/>
+        <property name="dataAccessMethod" value="getResourceBundleEntry"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="userPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="userDAO"/>
+        <property name="dataAccessMethod" value="findById"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+
+    <!-- daos -->
+    <!-- common -->
+    <bean id="countryDAO" class="com.hxcel.globalhealth.platform.dao.impl.CountryDAOHibernate" parent="hibSupport"/>
+    <bean id="emailDAO" class="com.hxcel.globalhealth.platform.dao.impl.EmailDAOHibernate" parent="hibSupport"/>
+    <bean id="instantMessageDAO" class="com.hxcel.globalhealth.platform.dao.impl.InstantMessageDAOHibernate" parent="hibSupport"/>
+    <bean id="locationDAO" class="com.hxcel.globalhealth.platform.dao.impl.LocationDAOHibernate" parent="hibSupport"/>
+    <bean id="phoneDAO" class="com.hxcel.globalhealth.platform.dao.impl.PhoneDAOHibernate" parent="hibSupport"/>
+    <bean id="userInfoDAO" class="com.hxcel.globalhealth.platform.dao.impl.UserInfoDAOHibernate" parent="hibSupport"/>
+
+    <bean id="applicationDAO" class="com.hxcel.globalhealth.platform.dao.impl.ApplicationDAOHibernate" parent="hibSupport"/>
+    <bean id="applicationConfigurationDAO" class="com.hxcel.globalhealth.platform.dao.impl.ApplicationConfigurationDAOHibernate" parent="hibSupport"/>
+    <bean id="applicationConfigurationOverrideDAO" class="com.hxcel.globalhealth.platform.dao.impl.ApplicationConfigurationOverrideDAOHibernate" parent="hibSupport"/>
+    <bean id="applicationRoleDAO" class="com.hxcel.globalhealth.platform.dao.impl.ApplicationRoleDAOHibernate" parent="hibSupport"/>
+    <bean id="licenseDAO" class="com.hxcel.globalhealth.platform.dao.impl.LicenseDAOHibernate" parent="hibSupport"/>
+    <bean id="organizationDAO" class="com.hxcel.globalhealth.platform.dao.impl.OrganizationDAOHibernate" parent="hibSupport"/>
+    <bean id="organizationLicenseDAO" class="com.hxcel.globalhealth.platform.dao.impl.OrganizationLicenseDAOHibernate" parent="hibSupport"/>
+    <bean id="organizationUserDAO" class="com.hxcel.globalhealth.platform.dao.impl.OrganizationUserDAOHibernate" parent="hibSupport"/>
+    <bean id="organizationUserRoleDAO" class="com.hxcel.globalhealth.platform.dao.impl.OrganizationUserRoleDAOHibernate" parent="hibSupport"/>
+    <bean id="regulationDAO" class="com.hxcel.globalhealth.platform.dao.impl.RegulationDAOHibernate" parent="hibSupport"/>
+    <bean id="regulationOverrideDAO" class="com.hxcel.globalhealth.platform.dao.impl.RegulationOverrideDAOHibernate" parent="hibSupport"/>
+    <bean id="resourceBundleEntryDAO" class="com.hxcel.globalhealth.platform.dao.impl.ResourceBundleEntryDAOHibernate" parent="hibSupport"/>
+    <bean id="resourceBundleEntryOverrideDAO" class="com.hxcel.globalhealth.platform.dao.impl.ResourceBundleEntryOverrideDAOHibernate" parent="hibSupport"/>
+    <bean id="userDAO" class="com.hxcel.globalhealth.platform.dao.impl.UserDAOHibernate" parent="hibSupport"/>
+    <bean id="roleDAO" class="com.hxcel.globalhealth.platform.dao.impl.RoleDAOHibernate" parent="hibSupport"/>
+    <bean id="userRoleDAO" class="com.hxcel.globalhealth.platform.dao.impl.UserRoleDAOHibernate" parent="hibSupport"/>
+
+    <!-- custom converters -->
+
+    <bean id="mapperIF" class="net.sf.dozer.util.mapping.DozerBeanMapper" scope="singleton">
+        <property name="mappingFiles">
+            <list>
+                <value>dozer_global_configuration.xml</value>
+            </list>
+        </property>
+        <property name="customConverters">
+            <list>
+                <!-- common -->
+                <ref bean="emailCustomConverter"/>
+                <ref bean="instantMessageCustomConverter"/>
+                <ref bean="locationCustomConverter"/>
+                <ref bean="phoneCustomConverter"/>
+                <ref bean="userInfoCustomConverter"/>
+
+                <!-- platform -->
+                <ref bean="applicationConfigurationCustomConverter"/>
+                <ref bean="applicationConfigurationOverrideCustomConverter"/>
+                <ref bean="applicationCustomConverter"/>
+                <ref bean="applicationRoleCustomConverter"/>
+                <ref bean="licenseCustomConverter"/>
+                <ref bean="organizationCustomConverter"/>
+                <ref bean="organizationLicenseCustomConverter"/>
+                <ref bean="organizationUserCustomConverter"/>
+                <ref bean="organizationUserRoleCustomConverter"/>
+                <ref bean="regulationCustomConverter"/>
+                <ref bean="regulationOverrideCustomConverter"/>
+                <ref bean="resourceBundleEntryCustomConverter"/>
+                <ref bean="resourceBundleEntryOverrideCustomConverter"/>
+                <ref bean="roleCustomConverter"/>
+                <ref bean="userCustomConverter"/>
+                <ref bean="userRoleCustomConverter"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- common -->
+    <bean id="emailCustomConverter" class="com.hxcel.globalhealth.platform.converter.EmailCustomConverter">
+        <property name="dao" ref="emailDAO"/>
+    </bean>
+
+    <bean id="instantMessageCustomConverter" class="com.hxcel.globalhealth.platform.converter.InstantMessageCustomConverter">
+        <property name="dao" ref="instantMessageDAO"/>
+    </bean>
+
+    <bean id="locationCustomConverter" class="com.hxcel.globalhealth.platform.converter.LocationCustomConverter">
+        <property name="dao" ref="locationDAO"/>
+    </bean>
+
+    <bean id="phoneCustomConverter" class="com.hxcel.globalhealth.platform.converter.PhoneCustomConverter">
+        <property name="dao" ref="phoneDAO"/>
+    </bean>
+
+    <bean id="userInfoCustomConverter" class="com.hxcel.globalhealth.platform.converter.UserInfoCustomConverter">
+        <property name="dao" ref="userInfoDAO"/>
+    </bean>
+
+    <!-- platform -->
+    <bean id="applicationConfigurationCustomConverter" class="com.hxcel.globalhealth.platform.converter.ApplicationConfigurationCustomConverter">
+        <property name="dao" ref="applicationConfigurationDAO"/>
+    </bean>
+
+    <bean id="applicationConfigurationOverrideCustomConverter" class="com.hxcel.globalhealth.platform.converter.ApplicationConfigurationOverrideCustomConverter">
+        <property name="dao" ref="applicationConfigurationOverrideDAO"/>
+    </bean>
+
+    <bean id="applicationCustomConverter" class="com.hxcel.globalhealth.platform.converter.ApplicationCustomConverter">
+        <property name="dao" ref="applicationDAO"/>
+    </bean>
+
+    <bean id="applicationRoleCustomConverter" class="com.hxcel.globalhealth.platform.converter.ApplicationRoleCustomConverter">
+        <property name="dao" ref="applicationRoleDAO"/>
+    </bean>
+
+    <bean id="licenseCustomConverter" class="com.hxcel.globalhealth.platform.converter.LicenseCustomConverter">
+        <property name="dao" ref="licenseDAO"/>
+    </bean>
+
+    <bean id="organizationCustomConverter" class="com.hxcel.globalhealth.platform.converter.OrganizationCustomConverter">
+        <property name="dao" ref="organizationDAO"/>
+    </bean>
+
+    <bean id="organizationLicenseCustomConverter" class="com.hxcel.globalhealth.platform.converter.OrganizationLicenseCustomConverter">
+        <property name="dao" ref="organizationLicenseDAO"/>
+    </bean>
+
+    <bean id="organizationUserCustomConverter" class="com.hxcel.globalhealth.platform.converter.OrganizationUserCustomConverter">
+        <property name="dao" ref="organizationUserDAO"/>
+    </bean>
+
+    <bean id="organizationUserRoleCustomConverter" class="com.hxcel.globalhealth.platform.converter.OrganizationUserRoleCustomConverter">
+        <property name="dao" ref="organizationUserRoleDAO"/>
+    </bean>
+
+    <bean id="regulationCustomConverter" class="com.hxcel.globalhealth.platform.converter.RegulationCustomConverter">
+        <property name="dao" ref="regulationDAO"/>
+    </bean>
+
+    <bean id="regulationOverrideCustomConverter" class="com.hxcel.globalhealth.platform.converter.RegulationOverrideCustomConverter">
+        <property name="dao" ref="regulationOverrideDAO"/>
+    </bean>
+
+    <bean id="resourceBundleEntryCustomConverter" class="com.hxcel.globalhealth.platform.converter.ResourceBundleEntryCustomConverter">
+        <property name="dao" ref="resourceBundleEntryDAO"/>
+    </bean>
+
+    <bean id="resourceBundleEntryOverrideCustomConverter" class="com.hxcel.globalhealth.platform.converter.ResourceBundleEntryOverrideCustomConverter">
+        <property name="dao" ref="resourceBundleEntryOverrideDAO"/>
+    </bean>
+
+    <bean id="roleCustomConverter" class="com.hxcel.globalhealth.platform.converter.RoleCustomConverter">
+        <property name="dao" ref="roleDAO"/>
+    </bean>
+
+    <bean id="userCustomConverter" class="com.hxcel.globalhealth.platform.converter.UserCustomConverter">
+        <property name="dao" ref="userDAO"/>
+    </bean>
+
+    <bean id="userRoleCustomConverter" class="com.hxcel.globalhealth.platform.converter.UserRoleCustomConverter">
+        <property name="dao" ref="userRoleDAO"/>
+    </bean>
+</beans>

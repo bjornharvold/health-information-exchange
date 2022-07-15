@@ -1,0 +1,62 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:hxcel="urn:jsptagdir:/WEB-INF/tags/hxcel"
+          version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="latestServices" class="update_box">
+        <table class="update_table">
+            <thead>
+            <tr class="service_grey">
+                <th colspan="2"><spring:message code="latest.services" text="Service updates"/></th>
+            </tr>
+            </thead>
+            <tbody>
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <tr>
+                    <td class="update_table_date ${color}">2008-11-22</td>
+                    <td class="${color} update_name"><hxcel:truncate text="com.springsource.server.servlet.admin" maxLength="36"/></td>
+                </tr>
+                <tr>
+                    <td class="update_table_date ${color}">2008-11-22</td>
+                    <td class="${color} update_name"><hxcel:truncate text="com.springsource.server.servlet.admin" maxLength="36"/></td>
+                </tr>
+                <tr>
+                    <td class="update_table_date ${color}">2008-11-22</td>
+                    <td class="${color} update_name"><hxcel:truncate text="com.springsource.antlr" maxLength="36"/></td>
+                </tr>
+                <tr>
+                    <td class="update_table_date ${color}">2008-11-22</td>
+                    <td class="${color} update_name"><hxcel:truncate text="com.springsource.edu.oswego.cs.dl.util.concurrent" maxLength="36"/></td>
+                </tr>
+                <tr>
+                    <td class="update_table_date ${color}">2008-11-22</td>
+                    <td class="${color} update_name"><hxcel:truncate text="com.springsource.javassist" maxLength="36"/></td>
+                </tr>
+                <tr>
+                    <td class="update_table_date ${color}">2008-11-22</td>
+                    <td class="${color} update_name"><hxcel:truncate text="com.springsource.net.sf.cglib" maxLength="36"/></td>
+                </tr>
+                <tr>
+                    <td class="update_table_date ${color}">2008-11-22</td>
+                    <td class="${color} update_name"><hxcel:truncate text="com.springsource.org.apache.commons.codec" maxLength="36"/></td>
+                </tr>
+                <tr>
+                    <td class="update_table_date ${color}">2008-11-22</td>
+                    <td class="${color} update_name"><hxcel:truncate text="com.springsource.org.apache.commons.collections" maxLength="36"/></td>
+                </tr>
+            </security:authorize>
+            </tbody>
+        </table>
+
+    </div>
+
+</jsp:root>

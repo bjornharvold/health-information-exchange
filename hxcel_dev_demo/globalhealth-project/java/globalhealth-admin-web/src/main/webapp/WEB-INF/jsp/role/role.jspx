@@ -1,0 +1,54 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="${role.id}">
+        <div class="fullWidth">
+            <spring:message var="altEdit" code="entity.edit" text="Edit"/>
+            <spring:message var="altClose" code="entity.close" text="Close"/>
+
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <div class="closeTab"><a href="javascript:removeTab({label: '${role.name}'})"><spring:message code="entity.close" text="CLOSE"/></a></div>
+            </security:authorize>
+        </div>
+        <div style="clear:both;"/>
+        <div class="cssbox" style="float:left;width:600px">
+            <div class="cssbox_head">
+                <h2><spring:message code="page.role.name" text="Role"/></h2>
+            </div>
+            <div class="cssbox_body">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" align="right">
+                                <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                                    <a href="javascript:bindFormLink({url: '/secure/role/edit.admin?id=${role.id}', id: '${role.id}', cssClass: 'jqmWindow'})"><img src="/images/icons/edit_pen_16.png" alt="${altEdit}" title="${altEdit}" border="0"/></a>&#160;
+                                </security:authorize>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="content_item_header"><spring:message code="role.name" text="Name"/>:</td>
+                            <td>${role.name}</td>
+                        </tr>
+                        <tr>
+                            <td class="content_item_header"><spring:message code="role.description" text="Description"/>:</td>
+                            <td>${role.description}</td>
+                        </tr>
+                        <tr>
+                            <td class="content_item_header"><spring:message code="role.code" text="Code"/>:</td>
+                            <td>${role.statusCode}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</jsp:root>

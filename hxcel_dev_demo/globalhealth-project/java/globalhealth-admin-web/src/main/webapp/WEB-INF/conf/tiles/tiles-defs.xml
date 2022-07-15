@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<!-- Definitions for Tiles documentation   -->
+
+<tiles-definitions>
+
+    <definition name="exception.generic" template="/WEB-INF/jsp/exception/generic.jspx"/>
+    <!-- =======================================================  -->
+    <!-- Master definition  									-->
+    <!-- =======================================================  -->
+
+    <!-- page master  -->
+    <definition name="template.page.master" template="/WEB-INF/jsp/template/master.jspx">
+        <put-attribute name="title" value="NA"/>
+        <put-attribute name="masthead" value="/WEB-INF/jsp/common/masthead.jspx"/>
+        <put-attribute name="content" value=""/>
+        <put-list-attribute name="navbars">
+            <add-attribute type="string" value="/WEB-INF/jsp/common/navbar.jspx"/>
+        </put-list-attribute>
+        <put-list-attribute name="stylesheets">
+            <add-attribute type="string" value="/css/global.css"/>
+            <add-attribute type="string" value="/css/jqModal.css"/>
+            <add-attribute type="string" value="/css/jquery-ui-themeroller.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts">
+            <add-attribute type="string" value="/js/jquery-1.2.6.min.js"/>
+            <add-attribute type="string" value="/js/jquery-ui-personalized-1.6rc2.min.js"/>
+            <add-attribute type="string" value="/js/jquery-form.js"/>
+            <add-attribute type="string" value="/js/jqModal.js"/>
+            <add-attribute type="string" value="/js/jquery.selectboxes.min.js"/>
+            <add-attribute type="string" value="/js/chili-1.7.pack.js"/>
+            <add-attribute type="string" value="/js/jquery.dimensions.pack.js"/>
+            <add-attribute type="string" value="/js/jquery.tooltip.pack.js"/>
+            <add-attribute type="string" value="/js/global.js"/>
+        </put-list-attribute>
+        <put-list-attribute name="pagescripts"/>
+    </definition>
+
+    <definition name="template.flash.master" template="/WEB-INF/jsp/template/flashlauncher.jspx">
+        <put-list-attribute name="stylesheets">
+            <add-attribute type="string" value="/history/history.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts">
+            <add-attribute type="string" value="/js/jquery-1.2.6.min.js"/>
+            <add-attribute type="string" value="/js/swfobject.js"/>
+            <add-attribute type="string" value="/history/history.js"/>
+        </put-list-attribute>
+    </definition>
+
+
+    <!-- content master  -->
+    <definition name="template.content.master" template="/WEB-INF/jsp/template/content.jspx">
+        <put-list-attribute name="contents"/>
+    </definition>
+
+    <!-- form master  -->
+    <definition name="template.form.master" template="/WEB-INF/jsp/template/form.jspx">
+        <put-attribute name="form" value="NA"/>
+        <put-attribute name="formButtons" value="NA"/>
+    </definition>
+
+    <!-- =======================================================  -->
+    <!-- For simplicity, all the definitions below have the same name as the controller -->
+    <!-- =======================================================  -->
+
+    <!-- non authenticated tiles -->
+    <definition name="login" extends="template.page.master">
+        <put-attribute name="title" value="page.login.title"/>
+        <put-attribute name="masthead" value=""/>
+        <put-attribute name="content" value="/WEB-INF/jsp/modules/login.jspx"/>
+        <put-list-attribute name="navbars"/>
+    </definition>
+
+    <definition name="login.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/modules/login.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- authenticated tiles -->
+    <definition name="homepage" extends="template.page.master">
+        <put-attribute name="title" value="page.home.name"/>
+        <put-attribute name="pageName" value="homepage"/>
+        <put-list-attribute name="pagescripts">
+            <add-attribute type="string" value="/WEB-INF/jsp/homepage_script.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="homepage.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/homepage.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- ========== APPLICATION ========== -->
+    <!-- applications application -->
+    <definition name="applications.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/applications.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- applications application data -->
+    <definition name="applications.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/applications_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- application content -->
+    <definition name="application.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/application_navbar.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- application data -->
+    <definition name="application.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/application_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- edit application -->
+    <definition name="application.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/application/application_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/application/application_form_buttons.jspx"/>
+    </definition>
+
+    <!-- upload application icon -->
+    <definition name="application.icon.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/application/application_icon_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/application/application_icon_form_buttons.jspx"/>
+    </definition>
+
+    <!-- upload application swf -->
+    <definition name="application.swf.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/application/application_swf_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/application/application_icon_form_buttons.jspx"/>
+    </definition>
+
+    <!-- application license page -->
+    <definition name="application.license.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/licenses.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- application license data -->
+    <definition name="application.license.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/licenses_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- application configuration page -->
+    <definition name="application.configuration.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/configurations.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- application configuration data -->
+    <definition name="application.configuration.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/configurations_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- application resource bundle page -->
+    <definition name="application.resourcebundle.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/resourcebundleentries.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- application resource bundle data -->
+    <definition name="application.resourcebundle.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/resourcebundleentries_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- application resource bundle data -->
+    <definition name="application.resourcebundle.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/application/application_resourcebundleentry_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/application/application_resourcebundleentry_form_buttons.jspx"/>
+    </definition>
+
+    <!-- application resource bundle data -->
+    <definition name="application.resourcebundle.upload" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/application/application_resourcebundle_upload_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/application/application_resourcebundleentry_form_buttons.jspx"/>
+    </definition>
+
+    <definition name="application.license.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/application/application_license_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/application/application_license_form_buttons.jspx"/>
+    </definition>
+
+    <!-- application role content -->
+    <definition name="application.role.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/roles.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- application role data -->
+    <definition name="application.role.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/application/roles_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="application.role.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/application/application_role_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/application/application_role_form_buttons.jspx"/>
+    </definition>
+    
+    <definition name="application.configuration.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/application/application_configuration_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/application/application_configuration_form_buttons.jspx"/>
+    </definition>
+
+    <!-- ========== ORGANIZATION ========== -->
+    <definition name="organizations" extends="template.page.master">
+        <put-attribute name="title" value="page.organizations.name"/>
+        <put-attribute name="pageName" value="organizations"/>
+        <put-list-attribute name="pagescripts">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/organizations_script.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organizations.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/organizations.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organizations.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/organizations_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/organization_navbar.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/organization_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/organization_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/organization_form_buttons.jspx"/>
+    </definition>
+
+    <!-- upload organization icon -->
+    <definition name="organization.icon.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/organization_icon_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/organization_icon_form_buttons.jspx"/>
+    </definition>
+    
+    <definition name="organization.applications" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_applications.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.applications.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_applications_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.application.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/application/organization_application_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/application/organization_application_form_buttons.jspx"/>
+    </definition>
+    <definition name="organization.application.icon.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/application/organization_application_icon_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/application/organization_application_icon_form_buttons.jspx"/>
+    </definition>
+    <definition name="organization.application.swf.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/application/organization_application_swf_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/application/organization_application_swf_form_buttons.jspx"/>
+    </definition>
+    <definition name="organization.application.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_application_navbar.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.application.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_application_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.application.license.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_application_licenses.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.application.license.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_application_licenses_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.application.license.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/application/organization_application_license_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/application/organization_application_license_form_buttons.jspx"/>
+    </definition>
+
+    <!-- organization application configuration page -->
+    <definition name="organization.application.configuration.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_application_configurations.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- organization application configuration data -->
+    <definition name="organization.application.configuration.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_application_configurations_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- organization application role content -->
+    <definition name="organization.application.role.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_application_roles.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <!-- organization application role data -->
+    <definition name="organization.application.role.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_application_roles_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="organization.application.role.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/application/organization_application_role_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/application/organization_application_role_form_buttons.jspx"/>
+    </definition>
+
+    <definition name="organization.application.configuration.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/application/organization_application_configuration_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/application/organization_application_configuration_form_buttons.jspx"/>
+    </definition>
+    <definition name="organization.application.resourcebundle.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_application_resourcebundleentries.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.application.resourcebundle.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/application/organization_application_resourcebundleentries_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.application.resourcebundle.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/application/organization_application_resourcebundleentry_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/application/organization_application_resourcebundleentry_form_buttons.jspx"/>
+    </definition>
+    <definition name="organization.application.resourcebundle.upload" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/application/organization_application_resourcebundle_upload_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/application/organization_application_resourcebundle_upload_form_buttons.jspx"/>
+    </definition>
+
+    <!-- ths is for 3rd party applications -->
+    <definition name="organization.licensed.applications.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/licensed/organization_licensed_applications.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.licensed.applications.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/licensed/organization_licensed_applications_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.licensed.application.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_navbar.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.licensed.application.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.licensed.application.overrides.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_overrides.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.licensed.application.overrides.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_overrides_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.licensed.application.override.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_override_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_override_form_buttons.jspx"/>
+    </definition>
+    <definition name="organization.licensed.application.resourcebundle.overrides.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_resourcebundleentry_overrides.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.licensed.application.resourcebundle.overrides.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_resourcebundleentry_overrides_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.licensed.application.resourcebundle.override.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_resourcebundleentry_override_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_resourcebundleentry_override_form_buttons.jspx"/>
+    </definition>
+    <definition name="organization.licensed.application.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/licensed/organization_licensed_application_form_buttons.jspx"/>
+    </definition>
+    <definition name="organization.users.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/user/organization_users.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.users.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/user/organization_users_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.user.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/user/organization_user_navbar.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.user.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/user/organization_user_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.users.find.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/user/organization_user_search.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.users.find.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/user/organization_user_search_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.user.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/user/organization_user_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/user/organization_user_form_buttons.jspx"/>
+    </definition>
+    <definition name="organization.user.roles.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/user/organization_user_roles.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.user.system.roles.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/user/organization_user_system_roles.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.user.system.roles.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/user/organization_user_system_roles_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.user.roles.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/organization/user/organization_user_roles_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="organization.user.role.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/organization/user/organization_user_role_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/organization/user/organization_user_role_form_buttons.jspx"/>
+    </definition>
+
+    <!-- ========== USER ========== -->
+    <!-- user specific -->
+    <definition name="users.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/user/users.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="users.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/user/users_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="user.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/user/user_navbar.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="user.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/user/user_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="user.roles.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/user/user_roles.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="user.roles.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/user/user_roles_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="user.role.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/user/user_role_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/user/user_role_form_buttons.jspx"/>
+    </definition>
+
+    <definition name="user.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/user/user_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/user/user_form_buttons.jspx"/>
+    </definition>
+
+    <definition name="user.icon.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/user/user_icon_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/user/user_icon_form_buttons.jspx"/>
+    </definition>
+
+    <!-- ========== COUNTRY ========== -->
+    <definition name="countries.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/country/countries.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="countries.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/country/countries_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="country.regulation.overrides.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/country/regulation_overrides.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="country.regulation.overrides.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/country/regulation_overrides_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="regulation.override.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/country/country_regulation_override_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/country/country_regulation_override_form_buttons.jspx"/>
+    </definition>
+
+    <definition name="country.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/country/country_navbar.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="country.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/country/country_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="country.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/country/country_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/country/country_form_buttons.jspx"/>
+    </definition>
+
+    <!-- ========== ROLE ========== -->
+    <!-- role specific -->
+    <definition name="roles.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/role/roles.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="roles.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/role/roles_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="role.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/role/role.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="role.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/role/role_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/role/role_form_buttons.jspx"/>
+    </definition>
+
+    <!-- ========== REGULATION ========== -->
+    <definition name="regulations.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/regulation/regulations.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="regulations.data" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/regulation/regulations_data.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="regulation.content" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/regulation/regulation.jspx"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="regulation.edit" extends="template.form.master">
+        <put-attribute name="form" value="/WEB-INF/jsp/regulation/regulation_form.jspx"/>
+        <put-attribute name="formButtons" value="/WEB-INF/jsp/regulation/regulation_form_buttons.jspx"/>
+    </definition>
+
+    <!-- testing -->
+    <definition name="service.search" extends="template.content.master">
+        <put-list-attribute name="contents">
+            <add-attribute type="string" value="/WEB-INF/jsp/service/services.jspx"/>
+        </put-list-attribute>
+    </definition>
+</tiles-definitions>

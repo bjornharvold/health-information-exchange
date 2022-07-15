@@ -1,0 +1,44 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div style="height:20px;float:left;padding-right:5px;margin-top:12px;color:#72716e;">
+        <b>${application.name}</b>
+    </div>
+    <div id="secondaryNavbar_${application.id}">
+        <ul>
+            <li><a href="/secure/application/view.admin?view=application.data&amp;id=${application.id}"><span><spring:message code="page.overview.name" text="Overview"/></span></a></li>
+            <li><a href="/secure/application/license/search.admin?id=${application.id}"><span><spring:message code="page.application.license" text="Licenses"/></span></a></li>
+            <li><a href="/secure/application/configuration/search.admin?id=${application.id}"><span><spring:message code="page.application.configuration" text="Configurations"/></span></a></li>
+            <li><a href="/secure/application/resourcebundle/search.admin?id=${application.id}"><span><spring:message code="page.application.resourcebundle" text="Internationalization"/></span></a></li>
+            <li><a href="/secure/application/role/search.admin?id=${application.id}"><span><spring:message code="page.roles.name" text="Roles"/></span></a></li>
+        </ul>
+
+        <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+            <div class="closeTab"><a href="javascript:removeTab({label: '${application.name}'})"><spring:message code="entity.close" text="CLOSE"/></a></div>
+        </security:authorize>
+    </div>
+
+    <!-- initialize secondary navbar -->
+    <script type="text/javascript">
+        var secondaryApplicationTabs = "#secondaryNavbar_${application.id} > ul";
+        var options = {fx: {
+            height: 'toggle',
+            opacity: 'toggle',
+            duration: 'fast'
+        },
+            add: function(e, ui) {
+                $(secondaryApplicationTabs).tabs("select", "#" + ui.panel.id);
+            }};
+
+        $(secondaryApplicationTabs).tabs(options);
+    </script>
+</jsp:root>

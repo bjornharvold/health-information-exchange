@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.hxcel.globalhealth</groupId>
+        <artifactId>globalhealth-java</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>integration-tests</artifactId>
+    <packaging>jar</packaging>
+    <name>Globalhealth: Integration Tests (Java)</name>
+
+    <dependencies>
+
+        <!-- our dependencies -->
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>globalhealth-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>globalhealth-admin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>globalhealth-ws</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hxcel.globalhealth.service</groupId>
+            <artifactId>globalhealth-service-cms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hxcel.globalhealth.service</groupId>
+            <artifactId>globalhealth-service-calendar</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hxcel.globalhealth.service</groupId>
+            <artifactId>globalhealth-service-email</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>globalhealth-persistence</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>greenmail</groupId>
+            <artifactId>greenmail</artifactId>
+            <version>${greenmail.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

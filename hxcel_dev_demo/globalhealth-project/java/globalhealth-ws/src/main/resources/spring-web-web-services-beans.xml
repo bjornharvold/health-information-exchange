@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://www.springframework.org/schema/jms
+                           http://www.springframework.org/schema/jms/spring-jms-2.5.xsd
+                           http://cxf.apache.org/jaxws
+                           http://cxf.apache.org/schemas/jaxws.xsd">
+
+
+    <!-- ============================== COMMON WEB SERVICE END POINT============================== -->
+    <jaxws:endpoint id="cxf_UserWebService"
+                    implementor="#userWebService"
+                    address="/UserWebService">
+    </jaxws:endpoint>
+
+    <jaxws:endpoint id="cxf_ReferenceDataWebService"
+                    implementor="#referenceDataWebService"
+                    address="/ReferenceDataWebService">
+    </jaxws:endpoint>
+    <!-- ============================== COMMON WEB SERVICE END POINT============================== -->
+
+    <!-- ============================== COMMON WEB SERVICE ============================== -->
+
+    <bean id="userWebService" class="com.hxcel.globalhealth.web.ws.impl.UserWebServiceImpl" parent="abstractWebService">
+        <property name="resourceBundle" value="errors"/>
+        <property name="description" value="${application.user.description}"/>
+        <property name="name" value="${application.user.name}"/>
+        <property name="shortName" value="${application.user.name.short}"/>
+    </bean>
+
+    <bean id="referenceDataWebService" class="com.hxcel.globalhealth.web.ws.impl.ReferenceDataWebServiceImpl" parent="abstractWebService">
+        <property name="resourceBundle" value="errors"/>
+        <property name="description" value="${application.referencedata.description}"/>
+        <property name="name" value="${application.referencedata.name}"/>
+        <property name="shortName" value="${application.referencedata.name.short}"/>
+    </bean>
+    <!-- ============================== COMMON WEB SERVICE ============================== -->
+
+    <!-- ============================== PATIENT WEB SERVICE END POINT============================== -->
+    <jaxws:endpoint id="cxf_PatientWebService"
+                    implementor="#patientWebService"
+                    address="/PatientWebService">
+        <!--<jaxws:inInterceptors>
+            <ref bean="wss4jInInterceptor"/>
+            <ref bean="saajInInterceptor"/>
+            <ref bean="validateUserTokenInterceptor"/>
+        </jaxws:inInterceptors>-->
+    </jaxws:endpoint>
+    <!-- ============================== PATIENT WEB SERVICE END POINT============================== -->
+
+    <!-- ============================== PATIENT WEB SERVICE ============================== -->
+    <bean id="patientWebService" class="com.hxcel.globalhealth.web.ws.impl.PatientWebServiceImpl" parent="abstractWebService">
+        <property name="resourceBundle" value="errors"/>
+        <property name="description" value="${application.phr.description}"/>
+        <property name="name" value="${application.phr.name}"/>
+        <property name="shortName" value="${application.phr.name.short}"/>
+    </bean>
+
+    <!-- ============================== PATIENT WEB SERVICE ============================== -->
+
+    <!-- ============================== PHR WEB SERVICE END POINT============================== -->
+    <jaxws:endpoint id="cxf_PhrWebService"
+                    implementor="#phrWebService"
+                    address="/PhrWebService">
+        <!--<jaxws:inInterceptors>
+            <ref bean="wss4jInInterceptor"/>
+            <ref bean="saajInInterceptor"/>
+            <ref bean="validateUserTokenInterceptor"/>
+        </jaxws:inInterceptors>-->
+    </jaxws:endpoint>
+    <!-- ============================== PHR WEB SERVICE END POINT============================== -->
+
+    <!-- ============================== PHR WEB SERVICE ============================== -->
+    <bean id="phrWebService" class="com.hxcel.globalhealth.web.ws.impl.PhrWebServiceImpl" parent="abstractWebService">
+        <property name="resourceBundle" value="errors"/>
+        <property name="description" value="${application.phr.description}"/>
+        <property name="name" value="${application.phr.name}"/>
+        <property name="shortName" value="${application.phr.name.short}"/>
+    </bean>
+
+    <!-- ============================== PHR WEB SERVICE ============================== -->
+</beans>

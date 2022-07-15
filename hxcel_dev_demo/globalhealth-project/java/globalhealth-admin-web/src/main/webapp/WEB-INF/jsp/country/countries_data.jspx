@@ -1,0 +1,78 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:hxcel="urn:jsptagdir:/WEB-INF/tags/hxcel"
+          version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="countriesTable">
+        <!-- alt text -->
+        <spring:message var="altNew" code="entity.new" text="New"/>
+        <spring:message var="altDelete" code="entity.delete" text="Delete"/>
+        <spring:message var="altView" code="entity.view" text="View"/>
+
+        <table cellpadding="2" cellspacing="0" border="0" width="100%" class="list_table">
+            <thead>
+                <tr>
+                    <th width="10%" align="left" class="first_column"><spring:message code="entity.date.created" text="Created"/></th>
+                    <th width="10%" align="left"><spring:message code="country.name" text="Name"/></th>
+                    <th width="10%" align="left"><spring:message code="country.code" text="Country code"/></th>
+                    <th width="10%" align="left"><spring:message code="country.language" text="Language"/></th>
+                    <th width="10%" align="left"><spring:message code="country.currency.name" text="Currency name"/></th>
+                    <th width="10%" align="left"><spring:message code="country.currency.code" text="Currency code"/></th>
+                    <th width="10%" align="left"><spring:message code="country.currency.code.number" text="Currency number"/></th>
+                    <th width="10%" align="left"><spring:message code="country.exchange.rate" text="Exchange rate"/></th>
+                    <th width="4%">&#160;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:choose>
+                    <c:when test="${empty countries}">
+                        <tr>
+                            <td align="center" height="350" colspan="9">
+                                <spring:message code="countries.empty" text="No countries are currently in the system"/>
+                            </td>
+                        </tr>
+                    </c:when>
+                    <c:otherwise>
+                        <c:forEach items="${countries}" varStatus="status" var="country">
+                            <c:choose>
+                                <c:when test="${status.count % 2 == 0}">
+                                    <c:set var="color" value="rowStyle1" scope="request"/>
+                                </c:when>
+                                <c:otherwise>
+                                    <c:set var="color" value="rowStyle2" scope="request"/>
+                                </c:otherwise>
+                            </c:choose>
+                            <tr class="${color}">
+                                <td class="first_column"><fmt:formatDate value="${country.createdDate}" dateStyle="long"/></td>
+                                <td class="row_title"><hxcel:truncate text="${country.statusCode}" maxLength="20"/></td>
+                                <td><hxcel:truncate text="${country.countryCode}" maxLength="10"/></td>
+                                <td><hxcel:truncate text="${country.language}" maxLength="3"/></td>
+                                <td><hxcel:truncate text="${country.currencyName}" maxLength="20"/></td>
+                                <td><hxcel:truncate text="${country.currencyCode}" maxLength="3"/></td>
+                                <td>${country.currencyCodeNumber}</td>
+                                <td>${country.exchangeRate}</td>
+                                <td align="right">
+                                    <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                                        <a href="javascript:addTab({ url: '/secure/country/view.admin?id=${country.id}', label: '${country.statusCode}'} )"><img src="/images/icons/newtab.png" alt="${altView}" title="${altView}" border="0"/></a>
+                                    </security:authorize>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </c:otherwise>
+                </c:choose>
+            </tbody>
+        </table>
+        <div class="paginator">
+            <hxcel:paginator id="countriesTable" url="/secure/country/search.admin" extraParameters="&amp;view=countries.data" currentPage="${index}" rowsPerPage="${maxResults}" count="${count}"/>
+        </div>
+    </div>
+</jsp:root>

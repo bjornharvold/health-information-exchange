@@ -1,0 +1,48 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <c:choose>
+        <c:when test="${platform == true}">
+            <c:set var="divId" value="${organization.id}_platformLicense"/>
+            <c:set var="tableId" value="${organization.id}_platformLicenseTable"/>
+            <c:set var="formUrl" value="/secure/organization/licensed/application/edit.admin?organizationId=${organization.id}&amp;platform=true"/>
+            <spring:message var="titleName" code="page.organization.platforms.license.name" text="3rd party platforms"/>
+            <c:set var="iconClass" value="licensedplatform"/>
+        </c:when>
+        <c:otherwise>
+            <c:set var="divId" value="${organization.id}_applicationLicense"/>
+            <c:set var="tableId" value="${organization.id}_applicationLicenseTable"/>
+            <c:set var="formUrl" value="/secure/organization/licensed/application/edit.admin?organizationId=${organization.id}&amp;platform=false"/>
+            <spring:message var="titleName" code="page.organization.applications.license.name" text="3rd party applications"/>
+            <c:set var="iconClass" value="licensedapplication"/>
+        </c:otherwise>
+    </c:choose>
+
+    <div id="${divId}">
+        <div class="page_header ${iconClass}">
+            <div class="titleName">${titleName}</div>
+            <div class="newEntity">
+                <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                    <a href="javascript:bindFormLink({url: '${formUrl}', id: '${divId}Table', cssClass: 'jqmWindow'})" title="${altNew}"><spring:message code="entity.new" text="NEW"/></a>
+                </security:authorize>
+            </div>
+            <div class="searchField">
+                <input type="text" name="search" onkeyup="replaceHtmlContent({url:'/secure/organization/licensed/application/search.admin?id=${organization.id}&amp;view=organization.licensed.applications.data&amp;platform=${platform}&amp;status=ACTIVE&amp;name=' + this.value, id: '${tableId}'});" class="textInput"/>
+            </div>
+        </div>
+
+        <div class="contentSeparator"><!----></div>
+
+        <jsp:include page="organization_licensed_applications_data.jspx" flush="true"/>
+
+    </div>
+</jsp:root>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://www.springframework.org/schema/jms
+                           http://www.springframework.org/schema/jms/spring-jms-2.5.xsd">
+    <!-- managers -->
+    <bean id="platformManager" class="com.hxcel.globalhealth.domain.platform.impl.PlatformManagerImpl">
+        <property name="largeIconWidth" value="${icon.large.width}"/>
+        <property name="mediumIconWidth" value="${icon.medium.width}"/>
+        <property name="smallIconWidth" value="${icon.small.width}"/>
+    </bean>
+
+    <!-- custom property editors -->
+    <bean id="applicationConfigurationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="applicationConfigurationDAO"/>
+        <property name="dataAccessMethod" value="getApplicationConfiguration"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="applicationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="applicationDAO"/>
+        <property name="dataAccessMethod" value="getApplication"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="organizationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="organizationDAO"/>
+        <property name="dataAccessMethod" value="getOrganization"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="organizationLicensePropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="organizationLicenseDAO"/>
+        <property name="dataAccessMethod" value="getOrganizationLicense"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="regulationPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="regulationDAO"/>
+        <property name="dataAccessMethod" value="getRegulation"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+    <bean id="resourceBundleEntryPropertyEditor" class="org.springmodules.web.propertyeditors.ReflectivePropertyEditor">
+        <property name="dataAccessObject" ref="resourceBundleEntryDAO"/>
+        <property name="dataAccessMethod" value="getResourceBundleEntry"/>
+        <property name="propertyName" value="id"/>
+    </bean>
+
+    <!-- daos -->
+    <bean id="applicationDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.ApplicationDAOHibernate" parent="hibSupport"/>
+    <bean id="applicationConfigurationDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.ApplicationConfigurationDAOHibernate" parent="hibSupport"/>
+    <bean id="applicationRoleDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.ApplicationRoleDAOHibernate" parent="hibSupport"/>
+    <bean id="licenseDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.LicenseDAOHibernate" parent="hibSupport"/>
+    <bean id="organizationDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.OrganizationDAOHibernate" parent="hibSupport"/>
+    <bean id="organizationConfigurationDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.ApplicationConfigurationOverrideDAOHibernate" parent="hibSupport"/>
+    <bean id="organizationLicenseDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.OrganizationLicenseDAOHibernate" parent="hibSupport"/>
+    <bean id="organizationUserDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.OrganizationUserDAOHibernate" parent="hibSupport"/>
+    <bean id="organizationUserRoleDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.OrganizationUserRoleDAOHibernate" parent="hibSupport"/>
+    <bean id="regulationDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.RegulationDAOHibernate" parent="hibSupport"/>
+    <bean id="regulationOverrideDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.RegulationOverrideDAOHibernate" parent="hibSupport"/>
+    <bean id="resourceBundleEntryDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.ResourceBundleEntryDAOHibernate" parent="hibSupport"/>
+    <bean id="resourceBundleEntryOverrideDAO" class="com.hxcel.globalhealth.domain.platform.dao.impl.ResourceBundleEntryOverrideDAOHibernate" parent="hibSupport"/>
+
+</beans>

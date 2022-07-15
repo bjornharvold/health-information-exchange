@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/jms
+                           http://www.springframework.org/schema/jms/spring-jms.xsd
+                           http://www.springframework.org/schema/osgi-compendium
+                           http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
+
+    <bean id="dataCreationManager" class="com.hxcel.globalhealth.platform.datacreator.DataCreationManager" init-method="init">
+        <property name="dataCreators">
+            <list>
+                <!-- country needs to be first as other creator beans rely on it -->
+                <ref bean="countryDataCreator"/>
+                <ref bean="godOrganizationDataCreator"/>
+                <ref bean="roleDataCreator"/>
+                <ref bean="adminDataCreator"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="abstractDataCreator" class="com.hxcel.globalhealth.platform.datacreator.creators.AbstractDataCreator" abstract="true"/>
+
+    <bean id="adminDataCreator" class="com.hxcel.globalhealth.platform.datacreator.creators.UserDataCreator" parent="abstractDataCreator">
+        <property name="file" value="classpath:users.xml"/>
+        <property name="enabled" value="true"/>
+        <property name="name" value="Administration Data Creator"/>
+    </bean>
+
+    <bean id="countryDataCreator" class="com.hxcel.globalhealth.platform.datacreator.creators.CountryDataCreator" parent="abstractDataCreator">
+        <property name="file" value="classpath:country.xml"/>
+        <property name="enabled" value="true"/>
+        <property name="name" value="Country Data Creator"/>
+    </bean>
+
+    <bean id="godOrganizationDataCreator" class="com.hxcel.globalhealth.platform.datacreator.creators.OrganizationDataCreator" parent="abstractDataCreator">
+        <property name="enabled" value="true"/>
+        <property name="name" value="God Organization Data Creator"/>
+        <property name="organizationName" value="Health XCEL, Inc."/>
+    </bean>
+
+    <bean id="roleDataCreator" class="com.hxcel.globalhealth.platform.datacreator.creators.RoleDataCreator" parent="abstractDataCreator">
+        <property name="file" value="classpath:user_roles.xml"/>
+        <property name="enabled" value="true"/>
+        <property name="name" value="Role Data Creator"/>
+    </bean>
+
+</beans>

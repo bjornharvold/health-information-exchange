@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.hxcel.globalhealth</groupId>
+        <artifactId>specification</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>common.spec</artifactId>
+    <packaging>bundle</packaging>
+    <name>Common Specification</name>
+
+    <properties>
+        <export.package>
+            com.hxcel.globalhealth.common.spec;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.dto;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.hibernate;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.image;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.model;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.model.enums;version="${project.version}"
+        </export.package>
+        <import.package>
+            org.springframework.stereotype;version="${spring.version}"
+        </import.package>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

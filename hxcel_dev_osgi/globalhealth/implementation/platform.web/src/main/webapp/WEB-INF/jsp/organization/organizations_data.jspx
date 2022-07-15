@@ -1,0 +1,74 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:hxcel="urn:jsptagdir:/WEB-INF/tags/hxcel"
+          version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="organizationsTable">
+        <!-- alt text -->
+        <spring:message var="altNew" code="entity.new" text="New"/>
+        <spring:message var="altDelete" code="entity.delete" text="Delete"/>
+        <spring:message var="altView" code="entity.view" text="View"/>
+
+        <table cellpadding="2" cellspacing="0" border="0" width="100%" class="list_table">
+            <thead>
+                <tr>
+                    <th width="8%" align="left" class="first_column"><spring:message code="entity.date.created" text="Created"/></th>
+                    <th width="30%" align="left"><spring:message code="organization.name" text="Name"/></th>
+                    <th width="10%" align="left"><spring:message code="organization.country" text="Country"/></th>
+                    <th width="10%" align="left"><spring:message code="organization.type" text="Type"/></th>
+                    <th width="10%" align="left"><spring:message code="organization.status" text="Status"/></th>
+                    <th width="18%" align="left"><spring:message code="organization.parent" text="Parent"/></th>
+                    <th width="4%">&#160;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:choose>
+                    <c:when test="${empty organizations}">
+                        <tr>
+                            <td align="center" height="350" colspan="7">
+                                <spring:message code="organization.empty" text="No organization are currently in the system"/>
+                            </td>
+                        </tr>
+                    </c:when>
+                    <c:otherwise>
+                        <c:forEach items="${organizations}" varStatus="status" var="org">
+                            <c:choose>
+                                <c:when test="${status.count % 2 == 0}">
+                                    <c:set var="color" value="rowStyle1" scope="request"/>
+                                </c:when>
+                                <c:otherwise>
+                                    <c:set var="color" value="rowStyle2" scope="request"/>
+                                </c:otherwise>
+                            </c:choose>
+                            <tr class="${color}">
+                                <td class="first_column"><fmt:formatDate value="${org.createdDate}" dateStyle="long"/></td>
+                                <td class="row_title"><hxcel:truncate text="${org.name}" maxLength="80"/></td>
+                                <td>${org.country.statusCode}</td>
+                                <td>${org.organizationType}</td>
+                                <td>${org.organizationStatus}</td>
+                                <td>${org.parent.name}</td>
+                                <td align="right">
+                                    <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                                        <a href="javascript:addTab({ url: '/secure/organization/view.admin?id=${org.id}', label: '${org.name}'} )"><img src="/images/icons/newtab.png" alt="${altView}" title="${altView}" border="0"/></a>
+                                    </security:authorize>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </c:otherwise>
+                </c:choose>
+            </tbody>
+        </table>
+        <div class="paginator">
+            <hxcel:paginator id="organizationsTable" url="/secure/organization/search.admin" extraParameters="&amp;view=organizations.data" currentPage="${index}" rowsPerPage="${maxResults}" count="${count}"/>
+        </div>
+    </div>
+</jsp:root>

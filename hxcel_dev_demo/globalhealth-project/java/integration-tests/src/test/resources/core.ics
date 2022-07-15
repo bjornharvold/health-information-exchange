@@ -1,0 +1,52 @@
+BEGIN:VCALENDAR
+CALSCALE:GREGORIAN
+PRODID:-//GA-GAAH INC//NONSGML GLOBALHEALTH//EN
+VERSION:1.0
+X-DISPLAY-NAME:Core
+BEGIN:VEVENT
+UID:aa433414-2000-4095-86d4-310b55966d43
+DTSTART;TZID=America/Los_Angeles:20040630T193000
+DTEND;TZID=America/Los_Angeles:20040630T203000
+SUMMARY:JavaTM Technology on Linux: Tips and Tricks
+DESCRIPTION:Meet the engineers behind the JavaTM 2 Platform, Standard Edition (J2SETM) port to Linux and find out some tips and techniques so that you, too, can be a JavaTM technology on Linux expert. Code and examples of tools to make your life easier are shown.
+LOCATION:BOF-1064
+DTSTAMP:20051220T211043Z
+END:VEVENT
+BEGIN:VEVENT
+UID:a7a6c9b1-1818-4463-889f-b51481cf4d59
+DTSTART;TZID=America/Los_Angeles:20040629T100000
+DTEND;TZID=America/Los_Angeles:20040629T110000
+SUMMARY:This Cat Roars! Experience the New Functionality in JavaTM 2 Platform, Standard Edition (J2SETM), Version 1.5
+DESCRIPTION:Today JavaTM technology is everywhere -- in large enterprise systems, desktops, hand-held devices and smart cards. Consequently Java technology is the platform of choice for developers all over the world. All this has happened in the short time since the technology was first introduced in 1995. While there have been updates and enhancements since the first version, release 1.5 of the core Java platform brings to the table more language-level updates and other enhancements through the incorporation of a number of Java Specification Requests (JSRs) than at any other time. In this hands-on session, developers will learn about all these changes and how to build desktop applications using version 1.5 of the Java platform.
+LAST-MODIFIED:20040610T120147Z
+LOCATION:6113
+DTSTAMP:20051220T211043Z
+END:VEVENT
+BEGIN:VEVENT
+UID:48c4812e-3337-4020-b9f1-3622953bdb3d
+DTSTART;TZID=America/Los_Angeles:20040630T223000
+DTEND;TZID=America/Los_Angeles:20040630T233000
+SUMMARY:Building Reusable Components for Sun JavaTM Studio Creator Application Development Tool
+DESCRIPTION:This session describes how to build reusable components for the Sun JavaTM Studio Creator application development tool, and shows how to assemble useful web applications from those components. This session is targeted at two types of developers:
+LOCATION:BOF-1105
+DTSTAMP:20051220T211043Z
+END:VEVENT
+BEGIN:VEVENT
+UID:a8031d62-88c9-4433-bced-35034c6a1f93
+DTSTART;TZID=America/Los_Angeles:20040630T193000
+DTEND;TZID=America/Los_Angeles:20040630T203000
+SUMMARY:Performance Measurement of Mixed JavaTM Technology, JIT-Compiled, and Native Applications
+DESCRIPTION:Many JavaTM technology-based applications are not pure Java technology, but include JIT-compiled code, as well as native code, accessed through JNI. Performance measurement for such codes is very important, and not available with typical Java software tools. In this session we describe the implementation of an external profiling agent that profiles mixed-model Java language codes. We show how the user can collect data on such applications, and how the data can be used to analyze the application's performance.
+LOCATION:BOF-1198
+DTSTAMP:20051220T211043Z
+END:VEVENT
+BEGIN:VEVENT
+UID:202b60d6-122e-4dd4-a8e4-8e7c827988b2
+DTSTART;TZID=America/Los_Angeles:20040630T203000
+DTEND;TZID=America/Los_Angeles:20040630T213000
+SUMMARY:Performance of JavaTM 2 Platform, Standard Edition (J2SETM), JavaTM 2 Platform, Enterprise Edition (J2EETM), Web Server, Web Services, and Portals
+DESCRIPTION:This session fields questions on anything in the JavaTM technology stack, including
+LOCATION:BOF-1217
+DTSTAMP:20051220T211043Z
+END:VEVENT
+END:VCALENDAR

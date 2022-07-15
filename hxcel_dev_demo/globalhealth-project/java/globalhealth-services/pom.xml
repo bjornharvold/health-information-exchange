@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>com.hxcel.globalhealth</groupId>
+		<artifactId>globalhealth-java</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth.service</groupId>
+	<artifactId>globalhealth-services</artifactId>
+	<packaging>pom</packaging>
+	<name>Globalhealth: Services (Java)</name>
+	<modules>
+		<module>globalhealth-service-calendar</module>
+        <module>globalhealth-service-cms</module>
+		<module>globalhealth-service-email</module>
+	</modules>
+</project>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.hxcel.globalhealth</groupId>
+        <artifactId>implementation</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>email.impl</artifactId>
+    <packaging>bundle</packaging>
+    <name>Email Implementation</name>
+
+    <properties>
+
+        <export.package>
+            com.hxcel.globalhealth.email;version="${project.version}"
+        </export.package>
+        <import.package>
+            com.hxcel.globalhealth.email.spec,
+            javax.activation;version="${javax.activation.version}",
+            javax.mail;version="${mail.version}",
+            javax.mail.internet;version="${mail.version}",
+            org.apache.commons.collections;version="${commons.collections.version}",
+            org.apache.commons.lang;version="${commons.lang.version}",
+            org.apache.commons.logging;version="${commons.logging.version}",
+            org.apache.velocity;version="${velocity.version}",
+            org.apache.velocity.app;version="${velocity.version}",
+            org.apache.velocity.context;version="${velocity.version}",
+            org.apache.velocity.exception;version="${velocity.version}",
+            org.apache.velocity.runtime;version="${velocity.version}",
+            org.apache.velocity.runtime.log;version="${velocity.version}",
+            org.apache.velocity.runtime.resource;version="${velocity.version}",
+            org.apache.velocity.runtime.resource.loader;version="${velocity.version}",
+            org.slf4j;version="${slf4j.version}",
+            org.springframework.beans.factory;version="${spring.version}",
+            org.springframework.beans.factory.annotation;version="${spring.version}",
+            org.springframework.context;version="${spring.version}",
+            org.springframework.core.io;version="${spring.version}",
+            org.springframework.core.io.support;version="${spring.version}",
+            org.springframework.mail;version="${spring.version}",
+            org.springframework.mail.javamail;version="${spring.version}",
+            org.springframework.ui.velocity;version="${spring.version}",
+            org.springframework.util;version="${spring.version}"
+        </import.package>
+    </properties>
+
+    <dependencies>
+
+        <!-- osgi ready bundles -->
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>email.spec</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.context.support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>com.springsource.javax.activation</artifactId>
+            <version>${javax.activation.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>com.springsource.org.apache.velocity</artifactId>
+            <version>${velocity.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>com.springsource.org.apache.commons.logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>com.springsource.javax.mail</artifactId>
+            <version>${mail.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.collections</artifactId>
+            <version>${commons.collections.version}</version>
+        </dependency>
+        <!-- velocity deps -->
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>com.springsource.org.jdom</artifactId>
+            <version>${jdom.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

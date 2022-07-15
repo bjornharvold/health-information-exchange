@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://www.springframework.org/schema/jms
+                           http://www.springframework.org/schema/jms/spring-jms-2.5.xsd
+                           http://cxf.apache.org/jaxws
+                           http://cxf.apache.org/schemas/jaxws.xsd">
+    <!-- ============================== MANAGERS ============================== -->
+    <!-- phr manager which everyone interested in phr should talk to -->
+    <bean id="phrManager" class="com.hxcel.globalhealth.domain.phr.impl.PhrManagerImpl"/>
+    <!-- ============================== MANAGERS ============================== -->
+
+    <!-- ============================== CONVERTERS ============================== -->
+    <bean id="abstractPhrCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.AbstractPhrCustomConverter" abstract="true"/>
+
+    <bean id="advanceDirectiveCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.AdvanceDirectiveCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="advanceDirectiveDAO"/>
+    </bean>
+
+    <bean id="allergyCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.AllergyCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="allergyDAO"/>
+    </bean>
+
+    <bean id="alternativeTreatmentCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.AlternativeTreatmentCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="alternativeTreatmentDAO"/>
+    </bean>
+
+    <bean id="dentalCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.DentalCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="dentalDAO"/>
+    </bean>
+
+    <bean id="employerCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.EmployerCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="employerDAO"/>
+    </bean>
+
+    <bean id="familyHistoryCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.FamilyHistoryCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="familyHistoryDAO"/>
+    </bean>
+
+    <bean id="hospitalizedCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.HospitalizedCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="hospitalizedDAO"/>
+    </bean>
+
+    <bean id="immunizationCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.ImmunizationCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="immunizationDAO"/>
+    </bean>
+
+    <bean id="insuranceCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.InsuranceCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="insuranceDAO"/>
+    </bean>
+
+    <bean id="medicalConditionCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.MedicalConditionCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="medicalConditionDAO"/>
+    </bean>
+
+    <bean id="medicationCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.MedicationCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="medicationDAO"/>
+    </bean>
+
+    <bean id="personalProfileCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.PersonalProfileCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="personalProfileDAO"/>
+    </bean>
+
+    <bean id="phrContactCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.PhrContactCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="phrContactDAO"/>
+    </bean>
+
+    <bean id="phrFileCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.PhrFileCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="phrFileDAO"/>
+    </bean>
+
+    <bean id="phrLocationCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.PhrLocationCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="phrLocationDAO"/>
+    </bean>
+
+    <bean id="practitionerCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.PractitionerCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="practitionerDAO"/>
+    </bean>
+
+    <bean id="surgeryCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.SurgeryCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="surgeryDAO"/>
+    </bean>
+
+    <bean id="travelImmunizationCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.TravelImmunizationCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="travelImmunizationDAO"/>
+    </bean>
+
+    <bean id="visionContactLensesCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.VisionContactLensesCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="visionContactLensDAO"/>
+    </bean>
+
+    <bean id="visionExamCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.VisionExamCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="visionExamDAO"/>
+    </bean>
+
+    <bean id="visionGlassesCustomConverter" class="com.hxcel.globalhealth.domain.phr.converter.VisionGlassesCustomConverter" parent="abstractPhrCustomConverter">
+        <property name="dao" ref="visionGlassesDAO"/>
+    </bean>
+    <!-- ============================== CONVERTERS ============================== -->
+
+    <!-- ============================== DAOS ============================== -->
+    <bean id="phrDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.PhrDAOHibernate" parent="hibSupport"/>
+    <bean id="advanceDirectiveDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.AdvanceDirectiveDAOHibernate" parent="hibSupport"/>
+    <bean id="allergyDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.AllergyDAOHibernate" parent="hibSupport"/>
+    <bean id="alternativeTreatmentDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.AlternativeTreatmentDAOHibernate" parent="hibSupport"/>
+    <bean id="dentalDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.DentalDAOHibernate" parent="hibSupport"/>
+    <bean id="employerDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.EmployerDAOHibernate" parent="hibSupport"/>
+    <bean id="visionContactLensDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.VisionContactLensDAOHibernate" parent="hibSupport"/>
+    <bean id="visionExamDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.VisionExamDAOHibernate" parent="hibSupport"/>
+    <bean id="visionGlassesDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.VisionGlassesDAOHibernate" parent="hibSupport"/>
+    <bean id="familyHistoryDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.FamilyHistoryDAOHibernate" parent="hibSupport"/>
+    <bean id="phrFileDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.PhrFileDAOHibernate" parent="hibSupport"/>
+    <bean id="hospitalizedDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.HospitalizedDAOHibernate" parent="hibSupport"/>
+    <bean id="immunizationDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.ImmunizationDAOHibernate" parent="hibSupport"/>
+    <bean id="insuranceDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.InsuranceDAOHibernate" parent="hibSupport"/>
+    <bean id="phrLocationDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.PhrLocationDAOHibernate" parent="hibSupport"/>
+    <bean id="medicalConditionDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.MedicalConditionDAOHibernate" parent="hibSupport"/>
+    <bean id="medicationDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.MedicationDAOHibernate" parent="hibSupport"/>
+    <bean id="personalProfileDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.PersonalProfileDAOHibernate" parent="hibSupport"/>
+    <bean id="phrContactDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.PhrContactDAOHibernate" parent="hibSupport"/>
+    <bean id="practitionerDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.PractitionerDAOHibernate" parent="hibSupport"/>
+    <bean id="surgeryDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.SurgeryDAOHibernate" parent="hibSupport"/>
+    <bean id="travelImmunizationDAO" class="com.hxcel.globalhealth.domain.phr.dao.impl.TravelImmunizationDAOHibernate" parent="hibSupport"/>
+    <!-- ============================== DAOS ============================== -->
+</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/osgi"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/osgi
+                                 http://www.springframework.org/schema/osgi/spring-osgi-1.2.xsd
+                                 http://www.springframework.org/schema/osgi-compendium
+                                 http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd
+                                 http://www.springframework.org/schema/beans
+                                 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- these are the services we need to make this bundle run -->
+    <reference id="applicationService" interface="com.hxcel.globalhealth.platform.spec.ApplicationService"/>
+    <reference id="countryService" interface="com.hxcel.globalhealth.platform.spec.CountryService"/>
+    <reference id="userService">
+        <interfaces>
+            <beans:value>com.hxcel.globalhealth.platform.spec.UserService</beans:value>
+            <beans:value>org.springframework.security.userdetails.UserDetailsService</beans:value>
+        </interfaces>
+    </reference>
+    <reference id="organizationService" interface="com.hxcel.globalhealth.platform.spec.OrganizationService"/>
+    <reference id="sessionFactory" interface="org.hibernate.SessionFactory"/>
+
+    <!--
+    <osgix:cm-properties persistent-id="com.hxcel.globalhealth.platform.web" id="platformWebConfig">
+        <beans:prop key="maxUploadSize">1000000</beans:prop>
+    </osgix:cm-properties>
+    -->
+    
+</beans:beans>

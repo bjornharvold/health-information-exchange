@@ -1,0 +1,2809 @@
+<?xml version="1.0"?>
+
+<icpc2 country="UNITED_STATES">
+   <diagnosis>
+    <name>N87</name>
+    <code>Parkinsonism</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K25</name>
+    <code>Fear Of Hypertension</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N86</name>
+    <code>Multiple Sclerosis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K24</name>
+    <code>Fear Of Heart Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N85</name>
+    <code>Congenital Anomaly Neurological</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K22</name>
+    <code>Risk Factor For Cardiovascular Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N81</name>
+    <code>Injury Nervous System Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N80</name>
+    <code>Head Injury Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F86</name>
+    <code>Trachoma</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F85</name>
+    <code>Corneal Ulcer</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S19</name>
+    <code>Skin Injury Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F84</name>
+    <code>Macular Degeneration</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S18</name>
+    <code>Laceration/Cut</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F83</name>
+    <code>Retinopathy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S17</name>
+    <code>Abrasion/Scratch/Blister</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F82</name>
+    <code>Detached Retina</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S16</name>
+    <code>Bruise/Contusion</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F81</name>
+    <code>Congenital Anomaly Eye Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S15</name>
+    <code>Foreign Body In Skin</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F80</name>
+    <code>Blocked Lacrimal Duct Of Infant</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S14</name>
+    <code>Burn/Scald</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S13</name>
+    <code>Animal/Human Bite</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S12</name>
+    <code>Insect Bite/Sting</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S11</name>
+    <code>Skin Infection Post-Traumatic</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S10</name>
+    <code>Boil/Carbuncle</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N79</name>
+    <code>Concussion</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N76</name>
+    <code>Neoplasm Nervous System Unspecified</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N75</name>
+    <code>Benign Neoplasm Nervous System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N74</name>
+    <code>Malignant Neoplasm Nervous System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N73</name>
+    <code>Neurological Infection Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N72</name>
+    <code>Tetanus</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N71</name>
+    <code>Meningitis/Encephalitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N70</name>
+    <code>Poliomyelitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F79</name>
+    <code>Injury Eye Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F76</name>
+    <code>Foreign Body In Eye</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S09</name>
+    <code>Infected Finger/Toe</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F75</name>
+    <code>Contusion/Haemorrhage Eye</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S08</name>
+    <code>Skin Colour Change</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F74</name>
+    <code>Neoplasm Of Eye/Adnexa</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S07</name>
+    <code>Rash Generalized</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F73</name>
+    <code>Eye Infection/Inflammation Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S06</name>
+    <code>Rash Localized</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F72</name>
+    <code>Blepharitis/Stye/Chalazion</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S05</name>
+    <code>Lumps/Swellings Generalized</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F71</name>
+    <code>Conjunctivitis Allergic</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S04</name>
+    <code>Lump/Swelling Localized</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F70</name>
+    <code>Conjunctivitis Infectious</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S03</name>
+    <code>Warts</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S02</name>
+    <code>Pruritus</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S01</name>
+    <code>Pain/Tenderness Of Skin</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K07</name>
+    <code>Swollen Ankles/Oedema</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K06</name>
+    <code>Prominent Veins</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K05</name>
+    <code>Irregular Heartbeat Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K04</name>
+    <code>Palpitations/Awareness Of Heart</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K03</name>
+    <code>Cardiovascular Pain Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K02</name>
+    <code>Pressure/Tightness Of Heart</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K01</name>
+    <code>Heart Pain</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y99</name>
+    <code>Genital Disease Male Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y86</name>
+    <code>Hydrocoele</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y85</name>
+    <code>Benign Prostatic Hypertrophy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y84</name>
+    <code>Congenital Genital Anomaly Male Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y83</name>
+    <code>Undescended Testicle</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y82</name>
+    <code>Hypospadias</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y81</name>
+    <code>Phimosis/Redundant Prepuce</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A99</name>
+    <code>Disease/Condition Of Unspecified Nature/Site</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y80</name>
+    <code>Injury Male Genital</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A98</name>
+    <code>Health Maintenance/Preventive Medicine</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A97</name>
+    <code>No Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A96</name>
+    <code>Death</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A95</name>
+    <code>Perinatal Mortality</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N29</name>
+    <code>Neurological Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A94</name>
+    <code>Perinatal Morbidity Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N28</name>
+    <code>Limited Function/Disability (N)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A93</name>
+    <code>Premature Newborn</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N27</name>
+    <code>Fear Of Neurological Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A92</name>
+    <code>Allergy/Allergic Reaction Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N26</name>
+    <code>Fear Of Cancer Of Neurological System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A91</name>
+    <code>Abnormal Result Investigation Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A90</name>
+    <code>Congenital Anomaly Nos/Multiple</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F29</name>
+    <code>Eye Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F28</name>
+    <code>Limited Function/Disability (F)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F27</name>
+    <code>Fear Of Eye Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y79</name>
+    <code>Benign/Unspecified Neoplasm Male Genital</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y78</name>
+    <code>Malignant Neoplasm Male Genital Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y77</name>
+    <code>Malignant Neoplasm Prostate</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y76</name>
+    <code>Condylomata Acuminata Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y75</name>
+    <code>Balanitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y74</name>
+    <code>Orchitis/Epididymitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y73</name>
+    <code>Prostatitis/Seminal Vesiculitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y72</name>
+    <code>Genital Herpes Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y71</name>
+    <code>Gonorrhoea Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A89</name>
+    <code>Effect Prosthetic Device</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y70</name>
+    <code>Syphilis Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A88</name>
+    <code>Adverse Effect Physical Factor</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A87</name>
+    <code>Complication Of Medical Treatment</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A86</name>
+    <code>Toxic Effect Non-Medicinal Substance</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A85</name>
+    <code>Adverse Effect Medical Agent</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N19</name>
+    <code>Speech Disorder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A84</name>
+    <code>Poisoning By Medical Agent</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N18</name>
+    <code>Paralysis/Weakness</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N17</name>
+    <code>Vertigo/Dizziness</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A82</name>
+    <code>Secondary Effect Of Trauma</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N16</name>
+    <code>Disturbance Of Smell/Taste</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A81</name>
+    <code>Multiple Trauma/Injuries</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A80</name>
+    <code>Trauma/Injury Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F18</name>
+    <code>Contact Lens Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F17</name>
+    <code>Glasses Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F16</name>
+    <code>Eyelid Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F15</name>
+    <code>Eye Appearance Abnormal</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F14</name>
+    <code>Eye Movements Abnormal</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F13</name>
+    <code>Eye Sensation Abnormal</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A79</name>
+    <code>Malignancy Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A78</name>
+    <code>Infectious Disease Other/Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A77</name>
+    <code>Viral Disease Other/Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A76</name>
+    <code>Viral Exanthem Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A75</name>
+    <code>Infectious Mononucleosis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A74</name>
+    <code>Rubella</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N08</name>
+    <code>Abnormal Involuntary Movements</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A73</name>
+    <code>Malaria</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N07</name>
+    <code>Convulsion/Seizure</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A72</name>
+    <code>Chickenpox</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N06</name>
+    <code>Sensation Disturbance Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A71</name>
+    <code>Measles</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N05</name>
+    <code>Tingling Fingers/Feet/Toes</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A70</name>
+    <code>Tuberculosis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N04</name>
+    <code>Restless Legs</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N03</name>
+    <code>Pain Face</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N01</name>
+    <code>Headache</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F05</name>
+    <code>Visual Disturbance Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F04</name>
+    <code>Visual Floaters/Spots</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F03</name>
+    <code>Eye Discharge</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F02</name>
+    <code>Red Eye</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F01</name>
+    <code>Eye Pain</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T99</name>
+    <code>Endocrine/Metabolic/Nutritional Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T93</name>
+    <code>Lipid Disorder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T92</name>
+    <code>Gout</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T91</name>
+    <code>Vitamin/Nutritional Deficiency</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T90</name>
+    <code>Diabetes Non-Insulin Dependent</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L99</name>
+    <code>Musculoskeletal Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L98</name>
+    <code>Acquired Deformity Of Limb</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L97</name>
+    <code>Neoplasm Benign/Unspecified Musculoskeletal</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L96</name>
+    <code>Acute Internal Damage Knee</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y29</name>
+    <code>Genital Symptom/Complaint Male Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L95</name>
+    <code>Osteoporosis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y28</name>
+    <code>Limited Function/Disability (Y)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L94</name>
+    <code>Osteochondrosis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y27</name>
+    <code>Fear Of Genital Disease Male Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L93</name>
+    <code>Tennis Elbow</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y26</name>
+    <code>Fear Of Genital Cancer Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L92</name>
+    <code>Shoulder Syndrome</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y25</name>
+    <code>Fear Of Sexually Transmitted Disease Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L91</name>
+    <code>Osteoarthrosis Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y24</name>
+    <code>Fear Of Sexual Dysfunction Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L90</name>
+    <code>Osteoarthrosis Of Knee</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D99</name>
+    <code>Disease Digestive System Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D98</name>
+    <code>Cholecystitis/Cholelithiasis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D97</name>
+    <code>Liver Disease Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D96</name>
+    <code>Worms/Other Parasites</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D95</name>
+    <code>Anal Fissure/Perianal Abscess</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D94</name>
+    <code>Chronic Enteritis/Ulcerative Colitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T89</name>
+    <code>Diabetes Insulin Dependent</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D93</name>
+    <code>Irritable Bowel Syndrome</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D92</name>
+    <code>Diverticular Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T87</name>
+    <code>Hypoglycaemia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D91</name>
+    <code>Abdominal Hernia Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T86</name>
+    <code>Hypothyroidism/Myxoedema</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D90</name>
+    <code>Hiatus Hernia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T85</name>
+    <code>Hyperthyroidism/Thyrotoxicosis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T83</name>
+    <code>Overweight</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T82</name>
+    <code>Obesity</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T81</name>
+    <code>Goitre</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T80</name>
+    <code>Congenital Anomaly Endocrine/Metabolic</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L89</name>
+    <code>Osteoarthrosis Of Hip</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L88</name>
+    <code>Rheumatoid/Seropositive Arthritis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L87</name>
+    <code>Bursitis/Tendinitis/Synovitis Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L86</name>
+    <code>Back Syndrome With Radiating Pain</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L85</name>
+    <code>Acquired Deformity Of Spine</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L84</name>
+    <code>Back Syndrome Without Radiating Pain</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L83</name>
+    <code>Neck Syndrome</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y16</name>
+    <code>Breast Symptom/Complaint Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L82</name>
+    <code>Congenital Anomaly Musculoskeletal</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L81</name>
+    <code>Injury Musculoskeletal Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y14</name>
+    <code>Family Planning Male Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L80</name>
+    <code>Dislocation/Subluxation</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y13</name>
+    <code>Sterilization Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A29</name>
+    <code>General Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y10</name>
+    <code>Infertility/Subfertility Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A28</name>
+    <code>Limited Function/Disability Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D89</name>
+    <code>Inguinal Hernia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A27</name>
+    <code>Fear Of Other Disease Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D88</name>
+    <code>Appendicitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A26</name>
+    <code>Fear Of Cancer Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D87</name>
+    <code>Stomach Function Disorder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A25</name>
+    <code>Fear Of Death/Dying</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D86</name>
+    <code>Peptic Ulcer Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D85</name>
+    <code>Duodenal Ulcer</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A23</name>
+    <code>Risk Factor Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D84</name>
+    <code>Oesophagus Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D83</name>
+    <code>Mouth/Tongue/Lip Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T78</name>
+    <code>Thyroglossal Duct/Cyst</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A21</name>
+    <code>Risk Factor For Malignancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D82</name>
+    <code>Teeth/Gum Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A20</name>
+    <code>Euthanasia Request/Discussion</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D81</name>
+    <code>Congenital Anomaly Digestive System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D80</name>
+    <code>Injury Digestive System Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T73</name>
+    <code>Neoplasm Endocrine Other/Unspecified</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T72</name>
+    <code>Benign Neoplasm Thyroid</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T71</name>
+    <code>Malignant Neoplasm Thyroid</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T70</name>
+    <code>Endocrine Infection</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L79</name>
+    <code>Sprain/Strain Of Joint Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L78</name>
+    <code>Sprain/Strain Of Knee</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L77</name>
+    <code>Sprain/Strain Of Ankle</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L76</name>
+    <code>Fracture: Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L75</name>
+    <code>Fracture: Femur</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y08</name>
+    <code>Sexual Function Symptom/Complaint Male</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L74</name>
+    <code>Fracture: Hand/Foot Bone</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y07</name>
+    <code>Impotence Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L73</name>
+    <code>Fracture: Tibia/Fibula</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y06</name>
+    <code>Prostate Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L72</name>
+    <code>Fracture: Radius/Ulna</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y05</name>
+    <code>Scrotum/Testis Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L71</name>
+    <code>Malignant Neoplasm Musculoskeletal</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y04</name>
+    <code>Penis Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L70</name>
+    <code>Infections Of Musculoskeletal System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y03</name>
+    <code>Urethral Discharge</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y02</name>
+    <code>Pain In Testis/Scrotum</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Y01</name>
+    <code>Pain In Penis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A18</name>
+    <code>Concern About Appearance</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D79</name>
+    <code>Foreign Body Digestive System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D78</name>
+    <code>Neoplasm Digestive System Benign/Unspecified</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A16</name>
+    <code>Irritable Infant</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D77</name>
+    <code>Malignant Digestive Neoplasm Other/Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D76</name>
+    <code>Malignant Neoplasm Pancreas</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D75</name>
+    <code>Malignant Neoplasm Colon/Rectum</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A13</name>
+    <code>Concern About/Fear Of Medical Treatment</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D74</name>
+    <code>Malignant Neoplasm Stomach</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D73</name>
+    <code>Gastroenteritis Presumed Infection</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A11</name>
+    <code>Chest Pain Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D72</name>
+    <code>Viral Hepatitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A10</name>
+    <code>Bleeding/Haemorrhage Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D71</name>
+    <code>Mumps</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D70</name>
+    <code>Gastrointestinal Infection</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A09</name>
+    <code>Sweating Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A08</name>
+    <code>Swelling</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A07</name>
+    <code>Coma</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A06</name>
+    <code>Fainting/Syncope</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A05</name>
+    <code>Feeling Ill</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A04</name>
+    <code>Weakness/Tiredness General</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A03</name>
+    <code>Fever</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A02</name>
+    <code>Chills</code>
+   </diagnosis>
+   <diagnosis>
+    <name>A01</name>
+    <code>Pain General/Multiple Sites</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W99</name>
+    <code>Disorder Of Pregnancy/Delivery Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W96</name>
+    <code>Complications Of Puerperium Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W95</name>
+    <code>Breast Disorder In Pregnancy/Puerperium Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W94</name>
+    <code>Puerperal Mastitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W93</name>
+    <code>Complicated Labour/Delivery Stillbirth</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W92</name>
+    <code>Complicated Labour/Delivery Livebirth</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W91</name>
+    <code>Uncomplicated Labour/Delivery Stillbirth</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W90</name>
+    <code>Uncomplicated  Labour/Delivery Livebirth</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T29</name>
+    <code>Endocrine/Metabolic/Nutritional Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T28</name>
+    <code>Limited Function/Disability (T)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T27</name>
+    <code>Fear Of Endocrine/Metabolic Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T26</name>
+    <code>Fear Of Cancer Of Endocrine System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W85</name>
+    <code>Gestational Diabetes</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W84</name>
+    <code>Pregnancy High Risk</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W83</name>
+    <code>Abortion Induced</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W82</name>
+    <code>Abortion Spontaneous</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W81</name>
+    <code>Toxaemia Of Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W80</name>
+    <code>Ectopic Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L29</name>
+    <code>Symptom/Complaint Musculoskeletal Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L28</name>
+    <code>Limited Function/Disability (L)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L27</name>
+    <code>Fear Of Musculoskeletal Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L26</name>
+    <code>Fear Of Cancer Musculoskeletal</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L20</name>
+    <code>Joint Symptom/Complaint Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D29</name>
+    <code>Digestive Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D28</name>
+    <code>Limited Function/Disability (D)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D27</name>
+    <code>Fear Of  Digestive Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D26</name>
+    <code>Fear Of Cancer Of Digestive System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D25</name>
+    <code>Abdominal Distension</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D24</name>
+    <code>Abdominal Mass Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D23</name>
+    <code>Hepatomegaly</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W79</name>
+    <code>Unwanted Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W78</name>
+    <code>Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D21</name>
+    <code>Swallowing Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D20</name>
+    <code>Mouth/Tongue/Lip Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W76</name>
+    <code>Congenital Anomaly Complicating Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W75</name>
+    <code>Injury Complicating Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W73</name>
+    <code>Benign/Unspecified Neoplasm Related To Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T11</name>
+    <code>Dehydration</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W72</name>
+    <code>Malignant Neoplasm Related To Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T10</name>
+    <code>Gdiagnosisth Delay</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W71</name>
+    <code>Infection Complicating Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W70</name>
+    <code>Puerperal Infection/Sepsis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L19</name>
+    <code>Muscle Symptom/Complaint Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L18</name>
+    <code>Muscle Pain</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L17</name>
+    <code>Foot/Toe Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L16</name>
+    <code>Ankle Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L15</name>
+    <code>Knee Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L14</name>
+    <code>Leg/Thigh Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L13</name>
+    <code>Hip Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L12</name>
+    <code>Hand/Finger Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L11</name>
+    <code>Wrist Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L10</name>
+    <code>Elbow Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D19</name>
+    <code>Teeth/Gum Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D18</name>
+    <code>Change In Faeces/Bowel Movements</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D17</name>
+    <code>Incontinence Of Bowel</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D16</name>
+    <code>Rectal Bleeding</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D15</name>
+    <code>Melaena</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D14</name>
+    <code>Haematemesis/Vomiting Blood</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D13</name>
+    <code>Jaundice</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T08</name>
+    <code>Weight Loss</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D12</name>
+    <code>Constipation</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T07</name>
+    <code>Weight Gain</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D11</name>
+    <code>Diarrhoea</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D10</name>
+    <code>Vomiting</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T05</name>
+    <code>Feeding Problem Of Adult</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T04</name>
+    <code>Feeding Problem Of Infant/Child</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T03</name>
+    <code>Loss Of Appetite</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T02</name>
+    <code>Excessive Appetite</code>
+   </diagnosis>
+   <diagnosis>
+    <name>T01</name>
+    <code>Excessive Thirst</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L09</name>
+    <code>Arm Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L08</name>
+    <code>Shoulder Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L07</name>
+    <code>Jaw Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L05</name>
+    <code>Flank/Axilla Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L04</name>
+    <code>Chest Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L03</name>
+    <code>Low Back Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L02</name>
+    <code>Back Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>L01</name>
+    <code>Neck Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D09</name>
+    <code>Nausea</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D08</name>
+    <code>Flatulence/Gas/Belching</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D07</name>
+    <code>Dyspepsia/Indigestion</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D06</name>
+    <code>Abdominal Pain Localized Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D05</name>
+    <code>Perianal Itching</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D04</name>
+    <code>Rectal/Anal Pain</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D03</name>
+    <code>Heartburn</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D02</name>
+    <code>Abdominal Pain Epigastric</code>
+   </diagnosis>
+   <diagnosis>
+    <name>D01</name>
+    <code>Abdominal Pain/Cramps General</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R99</name>
+    <code>Respiratory Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R98</name>
+    <code>Hyperventilation Syndrome</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R97</name>
+    <code>Allergic Rhinitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R96</name>
+    <code>Asthma</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R95</name>
+    <code>Chronic Obstructive Pulmonary Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R92</name>
+    <code>Neoplasm Respiratory Unspecified</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R90</name>
+    <code>Hypertrophy Tonsils/Adenoids</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W29</name>
+    <code>Pregnancy Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W28</name>
+    <code>Limited Function/Disability (W)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W27</name>
+    <code>Fear Of Complications Of Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W21</name>
+    <code>Concern About Body Image Related To Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B99</name>
+    <code>Blood/Lymph/Spleen Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R89</name>
+    <code>Congenital Anomaly Respiratory</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R88</name>
+    <code>Injury Respiratory Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R87</name>
+    <code>Foreign Body Nose/Larynx/Bronchus</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R86</name>
+    <code>Benign Neoplasm Respiratory</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B90</name>
+    <code>Hiv-Infection/Aids</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R85</name>
+    <code>Malignant Neoplasm Respiratory Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R84</name>
+    <code>Malignant Neoplasm Bronchus/Lung</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R83</name>
+    <code>Respiratory Infection Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R82</name>
+    <code>Pleurisy/Pleural Effusion</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R81</name>
+    <code>Pneumonia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R80</name>
+    <code>Influenza</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W19</name>
+    <code>Breast/Lactation Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W18</name>
+    <code>Post-Partum Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W17</name>
+    <code>Post-Partum Bleeding</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W15</name>
+    <code>Infertility/Subfertility</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W14</name>
+    <code>Contraception Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W13</name>
+    <code>Sterilization</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W12</name>
+    <code>Contraception Intrauterine</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W11</name>
+    <code>Contraception Oral</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W10</name>
+    <code>Contraception Postcoital</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B87</name>
+    <code>Splenomegaly</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B84</name>
+    <code>Unexplained Abnormal White codes</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R79</name>
+    <code>Chronic Bronchitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B83</name>
+    <code>Purpura/Coagulation Defect</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R78</name>
+    <code>Acute Bronchitis/Bronchiolitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B82</name>
+    <code>Anaemia Other/Unspecified</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R77</name>
+    <code>Laryngitis/Tracheitis Acute</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B81</name>
+    <code>Anaemia Vit B12/Folate Deficiency</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R76</name>
+    <code>Tonsillitis Acute</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B80</name>
+    <code>Iron Deficiency Anaemia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R75</name>
+    <code>Sinusitis Acute/Chronic</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R74</name>
+    <code>Upper Respiratory Infection Acute</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R73</name>
+    <code>Boil/Abscess Nose</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R72</name>
+    <code>Strep Throat</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R71</name>
+    <code>Whooping Cough</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W05</name>
+    <code>Pregnancy Vomiting/Nausea</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W03</name>
+    <code>Antepartum Bleeding</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W02</name>
+    <code>Fear Of Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>W01</name>
+    <code>Question Of Pregnancy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B79</name>
+    <code>Congenital Anomaly Blood/Lymph Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B78</name>
+    <code>Hereditary Haemolytic Anaemia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B77</name>
+    <code>Injury Blood/Lymph/Spleen Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B76</name>
+    <code>Ruptured Spleen Traumatic</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B75</name>
+    <code>Benign/Unspecified Neoplasm Blood</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B74</name>
+    <code>Malignant Neoplasm Blood Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B73</name>
+    <code>Leukaemia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B72</name>
+    <code>Hodgkin's Disease/Lymphoma</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B71</name>
+    <code>Lymphadenitis Chronic/Non-Specific</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B70</name>
+    <code>Lymphadenitis Acute</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U99</name>
+    <code>Urinary Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U98</name>
+    <code>Abnormal Urine Test Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U95</name>
+    <code>Urinary Calculus</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U90</name>
+    <code>Orthostatic Albuminuria/Proteinuria</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z29</name>
+    <code>Social Problem Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z28</name>
+    <code>Limited  Function/Disability (Z)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z27</name>
+    <code>Fear Of A Social Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z25</name>
+    <code>Assault/Harmful Event Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z24</name>
+    <code>Relationship Problem Friend</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z23</name>
+    <code>Loss/Death Of Parent/Family Member Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z22</name>
+    <code>Illness Problem Parent/Family</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z21</name>
+    <code>Behaviour Problem Parent/Family</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z20</name>
+    <code>Relationship Problem Parent/Family</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R29</name>
+    <code>Respiratory Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R28</name>
+    <code>Limited Function/Disability (R)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R27</name>
+    <code>Fear Of Respiratory Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U88</name>
+    <code>Glomerulonephritis/Nephrosis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R26</name>
+    <code>Fear Of Cancer Of Respiratory System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R25</name>
+    <code>Sputum/Phlegm Abnormal</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R24</name>
+    <code>Haemoptysis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U85</name>
+    <code>Congenital Anomaly Urinary Tract</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R23</name>
+    <code>Voice Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R21</name>
+    <code>Throat Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U80</name>
+    <code>Injury Urinary Tract</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z19</name>
+    <code>Loss/Death Of Child Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z18</name>
+    <code>Illness Problem With Child</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z16</name>
+    <code>Relationship Problem With Child</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z15</name>
+    <code>Loss/Death Of Partner Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z14</name>
+    <code>Partner Illness Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z13</name>
+    <code>Partner's Behaviour Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z12</name>
+    <code>Relationship Problem With Partner</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z11</name>
+    <code>Compliance/Being Ill Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B29</name>
+    <code>Symptom/Complaint Lymph/Immune Mechanism Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z10</name>
+    <code>Health Care System Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B28</name>
+    <code>Limited Function/Disability (B)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B27</name>
+    <code>Fear Of Blood/Lymph Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B26</name>
+    <code>Fear Of Cancer Blood/Lymph</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B25</name>
+    <code>Fear Of Aids/Hiv</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U79</name>
+    <code>Neoplasm Urinary Tract Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U78</name>
+    <code>Benign Neoplasm Urinary Tract</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U77</name>
+    <code>Malignant Neoplasm Urinary Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U76</name>
+    <code>Malignant Neoplasm Of Bladder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U75</name>
+    <code>Malignant Neoplasm Of Kidney</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U72</name>
+    <code>Urethritis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U71</name>
+    <code>Cystitis/Urinary Infection Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U70</name>
+    <code>Pyelonephritis/Pyelitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z09</name>
+    <code>Legal Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z08</name>
+    <code>Social Welfare Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z07</name>
+    <code>Education Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z06</name>
+    <code>Unemployment Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z05</name>
+    <code>Work Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z04</name>
+    <code>Social Cultural Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <code>P</code>
+    <code>Psykisk</code>
+    <code>NORWAY</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z03</name>
+    <code>Housing/Neighbourhood Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z02</name>
+    <code>Food/Water Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>Z01</name>
+    <code>Poverty/Financial Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R09</name>
+    <code>Sinus Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R08</name>
+    <code>Nose Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R07</name>
+    <code>Sneezing/Nasal Congestion</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R06</name>
+    <code>Nose Bleed/Epistaxis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R05</name>
+    <code>Cough</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R04</name>
+    <code>Breathing Problem Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R03</name>
+    <code>Wheezing</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R02</name>
+    <code>Shortness Of Breath/Dyspnoea</code>
+   </diagnosis>
+   <diagnosis>
+    <name>R01</name>
+    <code>Pain Respiratory System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B04</name>
+    <code>Blood Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>B02</name>
+    <code>Lymph Gland(S) Enlarged/Painful</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X99</name>
+    <code>Genital Disease Female Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X92</name>
+    <code>Chlamydia Infection Genital Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X91</name>
+    <code>Condylomata Acuminata Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X90</name>
+    <code>Genital Herpes Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P99</name>
+    <code>Psychological Disorders Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P98</name>
+    <code>Psychosis Nos/Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H99</name>
+    <code>Ear/Mastoid Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U29</name>
+    <code>Urinary Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X89</name>
+    <code>Premenstrual Tension Syndrome</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U28</name>
+    <code>Limited Function/Disability (U)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X88</name>
+    <code>Fibrocystic Disease Breast</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U27</name>
+    <code>Fear Of Urinary Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X87</name>
+    <code>Uterovaginal Prolapse</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U26</name>
+    <code>Fear Of Cancer Of Urinary System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X86</name>
+    <code>Abnormal Cervix Smear</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X85</name>
+    <code>Cervical Disease Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X84</name>
+    <code>Vaginitis/Vulvitis Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X83</name>
+    <code>Congenital Anomaly Genital Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X82</name>
+    <code>Injury Genital Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X81</name>
+    <code>Genital Neoplasm Female Other/Unspecified</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X80</name>
+    <code>Benign Neoplasm Female Genital</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P86</name>
+    <code>Anorexia Nervosa/Bulimia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P85</name>
+    <code>Mental Retardation</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P82</name>
+    <code>Post-Traumatic Stress Disorder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P81</name>
+    <code>Hyperkinetic Disorder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P80</name>
+    <code>Personality Disorder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H86</name>
+    <code>Deafness</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H85</name>
+    <code>Acoustic Trauma</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X79</name>
+    <code>Benign Neoplasm Breast Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H84</name>
+    <code>Presbyacusis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X78</name>
+    <code>Fibromyoma Uterus</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H83</name>
+    <code>Otosclerosis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X77</name>
+    <code>Malignant Neoplasm Genital Female Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H82</name>
+    <code>Vertiginous Syndrome</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X76</name>
+    <code>Malignant Neoplasm Breast Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H81</name>
+    <code>Excessive Ear Wax</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X75</name>
+    <code>Malignant Neoplasm Cervix</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H80</name>
+    <code>Congenital Anomaly Of Ear</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U14</name>
+    <code>Kidney Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X74</name>
+    <code>Pelvic Inflammatory Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U13</name>
+    <code>Bladder Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X73</name>
+    <code>Genital Trichomoniasis Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X72</name>
+    <code>Genital Candidiasis Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X71</name>
+    <code>Gonorrhoea Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X70</name>
+    <code>Syphilis Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P79</name>
+    <code>Phobia/Compulsive Disorder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P78</name>
+    <code>Neuraesthenia/Surmenage</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P77</name>
+    <code>Suicide/Suicide Attempt</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P76</name>
+    <code>Depressive Disorder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P75</name>
+    <code>Somatization Disorder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P74</name>
+    <code>Anxiety Disorder/Anxiety State</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P73</name>
+    <code>Affective Psychosis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P72</name>
+    <code>Schizophrenia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P71</name>
+    <code>Organic Psychosis Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P70</name>
+    <code>Dementia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H79</name>
+    <code>Ear Injury Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H78</name>
+    <code>Superficial Injury Of Ear</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H77</name>
+    <code>Perforation Ear Drum</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H76</name>
+    <code>Foreign Body In Ear</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H75</name>
+    <code>Neoplasm Of Ear</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H74</name>
+    <code>Chronic Otitis Media</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U08</name>
+    <code>Urinary Retention</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H73</name>
+    <code>Eustachian Salpingitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U07</name>
+    <code>Urine Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H72</name>
+    <code>Serous Otitis Media</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U06</name>
+    <code>Haematuria</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H71</name>
+    <code>Acute Otitis Media/Myringitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U05</name>
+    <code>Urination Problems Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H70</name>
+    <code>Otitis Externa</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U04</name>
+    <code>Incontinence Urine</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U02</name>
+    <code>Urinary Frequency/Urgency</code>
+   </diagnosis>
+   <diagnosis>
+    <name>U01</name>
+    <code>Dysuria/Painful Urination</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S99</name>
+    <code>Skin Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S98</name>
+    <code>Urticaria</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S97</name>
+    <code>Chronic Ulcer Skin</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S96</name>
+    <code>Acne</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S95</name>
+    <code>Molluscum Contagiosum</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S94</name>
+    <code>Ingdiagnosising Nail</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S93</name>
+    <code>Sebaceous Cyst</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S92</name>
+    <code>Sweat Gland Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S91</name>
+    <code>Psoriasis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S90</name>
+    <code>Pityriasis Rosea</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K99</name>
+    <code>Cardiovascular Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K96</name>
+    <code>Haemorrhoids</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X29</name>
+    <code>Genital Symptom/Complaint Female Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K95</name>
+    <code>Varicose Veins Of Leg</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X28</name>
+    <code>Limited Function/Disability (X)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K94</name>
+    <code>Phlebitis/Thrombophlebitis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X27</name>
+    <code>Fear Genital/Breast Disease Female Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K93</name>
+    <code>Pulmonary Embolism</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X26</name>
+    <code>Fear Of Breast Cancer Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K92</name>
+    <code>Atherosclerosis/Peripheral Vascular Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X25</name>
+    <code>Fear Of Genital Cancer Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K91</name>
+    <code>Cerebrovascular Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X24</name>
+    <code>Fear Of Sexual Dysfunction Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K90</name>
+    <code>Stroke/Cerebrovascular Accident</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X23</name>
+    <code>Fear Of Sexually Transmitted Disease Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X22</name>
+    <code>Concern About Breast Appearance Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X21</name>
+    <code>Breast Symptom/Complaint Female Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X20</name>
+    <code>Nipple Symptom/Complaint Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P29</name>
+    <code>Psychological Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P28</name>
+    <code>Limited Function/Disability (P)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S89</name>
+    <code>Diaper Rash</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P27</name>
+    <code>Fear Of Mental Disorder</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S88</name>
+    <code>Dermatitis Contact/Allergic</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S87</name>
+    <code>Dermatitis/Atopic Eczema</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P25</name>
+    <code>Phase Of Life Problem Adult</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S86</name>
+    <code>Dermatitis Seborrhoeic</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P24</name>
+    <code>Specific Learning Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S85</name>
+    <code>Pilonidal Cyst/Fistula</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P23</name>
+    <code>Adolescent Behaviour Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S84</name>
+    <code>Impetigo</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P22</name>
+    <code>Child Behaviour Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S83</name>
+    <code>Congenital Skin Anomaly Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S82</name>
+    <code>Naevus/Mole</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P20</name>
+    <code>Memory Disturbance</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S81</name>
+    <code>Haemangioma/Lymphangioma</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S80</name>
+    <code>Solar Keratosis/Sunburn</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H29</name>
+    <code>Ear Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H28</name>
+    <code>Limited Function/Disability (H)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K89</name>
+    <code>Transient Cerebral Ischaemia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H27</name>
+    <code>Fear Of Ear Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K88</name>
+    <code>Postural Hypotension</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K87</name>
+    <code>Hypertension Complicated</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K86</name>
+    <code>Hypertension Uncomplicated</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X19</name>
+    <code>Breast Lump/Mass Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K85</name>
+    <code>Elevated Blood Pressure</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X18</name>
+    <code>Breast Pain Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K84</name>
+    <code>Heart Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X17</name>
+    <code>Pelvis Symptom/Complaint Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K83</name>
+    <code>Heart Valve Disease Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X16</name>
+    <code>Vulval Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K82</name>
+    <code>Pulmonary Heart Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X15</name>
+    <code>Vaginal Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K81</name>
+    <code>Heart/Arterial Murmur Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X14</name>
+    <code>Vaginal Discharge</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K80</name>
+    <code>Cardiac Arrhythmia Nos</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X13</name>
+    <code>Postcoital Bleeding</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X12</name>
+    <code>Postmenopausal Bleeding</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X11</name>
+    <code>Menopausal Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X10</name>
+    <code>Postponement Of Menstruation</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P19</name>
+    <code>Drug Abuse</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P18</name>
+    <code>Medication Abuse</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S79</name>
+    <code>Neoplasm Skin Benign/Unspecified</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P17</name>
+    <code>Tobacco Abuse</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S78</name>
+    <code>Lipoma</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P16</name>
+    <code>Acute Alcohol Abuse</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S77</name>
+    <code>Malignant Neoplasm Of Skin</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P15</name>
+    <code>Chronic Alcohol Abuse</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S76</name>
+    <code>Skin Infection Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S75</name>
+    <code>Moniliasis/Candidiasis Skin</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P13</name>
+    <code>Encopresis/Bowel Training Problem</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S74</name>
+    <code>Dermatophytosis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P12</name>
+    <code>Bedwetting/Enuresis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S73</name>
+    <code>Pediculosis/Skin Infestation Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P11</name>
+    <code>Eating Problem In Child</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S72</name>
+    <code>Scabies/Other Acariasis</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P10</name>
+    <code>Stammering/Stuttering/Tic</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S71</name>
+    <code>Herpes Simplex</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S70</name>
+    <code>Herpes Zoster</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K79</name>
+    <code>Paroxysmal Tachycardia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K78</name>
+    <code>Atrial Fibrillation/Flutter</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K77</name>
+    <code>Heart Failure</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H15</name>
+    <code>Concern With Appearance Of Ears</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K76</name>
+    <code>Ischaemic Heart Disease Without Angina</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X09</name>
+    <code>Premenstrual Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K75</name>
+    <code>Acute Myocardial Infarction</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X08</name>
+    <code>Intermenstrual Bleeding</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H13</name>
+    <code>Plugged Feeling Ear</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K74</name>
+    <code>Ischaemic Heart Disease With Angina</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X07</name>
+    <code>Menstruation Irregular/Frequent</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K73</name>
+    <code>Congenital Anomaly Cardiovascular</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X06</name>
+    <code>Menstruation Excessive</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K72</name>
+    <code>Neoplasm Cardiovascular</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X05</name>
+    <code>Menstruation Absent/Scanty</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K71</name>
+    <code>Rheumatic Fever/Heart Disease</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X04</name>
+    <code>Painful Intercourse Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K70</name>
+    <code>Infection Of Circulatory System</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X03</name>
+    <code>Intermenstrual Pain</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X02</name>
+    <code>Menstrual Pain</code>
+   </diagnosis>
+   <diagnosis>
+    <name>X01</name>
+    <code>Genital Pain Female</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P09</name>
+    <code>Sexual Preference Concern</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P08</name>
+    <code>Sexual Fulfilment Reduced</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P07</name>
+    <code>Sexual Desire Reduced</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P06</name>
+    <code>Sleep Disturbance</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P04</name>
+    <code>Feeling/Behaving Irritable/Angry</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P03</name>
+    <code>Feeling Depressed</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P02</name>
+    <code>Acute Stress Reaction</code>
+   </diagnosis>
+   <diagnosis>
+    <name>P01</name>
+    <code>Feeling Anxious/Nervous/Tense</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H05</name>
+    <code>Bleeding Ear</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H04</name>
+    <code>Ear Discharge</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H02</name>
+    <code>Hearing Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>H01</name>
+    <code>Ear Pain/Earache</code>
+   </diagnosis>
+   <diagnosis>
+    <code>Z</code>
+    <code>Social Problems</code>
+    <code>null</code>
+   </diagnosis>
+   <diagnosis>
+    <code>Y</code>
+    <code>Male Genital System Including Breast</code>
+   </diagnosis>
+   <diagnosis>
+    <code>X</code>
+    <code>Female Genital System Including Breast</code>
+   </diagnosis>
+   <diagnosis>
+    <code>U</code>
+    <code>Urinary System</code>
+   </diagnosis>
+   <diagnosis>
+    <code>T</code>
+    <code>Endocrine/Metabolic/Nutritional</code>
+   </diagnosis>
+   <diagnosis>
+    <code>S</code>
+    <code>Skin</code>
+   </diagnosis>
+   <diagnosis>
+    <code>R</code>
+    <code>Respiratory</code>
+   </diagnosis>
+   <diagnosis>
+    <code>Psychological</code>
+   </diagnosis>
+   <diagnosis>
+    <code>N</code>
+    <code>Neurological</code>
+   </diagnosis>
+   <diagnosis>
+    <code>L</code>
+    <code>Musculoskeletal</code>
+   </diagnosis>
+   <diagnosis>
+    <code>K</code>
+    <code>Circulatory</code>
+   </diagnosis>
+   <diagnosis>
+    <code>H</code>
+    <name>Ear</name>
+   </diagnosis>
+   <diagnosis>
+    <code>F</code>
+    <name>Eye</name>
+   </diagnosis>
+   <diagnosis>
+    <code>D</code>
+    <code>Digestive</code>
+   </diagnosis>
+   <diagnosis>
+    <code>B</code>
+    <code>Blood/Blood Forming Organs/Immune Mechanism</code>
+   </diagnosis>
+   <diagnosis>
+    <code>A</code>
+    <code>General/Unspecified</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N99</name>
+    <code>Neurological Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N95</name>
+    <code>Tension Headache</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N94</name>
+    <code>Peripheral Neuritis/Neuropathy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N93</name>
+    <code>Carpal Tunnel Syndrome</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N92</name>
+    <code>Trigeminal Neuralgia</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N91</name>
+    <code>Facial Paralysis/Bell's Palsy</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N90</name>
+    <code>Cluster Headache</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F99</name>
+    <code>Eye/Adnexa Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F95</name>
+    <code>Strabismus</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S29</name>
+    <code>Skin Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F94</name>
+    <code>Blindness</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S28</name>
+    <code>Limited Function/Disability (S)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F93</name>
+    <code>Glaucoma</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S27</name>
+    <code>Fear Of Skin Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F92</name>
+    <code>Cataract</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S26</name>
+    <code>Fear Of Cancer Of Skin</code>
+   </diagnosis>
+   <diagnosis>
+    <name>F91</name>
+    <code>Refractive Error</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S24</name>
+    <code>Hair/Scalp Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S23</name>
+    <code>Hair Loss/Baldness</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S22</name>
+    <code>Nail Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S21</name>
+    <code>Skin Texture Symptom/Complaint</code>
+   </diagnosis>
+   <diagnosis>
+    <name>S20</name>
+    <code>Corn/Callosity</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K29</name>
+    <code>Cardiovascular Symptom/Complaint Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K28</name>
+    <code>Limited Function/Disability (K)</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N89</name>
+    <code>Migraine</code>
+   </diagnosis>
+   <diagnosis>
+    <name>K27</name>
+    <code>Fear Of Cardiovascular Disease Other</code>
+   </diagnosis>
+   <diagnosis>
+    <name>N88</name>
+    <code>Epilepsy</code>
+   </diagnosis>
+</icpc2>

@@ -1,0 +1,49 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <c:choose>
+        <c:when test="${platform == true}">
+            <spring:message var="titleName" code="page.platforms.name" text="Platforms"/>
+            <c:set var="divId" value="platformContent"/>
+            <c:set var="iconClass" value="platform"/>
+            <c:set var="formUrl" value="/secure/application/edit.admin?platform=true"/>
+            <c:set var="applicationSearch" value="replaceHtmlContent({url:'/secure/application/search.admin?platform=true&amp;view=applications.data&amp;name=' + this.value, id: 'platformsTable'});"/>
+        </c:when>
+        <c:otherwise>
+            <spring:message var="titleName" code="page.applications.name" text="Applications"/>
+            <c:set var="divId" value="applicationContent"/>
+            <c:set var="iconClass" value="application"/>
+            <c:set var="formUrl" value="/secure/application/edit.admin?platform=false"/>
+            <c:set var="applicationSearch" value="replaceHtmlContent({url:'/secure/application/search.admin?platform=false&amp;view=applications.data&amp;name=' + this.value, id: 'applicationsTable'});"/>
+        </c:otherwise>
+    </c:choose>
+
+    <div id="${divId}">
+
+        <div class="page_header ${iconClass}">
+            <div class="titleName">${titleName}</div>
+            <div class="newEntity">
+                <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                    <a href="javascript:bindFormLink({url: '${formUrl}', id: '${divId}', cssClass: 'jqmWindow'})"><spring:message code="entity.new" text="NEW"/></a>
+                </security:authorize>
+            </div>
+            <div class="searchField">
+                <input type="text" name="search" onkeyup="${applicationSearch}" class="textInput"/>
+            </div>
+        </div>
+
+        <div class="contentSeparator"><!----></div>
+        
+        <jsp:include page="applications_data.jspx" flush="true"/>
+
+    </div>
+</jsp:root>

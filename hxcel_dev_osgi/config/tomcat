@@ -1,0 +1,67 @@
+#!/bin/sh
+#
+# Startup script for Tomcat, the Apache Servlet Engine
+#
+# chkconfig: 345 80 20
+# description: Tomcat is the Apache Servlet Engine
+# processname: tomcat
+# pidfile: /var/run/tomcat.pid
+#
+# Mike Millson <mmillson@meritonlinesystems.com>
+#
+# version 1.02 - Clear work directory on shutdown per John Turner suggestion.
+# version 1.01 - Cross between RedHat Tomcat RPM and Chris Bush scripts
+
+# Tomcat name :)
+TOMCAT_PROG=tomcat
+ 
+# if TOMCAT_USER is not set, use tomcat like Apache HTTP server
+if [ -z "$TOMCAT_USER" ]; then
+ TOMCAT_USER="bjorn"
+fi
+
+RETVAL=0
+
+# start and stop functions
+start() {
+    echo -n "Starting tomcat: "
+
+    #chown -R $TOMCAT_USER:$TOMCAT_USER /usr/local/jakarta-tomcat/*    
+    #chown -R $TOMCAT_USER:$TOMCAT_USER /home/tomcat/*
+    su -l $TOMCAT_USER -c '/opt/jira/bin/startup.sh'
+    RETVAL=$?
+    echo
+    [ $RETVAL = 0 ] && touch /var/lock/subsys/tomcat
+    return $RETVAL
+}
+
+stop() {
+    echo -n "Stopping tomcat: "
+    su -l $TOMCAT_USER -c '/opt/jira/bin/shutdown.sh'
+    RETVAL=$?
+    echo
+    [ $RETVAL = 0 ] && rm -f /var/lock/subsys/tomcat /var/run/tomcat.pid
+}
+
+# See how we were called.
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+        stop
+	# Ugly hack
+	# We should really make sure tomcat
+	# is stopped before leaving stop
+        sleep 2	
+        start
+        ;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $RETVAL

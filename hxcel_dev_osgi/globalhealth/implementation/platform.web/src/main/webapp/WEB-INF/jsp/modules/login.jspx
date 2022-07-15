@@ -1,0 +1,58 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:spring-security="urn:jsptld:/WEB-INF/tlds/security.tld"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+
+    <spring:message var="login" code="system.login" text="LOGIN"/>
+    <spring:message var="reset" code="system.reset" text="RESET"/>
+
+    <div id="loginWrapper">
+
+        <div id="loginRaven"><!----></div>
+
+        <div id="loginSeparator"><!----></div>
+
+        <div id="loginModule">
+
+            <h2 class="page_header"><spring:message code="title.please.login" text="Please log in"/>: </h2>
+
+            <c:if test="${not empty param.success}">
+                <font color="red">
+                    Your login attempt was not successful, try again.<br/>
+                </font>
+            </c:if>
+
+            <div id="loginForm">
+                <form name="form" action="/j_spring_security_check" method="POST">
+                    <table>
+                        <tr>
+                            <td align="right"><spring:message code="user.username" text="Username"/>:&#160;</td>
+                            <td><input type='text' name='j_username' value="${SPRING_SECURITY_LAST_USERNAME}" class="loginTextInput"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><spring:message code="user.password" text="Password"/>:&#160;</td>
+                            <td><input type='password' name='j_password' class="loginTextInput"/></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">&#160;</td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            <div id="loginSubmit">
+                <a href="javascript:document.forms[0].submit()" class="button login_button">${login}</a>
+                <a href="javascript:document.forms[0].reset()" class="button reset_button">${reset}</a>
+            </div>
+        </div>
+
+    </div>
+
+</jsp:root>

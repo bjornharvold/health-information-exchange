@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/osgi"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/osgi
+                                 http://www.springframework.org/schema/osgi/spring-osgi-1.2.xsd
+                                 http://www.springframework.org/schema/osgi-compendium
+                                 http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd
+                                 http://www.springframework.org/schema/beans
+                                 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- these are the service references we are exporting -->
+    <service id="applicationServiceReference" interface="com.hxcel.globalhealth.platform.spec.ApplicationService" ref="applicationService"/>
+    <service id="userServiceReference" ref="userService">
+        <interfaces>
+            <beans:value>com.hxcel.globalhealth.platform.spec.UserService</beans:value>
+            <beans:value>org.springframework.security.userdetails.UserDetailsService</beans:value>
+        </interfaces>
+    </service>
+    <service id="organizationServiceReference" interface="com.hxcel.globalhealth.platform.spec.OrganizationService" ref="organizationService"/>
+    <service id="countryServiceReference" interface="com.hxcel.globalhealth.platform.spec.CountryService" ref="countryService"/>
+
+    <!-- so far we are only exporting this because the opensessioninviewinterceptor needs in platform.web bundle -->
+    <service ref="sessionFactory" context-class-loader="service-provider" interface="org.hibernate.SessionFactory"/>
+
+    <!-- these are the service references we are importing -->
+    <reference id="dataSource" interface="javax.sql.DataSource"/>
+    <reference id="imageResizer" interface="com.hxcel.globalhealth.common.spec.image.ImageResizer"/>
+    <reference id="cmsService" interface="com.hxcel.globalhealth.cms.spec.CmsService"/>
+
+    <osgix:cm-properties persistent-id="com.hxcel.globalhealth.platform" id="platformConfig">
+        <beans:prop key="largeIconWidth">72</beans:prop>
+        <beans:prop key="mediumIconWidth">32</beans:prop>
+        <beans:prop key="smallIconWidth">16</beans:prop>
+    </osgix:cm-properties>
+</beans:beans>

@@ -1,0 +1,81 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="${organization.id}_${ol.id}">
+        <spring:message var="altEdit" code="entity.edit" text="Edit"/>
+        <spring:message var="altClose" code="entity.close" text="Close"/>
+        <spring:message var="cmsHost" code="http.base.url" text="http://localhost:8888"/>
+        <spring:message var="applicationPublishInfo" code="application.publish.info" text="In order to publish you have to have uploaded all the assets. To unpublish, no one can be licensing the application from you."/>
+
+        <div class="page_header overview">
+            <div class="titleName"><spring:message code="page.overview.name" text="Overview"/></div>
+
+        </div>
+
+        <div class="module_550">
+            <table cellpadding="2" cellspacing="0" border="0" width="100%" class="content_table">
+                <tbody>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="application.name" text="Name"/>:</td>
+                    <td class="content_item">${ol.license.application.name}</td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="application.description" text="Description"/>:</td>
+                    <td class="content_item">${ol.license.application.description}</td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="application.owner" text="Owner"/>:</td>
+                    <td class="content_item">${ol.license.application.owner.name}</td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="application.version" text="Version"/>:</td>
+                    <td class="content_item">${ol.license.application.appVersion}</td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="application.status" text="Status"/>:</td>
+                    <td class="content_item">
+                        <c:choose>
+                            <c:when test="${ol.license.application.applicationStatus == 'UNPUBLISHED'}">
+                                <img src="/images/icons/flag_red.png" alt="" border="0"/>
+                            </c:when>
+                            <c:when test="${ol.license.application.applicationStatus == 'PUBLISHED'}">
+                                <img src="/images/icons/flag_green.png" alt="" border="0"/>
+                            </c:when>
+                        </c:choose>
+                    </td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="application.type" text="Type"/>:</td>
+                    <td class="content_item">${ol.license.application.applicationType}</td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="entity.date.created" text="Created"/>:</td>
+                    <td class="content_item"><fmt:formatDate value="${ol.license.application.createdDate}" dateStyle="long"/></td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="entity.date.updated" text="Updated"/>:</td>
+                    <td class="content_item"><fmt:formatDate value="${ol.license.application.lastUpdate}" dateStyle="long"/></td>
+                </tr>
+                <c:if test="${ol.license.application.platform == true and ol.license.application.applicationStatus == 'PUBLISHED'}">
+                    <tr class="rowStyle1">
+                        <td class="content_item_header"><spring:message code="application.launch.url" text="Platform URL"/>:</td>
+                        <td class="content_item"><a href="javascript:openNewWindow({url: '/platform/${ol.organization.id}/${ol.license.application.id}.html', title: '${ol.license.application.name}', width: '800', height: '600'})"><spring:message code="click.here" text=" Click here"/></a></td>
+                    </tr>
+                </c:if>
+                </tbody>
+            </table>
+        </div>
+
+        <jsp:include page="organization_licensed_application_swfinfo.jspx" flush="true"/>
+    </div>
+
+</jsp:root>

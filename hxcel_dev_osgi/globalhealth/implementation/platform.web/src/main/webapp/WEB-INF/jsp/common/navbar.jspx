@@ -1,0 +1,62 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <tiles:importAttribute name="pageName"/>
+
+    <spring:message var="home" code="page.home.name" text="Home"/>
+    <spring:message var="service" code="page.services.name" text="Services"/>
+    <spring:message var="platform" code="page.platforms.name" text="Platforms"/>
+    <spring:message var="apps" code="page.applications.name" text="Applications"/>
+    <spring:message var="orgs" code="page.organizations.name" text="Organizations"/>
+    <spring:message var="users" code="page.users.name" text="Users"/>
+    <spring:message var="roles" code="page.roles.name" text="Roles"/>
+    <spring:message var="countries" code="page.countries.name" text="Countries"/>
+    <spring:message var="regulations" code="page.regulations.name" text="Regulations"/>
+
+    <div id="navbar">
+        <ul>
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <li><a href="/secure/homepage.admin" title="${home}"><span>${home}</span></a></li>
+            </security:authorize>
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <li><a href="/secure/service/search.admin" title="${service}"><span>${service}</span></a></li>
+            </security:authorize>
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <li><a href="/secure/application/search.admin?platform=true" title="${platform}"><span>${platform}</span></a></li>
+            </security:authorize>
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <li><a href="/secure/application/search.admin?platform=false" title="${apps}"><span>${apps}</span></a></li>
+            </security:authorize>
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <li><a href="/secure/regulation/search.admin" title="${regulations}"><span>${regulations}</span></a></li>
+            </security:authorize>
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <li><a href="/secure/country/search.admin" title="${countries}"><span>${countries}</span></a></li>
+            </security:authorize>
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <li><a href="/secure/organization/search.admin" title="${orgs}"><span>${orgs}</span></a></li>
+            </security:authorize>
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <li><a href="/secure/user/search.admin" title="${users}"><span>${users}</span></a></li>
+            </security:authorize>
+            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                <li><a href="/secure/role/search.admin" title="${roles}"><span>${roles}</span></a></li>
+            </security:authorize>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <spring:message code="build.number" text="No build number found"/>
+    </div>
+
+
+</jsp:root>

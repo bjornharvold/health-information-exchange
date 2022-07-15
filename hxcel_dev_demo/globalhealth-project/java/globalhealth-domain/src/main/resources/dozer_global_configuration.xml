@@ -1,0 +1,184 @@
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+        "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+    <configuration>
+        <stop-on-errors>true</stop-on-errors>
+        <date-format>MM/dd/yyyy HH:mm</date-format>
+        <wildcard>true</wildcard>
+        <trim-strings>false</trim-strings>
+
+        <custom-converters>
+            <!-- ======================== COMMON ======================== -->
+            <converter type="com.hxcel.globalhealth.domain.common.converter.ContactCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.common.model.Contact</class-a>
+                <class-b>com.hxcel.globalhealth.domain.common.dto.ContactDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.common.converter.EmailCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.common.model.Email</class-a>
+                <class-b>com.hxcel.globalhealth.domain.common.dto.EmailDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.common.converter.InstantMessageCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.common.model.InstantMessage</class-a>
+                <class-b>com.hxcel.globalhealth.domain.common.dto.InstantMessageDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.common.converter.LocationCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.common.model.Location</class-a>
+                <class-b>com.hxcel.globalhealth.domain.common.dto.LocationDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.common.converter.PermissionCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.common.model.Permission</class-a>
+                <class-b>com.hxcel.globalhealth.domain.common.dto.PermissionDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.common.converter.PhoneCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.common.model.Phone</class-a>
+                <class-b>com.hxcel.globalhealth.domain.common.dto.PhoneDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.common.converter.UserInfoCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.common.model.UserInfo</class-a>
+                <class-b>com.hxcel.globalhealth.domain.common.dto.UserInfoDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.common.converter.UserCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.common.model.User</class-a>
+                <class-b>com.hxcel.globalhealth.domain.common.dto.UserDto</class-b>
+            </converter>
+            <!-- ======================== COMMON ======================== -->
+
+            <!-- ======================== PATIENT ======================== -->
+            <converter type="com.hxcel.globalhealth.domain.patient.converter.PatientCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.patient.model.Patient</class-a>
+                <class-b>com.hxcel.globalhealth.domain.patient.dto.PatientDto</class-b>
+            </converter>
+            <!-- ======================== PATIENT ======================== -->
+
+            <!-- ======================== PHR ======================== -->
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.AdvanceDirectiveCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.AdvanceDirective</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.AdvanceDirectiveDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.AllergyCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.Allergy</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.AllergyDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.AlternativeTreatmentCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.AlternativeTreatment</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.AlternativeTreatmentDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.DentalCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.Dental</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.DentalDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.EmployerCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.Employer</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.EmployerDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.FamilyHistoryCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.FamilyHistory</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.FamilyHistoryDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.HospitalizedCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.Hospitalized</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.HospitalizedDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.ImmunizationCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.Immunization</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.ImmunizationDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.InsuranceCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.Insurance</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.InsuranceDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.MedicalConditionCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.MedicalCondition</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.MedicalConditionDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.MedicationCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.Medication</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.MedicationDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.PersonalProfileCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.PersonalProfile</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.PersonalProfileDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.PhrContactCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.PhrContact</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.PhrContactDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.PhrFileCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.PhrFile</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.PhrFileDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.PhrLocationCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.PhrLocation</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.PhrLocationDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.PractitionerCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.Practitioner</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.PractitionerDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.SurgeryCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.Surgery</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.SurgeryDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.TravelImmunizationCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.TravelImmunization</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.TravelImmunizationDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.VisionContactLensesCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.VisionContactLenses</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.VisionContactLensesDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.VisionExamCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.VisionExam</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.VisionExamDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.phr.converter.VisionGlassesCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.phr.model.VisionGlasses</class-a>
+                <class-b>com.hxcel.globalhealth.domain.phr.dto.VisionGlassesDto</class-b>
+            </converter>
+
+            <!-- ======================== PHR ======================== -->
+            <!-- ======================== SOCIAL NETWORK ======================== -->
+            <converter type="com.hxcel.globalhealth.domain.socialnetwork.converter.GroupCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.socialnetwork.model.Group</class-a>
+                <class-b>com.hxcel.globalhealth.domain.socialnetwork.dto.GroupDto</class-b>
+            </converter>
+
+            <converter type="com.hxcel.globalhealth.domain.socialnetwork.converter.PublicProfileCustomConverter">
+                <class-a>com.hxcel.globalhealth.domain.socialnetwork.model.PublicProfile</class-a>
+                <class-b>com.hxcel.globalhealth.domain.socialnetwork.dto.PublicProfileDto</class-b>
+            </converter>
+            <!-- ======================== SOCIAL NETWORK ======================== -->
+        </custom-converters>
+
+    </configuration>
+</mappings>

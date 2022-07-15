@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.hxcel.globalhealth</groupId>
+        <artifactId>specification</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>platform.spec</artifactId>
+    <packaging>bundle</packaging>
+    <name>Platform Specification</name>
+
+    <properties>
+        <export.package>
+            com.hxcel.globalhealth.platform.spec;version="${project.version}",
+            com.hxcel.globalhealth.platform.spec.dto;version="${project.version}",
+            com.hxcel.globalhealth.platform.spec.model.enums;version="${project.version}"
+        </export.package>
+        <import.package>
+            com.hxcel.globalhealth.common.spec;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.dto;version="${project.version}",
+            com.hxcel.globalhealth.common.spec.model.enums;version="${project.version}",
+            org.springframework.dao;version="${spring.version}",
+            org.springframework.security.userdetails;version="${spring.security.version}",
+            org.springframework.transaction.annotation;version="${spring.version}"
+        </import.package>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>common.spec</artifactId> 
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.transaction</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- spring security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>org.springframework.security</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>org.springframework.security.annotation</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>org.springframework.security.acls</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.codec</artifactId>
+            <version>${commons.codec.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.collections</artifactId>
+            <version>${commons.collections.version}</version>
+        </dependency>
+    </dependencies>
+</project>

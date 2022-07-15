@@ -1,0 +1,40 @@
+<Context path="" docBase="globalhealth" debug="0"  allowLinking="true">
+</Context>
+
+<VirtualHost *:80>
+   DocumentRoot /opt/tomcat/webapps/globalhealth
+   DirectoryIndex index.xhtml
+   Alias /media /var/www/media
+   Alias /usage  /var/www/usage
+   <Directory /var/www/media/email>
+                Options Indexes
+   </Directory>
+   JkMount /*.do worker1
+   JkMount /*.html worker1
+   JkMount /*.jsp worker1
+   <LocationMatch ".*WEB-INF.*">
+                deny from all
+    </LocationMatch>
+    UseCanonicalName off
+</VirtualHost>
+
+<IfModule !mod_jk.c>
+  LoadModule jk_module "/usr/lib64/httpd/modules/mod_jk.so"
+</IfModule>
+# Where to find workers.properties
+JkWorkersFile /etc/httpd/conf/workers.properties
+# Where to put jk logs
+JkLogFile     /var/log/httpd/mod_jk.log
+# Set the jk log level [debug/error/info]
+JkLogLevel    error
+# Select the log format
+JkLogStampFormat "[%a %b %d %H:%M:%S %Y] "
+ # JkOptions indicate to send SSL KEY SIZE,
+#JkOptions     +ForwardKeySize +ForwardURICompat -ForwardDirectories
+ # JkRequestLogFormat set the request format
+JkRequestLogFormat     "%w %V %T"
+
+# Globally deny access to the WEB-INF directory
+<LocationMatch '.*WEB-INF.*'>
+       deny from all
+</LocationMatch>

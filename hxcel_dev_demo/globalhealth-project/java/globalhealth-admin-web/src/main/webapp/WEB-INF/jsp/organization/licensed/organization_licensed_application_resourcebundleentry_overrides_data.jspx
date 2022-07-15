@@ -1,0 +1,74 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:hxcel="urn:jsptagdir:/WEB-INF/tags/hxcel"
+          version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="${organization.id}_${ol.id}_resourcebundleoverrideTable">
+        <table width="100%" cellpadding="2" cellspacing="0" border="0" class="list_table">
+            <spring:message var="altEdit" code="entity.edit" text="Edit"/>
+            <spring:message var="altDelete" code="entity.delete" text="Delete"/>
+            <thead>
+                <tr>
+                    <th align="left" width="10%" class="first_column"><spring:message code="entity.date.created" text="Created"/></th>
+                    <th align="left" width="30%"><spring:message code="resourcebundleentry.key" text="Key"/></th>
+                    <th align="left" width="30%"><spring:message code="resourcebundleentry.value" text="Value"/></th>
+                    <th align="left" width="20%"><spring:message code="resourcebundleentry.override" text="Override"/></th>
+                    <th width="8%">&#160;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:choose>
+                    <c:when test="${empty overrides}">
+                        <tr>
+                            <td align="center" height="350" colspan="5">
+                                <spring:message code="resourcebundleentry.overrides.empty"
+                                                text="No overrides for this 3rd party are currently in the system"/>
+                            </td>
+                        </tr>
+                    </c:when>
+                    <c:otherwise>
+                        <c:forEach items="${overrides}" var="override" varStatus="status">
+                            <c:choose>
+                                <c:when test="${status.count % 2 == 0}">
+                                    <c:set var="color" value="rowStyle1" scope="request"/>
+                                </c:when>
+                                <c:otherwise>
+                                    <c:set var="color" value="rowStyle2" scope="request"/>
+                                </c:otherwise>
+                            </c:choose>
+                            <tr class="${color}">
+                                <td class="first_column"><fmt:formatDate value="${override.createdDate}" dateStyle="long"/></td>
+                                <td class="row_title"><hxcel:truncate text="${override.original.key}" maxLength="80"/></td>
+                                <td><hxcel:truncate text="${override.original.value}" maxLength="80"/></td>
+                                <td><hxcel:truncate text="${override.value}" maxLength="80"/></td>
+                                <td align="right">
+                                    <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                                        <a href="javascript:bindFormLink({url: '/secure/organization/licensed/application/resourcebundle/override/edit.admin?applicationId=${ol.license.application.id}&amp;organizationId=${organization.id}&amp;organizationLicenseId=${ol.id}&amp;id=${override.id}&amp;platform=${platform}', id: '${organization.id}_${ol.id}_resourcebundleoverrideTable', cssClass: 'jqmWindow'})" title="${altEdit}">
+                                            <img src="/images/icons/edit_pen_16.png" alt="${altEdit}" border="0"/>
+                                        </a>
+                                    </security:authorize>&#160;
+                                    <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                                        <a href="javascript:replaceHtmlContent({url: '/secure/organization/licenses/application/resourcebundle/override/delete.admin?view=organization.licensed.application.resourcebundle.overrides.data&amp;organizationLicenseId=${ol.id}&amp;id=${override.id}&amp;organizationId=${organization.id}&amp;platform=${platform}', id: '${organization.id}_${ol.id}_resourcebundleoverrideTable'})" title="${altDelete}"><img
+                                                src="/images/icons/delete.png" alt="${altDelete}" border="0"/></a>
+                                    </security:authorize>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </c:otherwise>
+                </c:choose>
+            </tbody>
+        </table>
+        <div class="paginator">
+            <hxcel:paginator id="${organization.id}_${ol.id}_resourcebundleoverrideTable" url="/secure/organization/licensed/application/resourcebundle/overrides/search.admin" extraParameters="&amp;organizationId=${organization.id}&amp;view=organization.licensed.application.resourcebundle.overrides.data&amp;id=${ol.id}&amp;platform=${platform}" currentPage="${index}" rowsPerPage="${maxResults}" count="${count}"/>
+        </div>
+    </div>
+</jsp:root>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.hxcel.globalhealth</groupId>
+        <artifactId>implementation</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>calendar.impl</artifactId>
+    <packaging>bundle</packaging>
+    <name>Calendar Implementation</name>
+
+    <properties>
+        <export.package>
+            com.hxcel.globalhealth.calendar;version="${project.version}",
+            com.hxcel.globalhealth.calendar.dto;version="${project.version}",
+            com.hxcel.globalhealth.calendar.factory;version="${project.version}",
+            com.hxcel.globalhealth.calendar.factory.chandler;version="${project.version}",
+        </export.package>
+        <import.package>
+            com.hxcel.globalhealth.calendar.spec,
+            org.slf4j;version="${slf4j.version}",
+            org.apache.commons.lang;version="${commons.lang.version}",
+            org.jaxen;version="${jaxen.version}",
+            org.jaxen.dom4j;version="${jaxen.version}",
+            org.dom4j;version="${dom4j.version}",
+            org.dom4j.io;version="${dom4j.version}",
+            org.apache.commons.httpclient;version="${commons.httpclient.version}",
+            org.apache.commons.httpclient.auth;version="${commons.httpclient.version}",
+            org.apache.commons.httpclient.methods;version="${commons.httpclient.version}",
+            org.apache.commons.httpclient.params;version="${commons.httpclient.version}",
+            org.springframework.beans.factory.annotation;version="${spring.version}"
+        </import.package>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>calendar.spec</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.httpclient</artifactId>
+            <version>${commons.httpclient.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.codec</artifactId>
+            <version>${commons.codec.version}</version>
+        </dependency>
+
+        <!-- dom4j with dependency -->
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>com.springsource.org.dom4j</artifactId>
+            <version>${dom4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.xml.stream</groupId>
+            <artifactId>com.springsource.javax.xml.stream</artifactId>
+            <version>${javax.xml.stream.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jaxen</groupId>
+            <artifactId>com.springsource.org.jaxen</artifactId>
+            <version>${jaxen.version}</version>
+        </dependency>
+
+        <!-- caldav4j deps -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.collections</artifactId>
+            <version>${commons.collections.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.webdav</groupId>
+            <artifactId>com.springsource.org.apache.webdav.lib</artifactId>
+            <version>${slide.version}</version>
+        </dependency>
+
+    </dependencies>
+</project>

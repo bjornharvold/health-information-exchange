@@ -1,0 +1,66 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:hxcel="urn:jsptagdir:/WEB-INF/tags/hxcel"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <table width="100%" id="${organization.id}_usersTable" cellpadding="2" cellspacing="0" class="list_table">
+        <thead>
+        <tr>
+            <th align="left" width="10%" class="first_column"><spring:message code="entity.date.created" text="Created"/></th>
+            <th width="25%" align="left"><spring:message code="user.name" text="Name"/></th>
+            <th width="25%" align="left"><spring:message code="user.username" text="Username"/></th>
+            <th width="15%" align="left"><spring:message code="user.country" text="Country"/></th>
+            <th width="10%"><spring:message code="user.status" text="Status"/></th>
+            <th width="10%"><spring:message code="user.system.status" text="System status"/></th>
+            <th width="5%">&#160;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:choose>
+            <c:when test="${empty users}">
+                <tr>
+                    <td align="center" height="300" colspan="7">
+                        <spring:message code="organization.users.empty" text="There are currently no members in the organization"/>
+                    </td>
+                </tr>
+            </c:when>
+            <c:otherwise>
+                <c:forEach items="${users}" varStatus="status" var="ou">
+                    <c:choose>
+                        <c:when test="${status.count % 2 == 0}">
+                            <c:set var="color" value="rowStyle1" scope="request"/>
+                        </c:when>
+                        <c:otherwise>
+                            <c:set var="color" value="rowStyle2" scope="request"/>
+                        </c:otherwise>
+                    </c:choose>
+                    <tr class="${color}" valign="top">
+                        <td class="first_column"><fmt:formatDate value="${ou.createdDate}" dateStyle="long"/></td>
+                        <td class="row_title">${ou.user.userInfo.lastName}, ${ou.user.userInfo.firstName}</td>
+                        <td>${ou.user.username}</td>
+                        <td>${ou.user.country.statusCode}</td>
+                        <td align="center">${ou.status}</td>
+                        <td align="center">${ou.user.userStatus}</td>
+                        <td align="right">
+                            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                                <a href="javascript:addSecondaryTab({ url: '/secure/organization/user/view.admin?organizationId=${organization.id}&amp;id=${ou.id}', id: 'secondaryNavbar_${organization.id}', label: '${ou.user.username}'} )"><img src="/images/icons/newtab.png" alt="${altView}" title="${altView}" border="0"/></a>&#160;
+                            </security:authorize>
+                            <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                                <a href="javascript:replaceHtmlContent({url: '/secure/organization/user/delete.admin?organizationId=${organization.id}&amp;id=${ou.id}', id: '${organization.id}_usersTable'})" title="${altDelete}"><img src="/images/icons/delete.png" alt="${altDelete}" border="0"/></a>
+                            </security:authorize>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </c:otherwise>
+        </c:choose>
+        </tbody>
+    </table>
+</jsp:root>

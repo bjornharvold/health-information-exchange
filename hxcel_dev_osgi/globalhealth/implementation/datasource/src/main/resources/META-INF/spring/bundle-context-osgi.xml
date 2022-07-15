@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2006, Health XCEL Inc.. All Rights Reserved.
+  -->
+<beans:beans xmlns="http://www.springframework.org/schema/osgi"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/osgi
+                                 http://www.springframework.org/schema/osgi/spring-osgi-1.2.xsd
+                                 http://www.springframework.org/schema/osgi-compendium
+                                 http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd
+                                 http://www.springframework.org/schema/beans
+                                 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <service interface="javax.sql.DataSource" ref="dataSource"/>
+
+    <!--
+    There are some compatibility concerns between dm server and spring dm. Commenting out for now.
+    <osgix:cm-properties persistent-id="com.hxcel.globalhealth.datasource" id="datasourceConfig">
+        <beans:prop key="url">jdbc:postgresql://localhost/globalhealth_db</beans:prop>
+        <beans:prop key="username">globalhealth_user</beans:prop>
+        <beans:prop key="password">globalhealth_user</beans:prop>
+        <beans:prop key="driverClassName">org.postgresql.Driver</beans:prop>
+    </osgix:cm-properties>
+    -->
+
+</beans:beans>

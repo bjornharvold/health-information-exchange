@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service"
+         class="flex.messaging.services.RemotingService">
+
+    <adapters>
+        <adapter-definition id="java-object" class="flex.messaging.services.remoting.adapters.JavaAdapter"
+                            default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+
+    <!-- these are our AMF services - can also be used as web services -->
+    <destination id="userService">
+        <properties>
+            <factory>spring</factory>
+            <source>userWebService</source>
+        </properties>
+    </destination>
+
+    <destination id="referenceDataService">
+        <properties>
+            <factory>spring</factory>
+            <source>referenceDataWebService</source>
+        </properties>
+    </destination>
+
+    <destination id="patientService">
+        <properties>
+            <factory>spring</factory>
+            <source>patientWebService</source>
+        </properties>
+    </destination>
+
+    <destination id="phrService">
+        <properties>
+            <factory>spring</factory>
+            <source>phrWebService</source>
+        </properties>
+    </destination>
+
+</service>

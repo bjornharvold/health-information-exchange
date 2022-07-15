@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+    	<groupId>com.hxcel.globalhealth</groupId>
+    	<artifactId>implementation</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>datasource</artifactId>
+    <packaging>bundle</packaging>
+    <name>Datasource</name>
+
+    <properties>
+        <export.package>
+            com.hxcel.globalhealth.datasource;version="${project.version}"
+        </export.package>
+        <import.package>
+            javax.naming,
+            javax.naming.spi,
+            javax.net,
+            javax.net.ssl,
+            javax.sql,
+            javax.transaction.xa,
+            org.apache.commons.dbcp;version="${commons.dbcp.version}",
+            org.apache.commons.dbcp.cpdsadapter;version="${commons.dbcp.version}",
+            org.apache.commons.dbcp.datasources;version="${commons.dbcp.version}",
+            org.apache.commons.jocl;version="${commons.dbcp.version}",
+            org.apache.commons.logging;version="${commons.logging.version}",
+            org.apache.commons.pool;version="${commons.pool.version}",
+            org.apache.commons.pool.impl;version="${commons.pool.version}",
+            org.apache.xerces.dom;version="${xerces.version}",
+            org.apache.xerces.impl;version="${xerces.version}",
+            org.apache.xerces.jaxp;version="${xerces.version}",
+            org.apache.xml.resolver;version="${xml.resolver.version}",
+            org.xml.sax*;version="${xml.commons.version}",
+            org.postgresql;version="${postgresql.version}",
+            org.postgresql.core;version="${postgresql.version}",
+            org.postgresql.core.types;version="${postgresql.version}",
+            org.postgresql.core.v2;version="${postgresql.version}",
+            org.postgresql.core.v3;version="${postgresql.version}",
+            org.postgresql.ds;version="${postgresql.version}",
+            org.postgresql.ds.common;version="${postgresql.version}",
+            org.postgresql.ds.jdbc23;version="${postgresql.version}",
+            org.postgresql.fastpath;version="${postgresql.version}",
+            org.postgresql.geometric;version="${postgresql.version}",
+            org.postgresql.jdbc2;version="${postgresql.version}",
+            org.postgresql.jdbc2.optional;version="${postgresql.version}",
+            org.postgresql.jdbc3;version="${postgresql.version}",
+            org.postgresql.largeobject;version="${postgresql.version}",
+            org.postgresql.ssl;version="${postgresql.version}",
+            org.postgresql.translation;version="${postgresql.version}",
+            org.postgresql.util;version="${postgresql.version}",
+            org.postgresql.xa;version="${postgresql.version}",
+            org.springframework.beans;version="${spring.version}",
+            org.springframework.beans.factory;version="${spring.version}",
+            org.springframework.core;version="${spring.version}",
+            org.springframework.dao;version="${spring.version}",
+            org.springframework.jdbc;version="${spring.version}",
+            org.springframework.jdbc.datasource;version="${spring.version}",
+            org.springframework.jdbc.datasource.lookup;version="${spring.version}",
+            org.springframework.jndi;version="${spring.version}",
+            org.springframework.transaction;version="${spring.version}",
+            org.springframework.transaction.support;version="${spring.version}",
+            org.springframework.util;version="${spring.version}"
+        </import.package>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.transaction</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate</artifactId>
+            <version>${hibernate.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.annotations</artifactId>
+            <version>${hibernate.annotations.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.annotations.common</artifactId>
+            <version>${hibernate.common.annotations.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.ejb</artifactId>
+            <version>${hibernate.ejb.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>com.springsource.org.hibernate.validator</artifactId>
+            <version>${hibernate.validator.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>com.springsource.javax.persistence</artifactId>
+            <version>${javax.persistence.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.collections</artifactId>
+            <version>${commons.collections.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.dbcp</artifactId>
+            <version>${commons.dbcp.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.pool</artifactId>
+            <version>${commons.pool.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.ehcache</groupId>
+            <artifactId>com.springsource.net.sf.ehcache</artifactId>
+            <version>${ehcache.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.jsr107cache</groupId>
+            <artifactId>com.springsource.net.sf.jsr107cache</artifactId>
+            <version>${jsr107cache.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>com.springsource.org.postgresql.jdbc3</artifactId>
+            <version>${postgresql.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xerces</groupId>
+            <artifactId>com.springsource.org.apache.xerces</artifactId>
+            <version>${xerces.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xml</groupId>
+            <artifactId>com.springsource.org.apache.xml.resolver</artifactId>
+            <version>${xml.resolver.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xmlcommons</groupId>
+            <artifactId>com.springsource.org.apache.xmlcommons</artifactId>
+            <version>${xml.commons.version}</version>
+        </dependency>
+
+    </dependencies>
+</project>

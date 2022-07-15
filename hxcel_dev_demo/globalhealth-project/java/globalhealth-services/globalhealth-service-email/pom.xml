@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>com.hxcel.globalhealth.service</groupId>
+		<artifactId>globalhealth-services</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.hxcel.globalhealth.service</groupId>
+	<artifactId>globalhealth-service-email</artifactId>
+	<packaging>jar</packaging>
+	<name>Globalhealth: Service Email (Java)</name>
+
+	<dependencies>
+        <!-- osgi ready bundles -->
+        <dependency>
+            <groupId>velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>${velocity.version}</version> 
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>com.springsource.javax.mail</artifactId>
+            <version>${mail.version}</version>
+        </dependency>
+
+        <!-- velocity deps -->
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>com.springsource.org.jdom</artifactId>
+            <version>${jdom.version}</version> 
+        </dependency>
+    </dependencies>
+</project>

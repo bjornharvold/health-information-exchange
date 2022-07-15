@@ -1,0 +1,35 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="${application.id}_rbentry">
+        <div class="page_header resourcebundle_entry">
+            <div class="titleName"><spring:message code="page.application.resourcebundle" text="Internationalization"/></div>
+            <div class="uploadEntity">
+                <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                    <a href="javascript:bindFormLink({url: '/secure/application/resourcebundle/upload.admin?applicationId=${application.id}', id: '${application.id}_rbentryTable', cssClass: 'jqmWindow'})"><spring:message code="entity.upload" text="UPLOAD"/></a>
+                </security:authorize>
+            </div>
+            <div class="newEntity">
+                <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                    <a href="javascript:bindFormLink({url: '/secure/application/resourcebundle/edit.admin?applicationId=${application.id}', id: '${application.id}_rbentryTable', cssClass: 'jqmWindow'})" title="${altNew}"><spring:message code="entity.new" text="NEW"/></a>
+                </security:authorize>
+            </div>
+            <div class="searchField">
+                <input type="text" name="search" onkeyup="replaceHtmlContent({url:'/secure/application/resourcebundle/search.admin?id=${application.id}&amp;view=application.resourcebundle.data&amp;name=' + this.value, id: '${application.id}_rbentryTable'});" class="textInput"/>
+            </div>
+        </div>
+
+        <div class="contentSeparator"><!----></div>
+
+        <jsp:include page="resourcebundleentries_data.jspx" flush="true"/>
+    </div>
+</jsp:root>

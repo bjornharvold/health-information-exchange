@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2008, Health XCEL Inc.. All Rights Reserved.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:cxf="http://cxf.apache.org/core"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-util-2.5.xsd
+                           http://www.springframework.org/schema/lang
+                           http://www.springframework.org/schema/lang/spring-lang-2.5.xsd
+                           http://www.springframework.org/schema/tool
+                           http://www.springframework.org/schema/tool/spring-tool-2.5.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://www.springframework.org/schema/jms
+                           http://www.springframework.org/schema/jms/spring-jms-2.5.xsd
+                           http://cxf.apache.org/jaxws
+                           http://cxf.apache.org/schemas/jaxws.xsd
+                           http://cxf.apache.org/core
+                           http://cxf.apache.org/schemas/core.xsd">
+
+    <!-- dozer -->
+    <bean id="mapperIF" class="net.sf.dozer.util.mapping.DozerBeanMapper" scope="singleton">
+        <property name="mappingFiles">
+            <list>
+                <value>dozer_global_configuration.xml</value>
+            </list>
+        </property>
+        <property name="customConverters">
+            <list>
+                <!-- common -->
+                <ref bean="contactCustomConverter"/>
+                <ref bean="emailCustomConverter"/>
+                <ref bean="instantMessageCustomConverter"/>
+                <ref bean="locationCustomConverter"/>
+                <ref bean="permissionCustomConverter"/>
+                <ref bean="phoneCustomConverter"/>
+                <ref bean="userInfoCustomConverter"/>
+                <ref bean="userCustomConverter"/>
+
+                <!-- patient -->
+                <ref bean="patientCustomConverter"/>
+
+                <!-- phr -->
+                <ref bean="advanceDirectiveCustomConverter"/>
+                <ref bean="allergyCustomConverter"/>
+                <ref bean="alternativeTreatmentCustomConverter"/>
+                <ref bean="dentalCustomConverter"/>
+                <ref bean="employerCustomConverter"/>
+                <ref bean="familyHistoryCustomConverter"/>
+                <ref bean="hospitalizedCustomConverter"/>
+                <ref bean="immunizationCustomConverter"/>
+                <ref bean="insuranceCustomConverter"/>
+                <ref bean="medicalConditionCustomConverter"/>
+                <ref bean="medicationCustomConverter"/>
+                <ref bean="personalProfileCustomConverter"/>
+                <ref bean="phrContactCustomConverter"/>
+                <ref bean="phrFileCustomConverter"/>
+                <ref bean="phrLocationCustomConverter"/>
+                <ref bean="practitionerCustomConverter"/>
+                <ref bean="surgeryCustomConverter"/>
+                <ref bean="travelImmunizationCustomConverter"/>
+                <ref bean="visionContactLensesCustomConverter"/>
+                <ref bean="visionExamCustomConverter"/>
+                <ref bean="visionGlassesCustomConverter"/>
+
+                <!-- social network -->
+                <ref bean="publicProfileCustomConverter"/>
+                <ref bean="groupCustomConverter"/>
+            </list>
+        </property>
+    </bean>
+</beans>

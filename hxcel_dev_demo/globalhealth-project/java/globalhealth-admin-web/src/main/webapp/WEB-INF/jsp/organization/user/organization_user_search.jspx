@@ -1,0 +1,39 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:hxcel="urn:jsptagdir:/WEB-INF/tags/hxcel"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="userContent">
+
+        <!-- alt text -->
+        <spring:message var="altNew" code="entity.new" text="New"/>
+        <spring:message var="altDelete" code="entity.delete" text="Delete"/>
+        <spring:message var="altView" code="entity.view" text="View"/>
+
+        <h2><spring:message code="page.users.name" text="Users"/></h2>
+
+        <table border="0" cellpadding="2" cellspacing="0" width="100%">
+            <tbody>
+                <tr>
+                    <td width="10%" height="35">
+                        <input type="text" name="search" onkeyup="replaceHtmlContent({url:'/secure/organization/user/find.admin?view=organization.users.find.data&amp;organizationId=${organization.id}&amp;name=' + this.value, id: '${organization.id}_userSearch'});" class="textInput"/>
+                    </td>
+                    <td valign="middle"><img src="/images/icons/magnifier.png" alt="${search}" title="${search}" border="0" width="16" height="16"/></td>
+                    <td width="80%" align="right">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <jsp:include page="organization_user_search_data.jspx" flush="true"/>
+
+        <a href="javascript:closeModal('${organization.id}_usersTable')"><spring:message code="entity.close" text="Close"/></a>
+    </div>
+</jsp:root>

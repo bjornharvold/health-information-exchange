@@ -1,0 +1,107 @@
+!SESSION 2009-03-24 18:07:58.713 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_07
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=carbon, NL=en_US
+
+!ENTRY org.springframework.osgi.web.extender 4 0 2009-03-24 18:08:04.491
+!MESSAGE FrameworkEvent.ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.springframework.osgi.web.extender.internal.activator.WarLoaderListener.stop() of bundle org.springframework.osgi.web.extender.
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:1048)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:396)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:502)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1076)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.suspendAllBundles(StartLevelManager.java:640)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:599)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:283)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:256)
+	at org.eclipse.osgi.framework.internal.core.SystemBundle.suspend(SystemBundle.java:190)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:546)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:449)
+	at org.eclipse.osgi.framework.internal.core.OSGi.close(OSGi.java:41)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:423)
+	at org.springframework.osgi.test.platform.EquinoxPlatform.stop(EquinoxPlatform.java:93)
+	at org.springframework.osgi.test.AbstractOsgiTests.shutdownTest(AbstractOsgiTests.java:494)
+	at org.springframework.osgi.test.AbstractOsgiTests.access$000(AbstractOsgiTests.java:50)
+	at org.springframework.osgi.test.AbstractOsgiTests$2.run(AbstractOsgiTests.java:480)
+Caused by: java.lang.NullPointerException
+	at org.springframework.osgi.web.extender.internal.activator.WarLoaderListener$DeploymentManager.destroy(WarLoaderListener.java:136)
+	at org.springframework.osgi.web.extender.internal.activator.WarLoaderListener.stop(WarLoaderListener.java:470)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$3.run(BundleContextImpl.java:1032)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:1028)
+	... 16 more
+Root exception:
+java.lang.NullPointerException
+	at org.springframework.osgi.web.extender.internal.activator.WarLoaderListener$DeploymentManager.destroy(WarLoaderListener.java:136)
+	at org.springframework.osgi.web.extender.internal.activator.WarLoaderListener.stop(WarLoaderListener.java:470)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$3.run(BundleContextImpl.java:1032)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:1028)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:396)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:502)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1076)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.suspendAllBundles(StartLevelManager.java:640)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:599)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:283)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:256)
+	at org.eclipse.osgi.framework.internal.core.SystemBundle.suspend(SystemBundle.java:190)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:546)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:449)
+	at org.eclipse.osgi.framework.internal.core.OSGi.close(OSGi.java:41)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:423)
+	at org.springframework.osgi.test.platform.EquinoxPlatform.stop(EquinoxPlatform.java:93)
+	at org.springframework.osgi.test.AbstractOsgiTests.shutdownTest(AbstractOsgiTests.java:494)
+	at org.springframework.osgi.test.AbstractOsgiTests.access$000(AbstractOsgiTests.java:50)
+	at org.springframework.osgi.test.AbstractOsgiTests$2.run(AbstractOsgiTests.java:480)
+
+!ENTRY org.springframework.osgi.catalina.start.osgi 4 0 2009-03-24 18:08:04.492
+!MESSAGE FrameworkEvent.ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.springframework.osgi.web.tomcat.internal.Activator.stop() of bundle org.springframework.osgi.catalina.start.osgi.
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:1048)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:396)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:502)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1076)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.suspendAllBundles(StartLevelManager.java:640)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:599)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:283)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:256)
+	at org.eclipse.osgi.framework.internal.core.SystemBundle.suspend(SystemBundle.java:190)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:546)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:449)
+	at org.eclipse.osgi.framework.internal.core.OSGi.close(OSGi.java:41)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:423)
+	at org.springframework.osgi.test.platform.EquinoxPlatform.stop(EquinoxPlatform.java:93)
+	at org.springframework.osgi.test.AbstractOsgiTests.shutdownTest(AbstractOsgiTests.java:494)
+	at org.springframework.osgi.test.AbstractOsgiTests.access$000(AbstractOsgiTests.java:50)
+	at org.springframework.osgi.test.AbstractOsgiTests$2.run(AbstractOsgiTests.java:480)
+Caused by: java.lang.NullPointerException
+	at org.springframework.osgi.web.tomcat.internal.Activator.stop(Activator.java:128)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$3.run(BundleContextImpl.java:1032)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:1028)
+	... 16 more
+Root exception:
+java.lang.NullPointerException
+	at org.springframework.osgi.web.tomcat.internal.Activator.stop(Activator.java:128)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$3.run(BundleContextImpl.java:1032)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:1028)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:396)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:502)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1076)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.suspendAllBundles(StartLevelManager.java:640)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:599)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:283)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:256)
+	at org.eclipse.osgi.framework.internal.core.SystemBundle.suspend(SystemBundle.java:190)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:546)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:449)
+	at org.eclipse.osgi.framework.internal.core.OSGi.close(OSGi.java:41)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:423)
+	at org.springframework.osgi.test.platform.EquinoxPlatform.stop(EquinoxPlatform.java:93)
+	at org.springframework.osgi.test.AbstractOsgiTests.shutdownTest(AbstractOsgiTests.java:494)
+	at org.springframework.osgi.test.AbstractOsgiTests.access$000(AbstractOsgiTests.java:50)
+	at org.springframework.osgi.test.AbstractOsgiTests$2.run(AbstractOsgiTests.java:480)

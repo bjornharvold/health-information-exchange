@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+    	<groupId>com.hxcel.globalhealth</groupId>
+    	<artifactId>implementation</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hxcel.globalhealth</groupId>
+    <artifactId>cms.impl</artifactId>
+    <packaging>bundle</packaging>
+    <name>Content Management System Implementation</name>
+
+    <properties>
+
+        <export.package>
+            com.hxcel.globalhealth.cms;version="${project.version}",
+            com.hxcel.globalhealth.cms.utils;version="${project.version}"
+        </export.package>
+        <import.package>
+            com.hxcel.globalhealth.cms.spec;version="${project.version}",
+            javax.crypto,
+            javax.crypto.spec,
+            javax.net,
+            javax.net.ssl,
+            javax.xml.parsers,
+            org.apache.commons.codec;version="${commons.codec.version}",
+            org.apache.commons.codec.binary;version="${commons.codec.version}",
+            org.apache.commons.codec.net;version="${commons.codec.version}",
+            org.apache.commons.httpclient;version="${commons.httpclient.version}",
+            org.apache.commons.httpclient.auth;version="${commons.httpclient.version}",
+            org.apache.commons.httpclient.cookie;version="${commons.httpclient.version}",
+            org.apache.commons.httpclient.methods;version="${commons.httpclient.version}",
+            org.apache.commons.httpclient.methods.multipart;version="${commons.httpclient.version}",
+            org.apache.commons.httpclient.params;version="${commons.httpclient.version}",
+            org.apache.commons.httpclient.protocol;version="${commons.httpclient.version}",
+            org.apache.commons.httpclient.util;version="${commons.httpclient.version}",
+            org.apache.commons.logging;version="${commons.logging.version}",
+            org.slf4j;version="${slf4j.version}",
+            org.springframework.context.support;version="${spring.version}"
+        </import.package>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.hxcel.globalhealth</groupId>
+            <artifactId>cms.spec</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.httpclient</artifactId>
+            <version>${commons.httpclient.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mozilla.javascript</groupId>
+            <artifactId>com.springsource.org.mozilla.javascript</artifactId>
+            <version>${rhino.javascript.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.codec</artifactId>
+            <version>${commons.codec.version}</version>
+        </dependency>
+    </dependencies>
+</project>

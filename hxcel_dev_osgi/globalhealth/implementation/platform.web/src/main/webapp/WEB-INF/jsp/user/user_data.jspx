@@ -1,0 +1,72 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:spring-form="http://www.springframework.org/tags/form"
+          xmlns:security="http://www.springframework.org/security/tags"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:x="http://java.sun.com/jsp/jstl/xml"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"/>
+
+    <div id="${user.id}">
+        <spring:message var="altEdit" code="entity.edit" text="Edit"/>
+        <spring:message var="altClose" code="entity.close" text="Close"/>
+
+        <div class="page_header overview">
+            <div class="titleName"><spring:message code="page.overview.name" text="Overview"/></div>
+            <div class="editEntity">
+                <security:authorize ifAllGranted="ROLE_ADMINISTRATOR">
+                    <a href="javascript:bindFormLink({url: '/secure/user/edit.admin?id=${user.id}', id: '${user.id}', cssClass: 'jqmWindow'})"><img src="/images/icons/edit_pen.png" alt="${altEdit}" title="${altEdit}" border="0"/></a>
+                </security:authorize>
+            </div>
+        </div>
+
+        <div class="module_550">
+            <table cellpadding="2" cellspacing="0" border="0" width="100%" class="content_table">
+                <tbody>
+                <tr class="rowStyle1">
+                    <td width="25%" class="content_item_header"><spring:message code="user.username" text="Username"/>:</td>
+                    <td width="75%" class="content_item">${user.username}</td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="user.name.first" text="First name"/>:</td>
+                    <td class="content_item">${user.userInfo.firstName}</td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="user.name.middle" text="Middle name"/>:</td>
+                    <td class="content_item">${user.userInfo.middleName}</td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="user.name.last" text="Last name"/>:</td>
+                    <td class="content_item">${user.userInfo.lastName}</td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="user.sex" text="Gender"/>:</td>
+                    <td class="content_item">${user.userInfo.sex}</td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="user.salutation" text="Salutation"/>:</td>
+                    <td class="content_item">${user.userInfo.salutation}</td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="user.country" text="Country"/>:</td>
+                    <td class="content_item">${user.country.statusCode}</td>
+                </tr>
+                <tr class="rowStyle2">
+                    <td class="content_item_header"><spring:message code="entity.date.created" text="Created"/>:</td>
+                    <td class="content_item"><fmt:formatDate value="${user.createdDate}" dateStyle="long"/></td>
+                </tr>
+                <tr class="rowStyle1">
+                    <td class="content_item_header"><spring:message code="entity.date.updated" text="Updated"/>:</td>
+                    <td class="content_item"><fmt:formatDate value="${user.lastUpdate}" dateStyle="long"/></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <jsp:include page="user_iconinfo.jspx"/>
+    </div>
+
+</jsp:root>
